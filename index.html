@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Corretora de Seguros</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .carousel-item {
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #contact-form textarea {
+            resize: none;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+
+        /* Novo estilo para as imagens de ícones */
+        .icon-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: #007bff; /* Cor de contraste */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .icon-circle img {
+            width: 70%;
+        }
+
+    </style>
 </head>
+
 <body>
-    <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="https://corretordigital.site/logos/15326-1676668491144.png" alt="Logo da Corretora" style="height: 50px;">
@@ -18,148 +55,240 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#hero">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carousel">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre Nós</a>
+                        <a class="nav-link" href="#cotacao">Cotação de seguro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cotacao">Cotação de Seguro</a>
+                        <a class="nav-link" href="#sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                 </ul>
             </div>
+
+
         </div>
-    </header>
 
-    <section id="hero" class="jumbotron text-center">
-        <h1 class="display-4">Proteção para todos os momentos da vida</h1>
-        <p class="lead">Sua segurança é nossa prioridade. Conheça nossos serviços.</p>
-        <a href="#cotacao" class="btn btn-primary btn-lg">Solicitar Cotação</a>
-    </section>
 
-    <div class="container" >
-        <!-- Sobre Nós -->
-        <section id="sobre" class="my-5">
-            <div class="container">
-                <div class="row justify-content-center"> <!-- Centraliza a coluna no contêiner -->
-                    <div class="col-md-6 text-center"> <!-- Texto centralizado e coluna de tamanho 6 -->
-                        <h2>Sobre nós</h2>
-                        Seguro é coisa séria e deve ser feito por quem entende do assunto.
-                        Nós, da Marpe Corretora de Seguros, somos habilitados a mais de 10 anos para oferecer soluções em todos os ramos de seguros, planos de saúde, odontológicos e consórcios.
-                        Somos parceiros das principais seguradoras do mercado, o que nos dá a garantia de possuir a solução em proteção de acordo com a sua necessidade.
-                        Os seguros vão de Patrimoniais (Automóvel, Empresarial, Residencial, Equipamento, Propriedade Rural, Seguro Agrícola, Consórcio, Seguro de Cargas...) até Pessoais (Vida individual e coletivo, Seguro Acidentes, Seguro Viagem, Plano de Saúde Empresarial, Plano Odontológico, Responsabilidade Civil...)
-                        Nosso escritório está localizado na cidade de São Sepé, região centro do estado do RS.
-                        Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e não custa nada.</p>
-                    </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner1.jpg');">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <h2 class="text-white">Contigo em todos os momentos</h2>
                 </div>
+
             </div>
-        </section>
-        
 
-        <!-- Cotação de Seguro -->
-        <section id="cotacao" class="my-5">
-            <div class="container text-center">
-                <h2 class="mb-4">Faça uma Cotação</h2>
-                <p>Precisando de um seguro? Escolha uma das opções abaixo, preencha os dados e em breve enviaremos um estudo personalizado para a sua necessidade.</p>
-                <div class="row">
-                    <!-- Opção Auto -->
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" class="card-img-top" alt="Seguro Auto">
-                            <div class="card-body">
-                                <h5 class="card-title">Auto</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Opção Moto -->
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/moto.png" class="card-img-top" alt="Seguro Moto">
-                            <div class="card-body">
-                                <h5 class="card-title">Moto</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Opção Caminhão -->
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/caminhao.png" class="card-img-top" alt="Seguro Caminhão">
-                            <div class="card-body">
-                                <h5 class="card-title">Caminhão</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Outras opções -->
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/residencial.png" class="card-img-top" alt="Seguro Residencial">
-                            <div class="card-body">
-                                <h5 class="card-title">Residencial</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/vida.png" class="card-img-top" alt="Seguro Vida">
-                            <div class="card-body">
-                                <h5 class="card-title">Vida</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 mb-3">
-                        <div class="card scale-card">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/diversos.png" class="card-img-top" alt="Seguros Diversos">
-                            <div class="card-body">
-                                <h5 class="card-title">Diversos</h5>
-                                <a href="https://marpe.corretordigital.site/#/" class="btn btn-primary" target="_blank">Cotar Agora</a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="carousel-item" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner2.jpg');">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <h2 class="text-white">Proteção para você e sua família</h2>
                 </div>
 
-                
             </div>
-        </section>
-        
 
-        <!-- Contato -->
-        <section id="contato" class="my-5">
-            <h2 class="text-center">Contato</h2>
-            <form>
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            <div class="carousel-item" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner3.jpg');">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <h2 class="text-white">Seguros para todas as suas necessidades</h2>
                 </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea class="form-control" id="mensagem" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-            </form>
-        </section>
+
+            </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
     </div>
 
-    <footer class="bg-light text-center text-lg-start colored-background">
-        <div class="container p-4">
-            <p>© 2024 Corretora de Seguros. Todos os direitos reservados.</p>
+
+    <!-- Cotação -->
+    <!-- <section id="cotacao" class="container my-5">
+        <h2 class="text-center">Faça uma Cotação</h2>
+        <p class="text-center">Escolha uma opção e preencha os dados.</p>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <a target="_blank" href="https://marpe.corretordigital.site/#/">
+                <div class="icon-circle">
+                    <img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" alt="Auto">
+                </div>
+
+            </a>
+                <h3>Auto</h3>
+            </div>
+
+            <div class="col-md-4">
+                <a target="_blank" href="https://marpe.corretordigital.site/#/">
+                <div class="icon-circle">
+                    <img src="https://marpe.corretordigital.site/assets/img/icons/moto.png" alt="Moto">
+                </div>
+
+                </a>
+                <h3>Moto</h3>
+            </div>
+
+
+                <div class="col-md-4">
+                    <a target="_blank" href="https://marpe.corretordigital.site/#/">
+                        <div class="icon-circle">
+                            <img src="https://marpe.corretordigital.site/assets/img/icons/residencial.png" alt="Residencial">
+                        </div>
+
+                    </a>
+                    <h3>Residencial</h3>
+
+
+            </div>
+
         </div>
+
+    </section> -->
+    <section id="cotacao" class="container my-5">
+        <h2 class="text-center">Faça uma Cotação</h2>
+        <p class="text-center">Escolha uma opção e preencha os dados.</p>
+        <div class="row text-center">
+            <!-- Opção Auto -->
+            <div class="col-md-4">
+                <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                    <div class="icon-circle">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" alt="Auto">
+                    </div>
+                </a>
+                    <h3>Auto</h3>
+
+            </div>
+    
+            <!-- Opção Moto -->
+            <div class="col-md-4">
+                <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                    <div class="icon-circle">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/moto.png" alt="Moto">
+                    </div>
+                </a>
+                    <h3>Moto</h3>
+
+            </div>
+    
+            <!-- Opção Caminhão -->
+            <div class="col-md-4">
+                
+                    <div class="icon-circle">
+                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/caminhao.png" alt="Caminhão">
+                        </a>
+                    </div>
+                    <h3>Caminhão</h3>
+                
+            </div>
+        </div>
+    
+        <div class="row text-center mt-4">
+            <!-- Opção Residencial -->
+            <div class="col-md-4">
+                
+                    <div class="icon-circle">
+                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/residencial.png" alt="Residencial">
+                            </a>
+                    </div>
+                    <h3>Residencial</h3>
+                
+            </div>
+    
+            <!-- Opção Vida -->
+            <div class="col-md-4">
+                
+                    <div class="icon-circle">
+                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/vida.png" alt="Vida">
+                            </a>
+                    </div>
+                    <h3>Vida</h3>
+                
+            </div>
+    
+            <!-- Opção Diversos -->
+            <div class="col-md-4">
+                
+                    <div class="icon-circle">
+                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
+                        <img src="https://marpe.corretordigital.site/assets/img/icons/diversos.png" alt="Diversos">
+                            </a>
+                    </div>
+                    <h3>Diversos</h3>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sobre nós -->
+    <section id="sobre" class="bg-light py-5">
+        <div class="container text-center">
+            <div class="col-md-8 mx-auto">
+                <h2>Sobre nós</h2>
+                <p>Seguro é coisa séria e deve ser feito por quem entende do assunto.</p>
+                <p>Nós, da Marpe Corretora de Seguros, somos habilitados há mais de 10 anos para oferecer soluções.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="container my-5">
+        <h2 class="text-center">Contato</h2>
+        <form id="contact-form">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nome</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Nome">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputPhone">Telefone</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="Telefone">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="inputMessage">Sua Mensagem</label>
+                <textarea class="form-control" id="inputMessage" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2024 Corretora de Seguros. Todos os direitos reservados.</p>
+        </div>
+
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
+
