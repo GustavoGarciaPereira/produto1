@@ -2610,7 +2610,7 @@ class PHPMailer
 
     /**
      * Add an embedded (inline) attachment from a file.
-     * This can include images, sounds, and just about any other document type.
+     * This can include images, sounds, and just SOBRE any other document type.
      * These differ from 'regular' attachments in that they are intended to be
      * displayed inline with the message, not just attached for download.
      * This is used in HTML messages that embed the images
@@ -2657,7 +2657,7 @@ class PHPMailer
 
     /**
      * Add an embedded stringified attachment.
-     * This can include images, sounds, and just about any other document type.
+     * This can include images, sounds, and just SOBRE any other document type.
      * Be sure to set the $type to an image type for images:
      * JPEG images use 'image/jpeg', GIF uses 'image/gif', PNG uses 'image/png'.
      * @param string $string The attachment binary data.

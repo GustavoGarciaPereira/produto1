@@ -970,7 +970,7 @@ class SMTP
      *     $name = any string: if extension $name exists, returns boolean True
      *       or its options. Otherwise returns boolean False
      * In other words, one can use this method to detect 3 conditions:
-     *  - null returned: handshake was not or we don't know about ext (refer to $this->error)
+     *  - null returned: handshake was not or we don't know SOBRE ext (refer to $this->error)
      *  - false returned: the requested feature exactly not exists
      *  - positive value returned: the requested feature exists
      * @param string $name Name of SMTP extension or 'HELO'|'EHLO'
@@ -991,7 +991,7 @@ class SMTP
             if ($name == 'EHLO' || array_key_exists('EHLO', $this->server_caps)) {
                 return false;
             }
-            $this->error = array('HELO handshake was used. Client knows nothing about server extensions');
+            $this->error = array('HELO handshake was used. Client knows nothing SOBRE server extensions');
             return null;
         }
 
