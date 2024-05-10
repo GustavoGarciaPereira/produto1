@@ -1,344 +1,510 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Corretora de Seguros</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom CSS */
-        body{
-            background-color: #e1f0ff;
-            font-family: 'Intro Regular', sans-serif;
-        }
-        h1 {
-            font-family: 'Intro Bold', sans-serif;
-        }
-        
-        .special-icons {
-            font-family: 'Type Icons';
-        }
-        
-        .bold-text {
-            font-family: 'Montserrat Bold', sans-serif;
-        }
-        .carousel-item {
-            height: 60vh;
-            background-size: cover;
-            background-position: center;
-        }
-        .t{
-            background-color: #e1f0ff;
-        }
-
-        #contact-form textarea {
-            resize: none;
-        }
-
-        footer {
-            padding: 20px 0;
-        }
-
-        /* Novo estilo para as imagens de ícones */
-        .icon-circle {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: #007bff; /* Cor de contraste */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-        }
-
-        .icon-circle img {
-            width: 70%;
-        }
-
-        @font-face {
-            font-family: 'Intro Book';
-            src: url('./Fonts/Intro Book.otf') format('opentype');
-        }
-        
-        @font-face {
-            font-family: 'Intro Regular';
-            src: url('./Fonts/Intro Regular.otf') format('opentype');
-        }
-        
-        @font-face {
-            font-family: 'Intro Bold';
-            src: url('./Fonts/Intro Bold.otf') format('opentype');
-        }
-        
-        @font-face {
-            font-family: 'Montserrat Bold';
-            src: url('./Fonts/Montserrat Bold.ttf') format('truetype');
-        }
-        
-        @font-face {
-            font-family: 'Type Icons';
-            src: url('./Fonts/Type Icons.ttf') format('truetype');
-        }
-
-    </style>
-</head>
-
-<body class="t">
-    <!-- Header -->
-    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://corretordigital.site/logos/15326-1676668491144.png" alt="Logo da Corretora" style="height: 50px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#carousel">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#cotacao">Cotação de seguro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
-                    </li>
-                </ul>
-            </div>
-
-
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-logo"><img src="images/15326-1676668491144.png" alt="" width="151" height="44" srcset="images/15326-1676668491144.png 2x"/>
+      </div>
+      <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
         </div>
-
-
-    </nav>
-
-    <!-- Carousel -->
-    <div id="carousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner1.jpg');">
-                <div class="d-flex align-items-center justify-content-center h-100">
-                    <h2 class="text-white">Contigo em todos os momentos</h2>
-                </div>
-
-            </div>
-
-            <div class="carousel-item" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner2.jpg');">
-                <div class="d-flex align-items-center justify-content-center h-100">
-                    <h2 class="text-white">Proteção para você e sua família</h2>
-                </div>
-
-            </div>
-
-            <div class="carousel-item" style="background-image: url('https://marpe.corretordigital.site/assets/img/banner3.jpg');">
-                <div class="d-flex align-items-center justify-content-center h-100">
-                    <h2 class="text-white">Seguros para todas as suas necessidades</h2>
-                </div>
-
-            </div>
-
-        </div>
-
-        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Próximo</span>
-        </a>
+      </div>
     </div>
-
-
-    <!-- Cotação -->
-    <!-- <section id="cotacao" class="container my-5">
-        <h2 class="text-center">Faça uma Cotação</h2>
-        <p class="text-center">Escolha uma opção e preencha os dados.</p>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <a target="_blank" href="https://marpe.corretordigital.site/#/">
-                <div class="icon-circle">
-                    <img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" alt="Auto">
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section novi-background page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-lg-stick-up="true" data-lg-stick-up-offset="118px" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-stick-up="true" data-xl-stick-up-offset="118px" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-xxl-stick-up-offset="118px" data-xxl-stick-up="true">
+            <div class="rd-navbar-aside-outer">
+              <div class="rd-navbar-aside">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="images/15326-1676668491144.png" alt="" width="151" height="44" srcset="images/15326-1676668491144.png 2x"/></a>
                 </div>
-
-            </a>
-                <h3>Auto</h3>
-            </div>
-
-            <div class="col-md-4">
-                <a target="_blank" href="https://marpe.corretordigital.site/#/">
-                <div class="icon-circle">
-                    <img src="https://marpe.corretordigital.site/assets/img/icons/moto.png" alt="Moto">
+                <div class="rd-navbar-collapse">
+                  <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
+                  <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
+                    <article class="unit align-items-center">
+                      <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-phone"></span></div>
+                      <div class="unit-body">
+                        <ul class="list-0">
+                          <li><a class="link-default" href="tel:#">1-800-1234-567</a></li>
+                          <li><a class="link-default" href="tel:#">1-800-8763-765</a></li>
+                        </ul>
+                      </div>
+                    </article>
+                    <article class="unit align-items-center">
+                      <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
+                      <div class="unit-body"><a class="link-default" href="tel:#">2130 Fulton Street <br> San Diego, CA 94117-1080</a></div>
+                    </article><a class="button button-gray-bordered button-winona" href="#">Request a call</a>
+                  </div>
                 </div>
-
-                </a>
-                <h3>Moto</h3>
+              </div>
             </div>
-
-
-                <div class="col-md-4">
-                    <a target="_blank" href="https://marpe.corretordigital.site/#/">
-                        <div class="icon-circle">
-                            <img src="https://marpe.corretordigital.site/assets/img/icons/residencial.png" alt="Residencial">
-                        </div>
-
-                    </a>
-                    <h3>Residencial</h3>
-
-
-            </div>
-
-        </div>
-
-    </section> -->
-    <section id="cotacao" class="container my-5">
-        <h2 class="text-center">Faça uma Cotação</h2>
-        <p class="text-center">Escolha uma opção e preencha os dados.</p>
-        <div class="row text-center">
-            <!-- Opção Auto -->
-            <div class="col-md-4">
-                <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                    <div class="icon-circle">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" alt="Auto">
-                    </div>
-                </a>
-                    <h3>Auto</h3>
-
-            </div>
-    
-            <!-- Opção Moto -->
-            <div class="col-md-4">
-                <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                    <div class="icon-circle">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/moto.png" alt="Moto">
-                    </div>
-                </a>
-                    <h3>Moto</h3>
-
-            </div>
-    
-            <!-- Opção Caminhão -->
-            <div class="col-md-4">
-                
-                    <div class="icon-circle">
-                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/caminhao.png" alt="Caminhão">
-                        </a>
-                    </div>
-                    <h3>Caminhão</h3>
-                
-            </div>
-        </div>
-    
-        <div class="row text-center mt-4">
-            <!-- Opção Residencial -->
-            <div class="col-md-4">
-                
-                    <div class="icon-circle">
-                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/residencial.png" alt="Residencial">
-                            </a>
-                    </div>
-                    <h3>Residencial</h3>
-                
-            </div>
-    
-            <!-- Opção Vida -->
-            <div class="col-md-4">
-                
-                    <div class="icon-circle">
-                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/vida.png" alt="Vida">
-                            </a>
-                    </div>
-                    <h3>Vida</h3>
-                
-            </div>
-    
-            <!-- Opção Diversos -->
-            <div class="col-md-4">
-                
-                    <div class="icon-circle">
-                        <a target="_blank" href="https://marpe.corretordigital.site/#/" style="cursor: pointer;">
-                        <img src="https://marpe.corretordigital.site/assets/img/icons/diversos.png" alt="Diversos">
-                            </a>
-                    </div>
-                    <h3>Diversos</h3>
-                
-            </div>
-        </div>
-    </section>
-    
-    <!-- Sobre nós -->
-    <section id="sobre" class="py-5">
-        <div class="container text-center">
-            <div class="col-md-8 mx-auto">
-                <h2>Sobre nós</h2>
-                <p>Seguro é coisa séria e deve ser feito por quem entende do assunto.</p>
-                <p>Nós, da Marpe Corretora de Seguros, somos habilitados a mais de 10 anos para oferecer soluções em todos os ramos de seguros, planos de saúde, </p>
-                <p>odontológicos e consórcios.</p>
-                <p>Somos parceiros das principais seguradoras do mercado, o que nos dá a garantia de possuir a solução em proteção de acordo com a sua necessidade.</p>
-                <p>Os seguros vão de Patrimoniais (Automóvel, Empresarial, Residencial, Equipamento, Propriedade Rural, Seguro Agrícola, Consórcio, Seguro de Cargas...)</p>
-                <p>até Pessoais (Vida individual e coletivo, Seguro Acidentes, Seguro Viagem, Plano de Saúde Empresarial, Plano Odontológico, Responsabilidade Civil...)</p>
-                <p>Nosso escritório está localizado na cidade de São Sepé, região centro do estado do RS.</p>
-                <p>Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e não custa nada.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="container my-5">
-        <h2 class="text-center">Contato</h2>
-        <form id="contact-form">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputName">Nome</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Nome">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About us</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                    </li>
+                  </ul>
                 </div>
-
-                <div class="form-group col-md-6">
-                    <label for="inputPhone">Telefone</label>
-                    <input type="text" class="form-control" id="inputPhone" placeholder="Telefone">
-                </div>
-
+              </div>
             </div>
-
-            <div class="form-group">
-                <label for="inputEmail">E-mail</label>
-                <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
-            </div>
-
-            <div class="form-group">
-                <label for="inputMessage">Sua Mensagem</label>
-                <textarea class="form-control" id="inputMessage" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-light">
-        <div class="container text-center">
-            <p>&copy; 2024 Corretora de Seguros. Todos os direitos reservados. | https://www.linkedin.com/in/gustavo-garcia-pereira-078240143/</p>
-            <p>Marcel Foletto Pereira Ltda</p>
-            <p>CNPJ 446976830001-53</p>
+          </nav>
         </div>
-
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
+      </header>
+      <section class="section swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="4759" data-simulate-touch="true">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide_video" data-slide-bg="images/slider-minimal-slide-1-1920x968.jpg">
+            <div class="container">
+              <div class="jumbotron-classic-content">
+                <div class="wow-outer">
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Offering Diverse</div>
+                </div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Properties</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">inHouse provides you with lots of great properties throughout the USA so that you could easily choose your dream property.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View Properties</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-minimal-slide-2-1920x968.jpg">
+            <div class="container">
+              <div class="jumbotron-classic-content">
+                <div class="wow-outer">
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Easily</div>
+                </div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Rent & Sale</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">With the help of our services and property management solutions, you can rent or sell any house or apartment.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View properties</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/slider-minimal-slide-3-1920x968.jpg">
+            <div class="container">
+              <div class="jumbotron-classic-content">
+                <div class="wow-outer">
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">More Than 20 Years of</div>
+                </div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Experience</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Founded in 1989, our company is a team of renowned property management and real estate experts always ready to help you.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View properties</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination-outer container">
+          <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
+        </div>
+      </section>
+      <section class="section novi-background section-md text-center">
+        <div class="container">
+          <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Popular properties</span></h3>
+          <div class="row row-lg-50 row-35 offset-top-2">
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/grid-blog-1-571x353.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a class="post-modern-title" href="#">5619 Walnut Hill Ln, Dallas, TX 75229</a></h4>
+                <ul class="post-modern-meta">
+                  <li><a class="button-winona" href="#">$1500/mon</a></li>
+                  <li>30 Sq. Ft.</li>
+                  <li>3 Bedrooms</li>
+                </ul>
+                <p>A comfortable residential property located in a quiet and cozy area.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/grid-blog-2-571x353.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a class="post-modern-title" href="#">1808 Bolingbroke Pl, Fort Worth, TX 76140</a></h4>
+                <ul class="post-modern-meta">
+                  <li><a class="button-winona" href="#">$1300/mon</a></li>
+                  <li>40 Sq. Ft.</li>
+                  <li>2 Bedrooms</li>
+                </ul>
+                <p>Perfect for those who love both city life and the countryside.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/grid-blog-3-571x353.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a class="post-modern-title" href="#">924 Bel Air Rd, Los Angeles, CA 90077</a></h4>
+                <ul class="post-modern-meta">
+                  <li><a class="button-winona" href="#">1800/mon</a></li>
+                  <li>50 Sq. Ft.</li>
+                  <li>4 Bedrooms</li>
+                </ul>
+                <p>Located in 5 mins from downtown, this property is great for anyone.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- Post Modern-->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title"><a class="post-modern-title" href="#">13510 W Cheery Lynn Rd, Avondale, AZ 85392</a></h4>
+                <ul class="post-modern-meta">
+                  <li><a class="button-winona" href="#">$2700/mon</a></li>
+                  <li>90 Sq. Ft.</li>
+                  <li>2 Bedrooms</li>
+                </ul>
+                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
+              </article>
+            </div>
+            <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view More properties</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="section novi-background section-lg bg-gray-100">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Minimal-->
+              <article class="box-minimal">
+                <div class="box-chloe__icon novi-icon linearicons-user wow fadeIn"></div>
+                <div class="box-minimal-main wow-outer">
+                  <h4 class="box-minimal-title wow slideInDown">Qualified Employees</h4>
+                  <p class="wow fadeInUpSmall">Our team consists of more than 20 qualified and experienced real estate brokers and property managers ready to help you.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Minimal-->
+              <article class="box-minimal">
+                <div class="box-chloe__icon novi-icon linearicons-bubble-text wow fadeIn" data-wow-delay=".1s"></div>
+                <div class="box-minimal-main wow-outer">
+                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s">Free Consultations</h4>
+                  <p class="wow fadeInUpSmall" data-wow-delay=".1s">Our acquaintance with a client always begins with a free consultation to find out what kind of property they are looking for.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4 wow-outer">
+              <!-- Box Minimal-->
+              <article class="box-minimal">
+                <div class="box-chloe__icon novi-icon linearicons-star wow fadeIn" data-wow-delay=".2s"></div>
+                <div class="box-minimal-main wow-outer">
+                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s">100% Guaranteed</h4>
+                  <p class="wow fadeInUpSmall" data-wow-delay=".2s">All the results that you get from our realtors are 100% guaranteed to offer you the best choice of properties throughout the USA.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Services-->
+      <section class="section novi-background section-lg text-center">
+        <div class="container">
+          <h3 class="text-uppercase">Residential property categories</h3>
+          <p><span class="text-width-1">At our agency, we work with various types of residential real estate property. You can find out more about our properties by browsing our website.</span></p>
+          <div class="row row-35 row-xxl-70 offset-top-2">
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-1-270x300.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#">Single-Family Homes</a></h4>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-2-270x300.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#">Townhouses</a></h4>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-3-270x300.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#">Multi-Family Homes</a></h4>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#">Condominiums</a></h4>
+              </article>
+            </div>
+            <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view all properties</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="section novi-background section-lg text-center bg-gray-100">
+        <div class="container">
+          <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Our Team</span></h3>
+          <div class="row row-lg-50 row-35 row-xxl-70 justify-content-center justify-content-lg-start">
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft">
+                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-1-270x273.jpg" alt="" width="270" height="273"/>
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Nathalie Porter</a></h5>
+                  <p class="profile-creative-position">Founder, Broker</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  </div>
+                  <p>Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-2-270x273.jpg" alt="" width="270" height="273"/>
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">John Thompson</a></h5>
+                  <p class="profile-creative-position">Sales Associate</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  </div>
+                  <p>John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft">
+                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-3-270x273.jpg" alt="" width="270" height="273"/>
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Brian Payne</a></h5>
+                  <p class="profile-creative-position">Realtor</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  </div>
+                  <p>Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer">
+              <!-- Profile Creative-->
+              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
+                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/team-4-270x273.jpg" alt="" width="270" height="273"/>
+                </figure>
+                <div class="profile-creative-main">
+                  <h5 class="profile-creative-title"><a href="#">Marie Fernandez</a></h5>
+                  <p class="profile-creative-position">Broker</p>
+                  <div class="profile-creative-contacts">
+                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">1-800-1324-567</a></div>
+                  </div>
+                  <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Best offer-->
+      <section class="section novi-background section-1 bg-primary-darker text-center" style="background-image: url(images/bg-1-1920-455.jpg);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-lg-7 col-xl-6">
+              <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Best offers</span></h3>
+              <p class="heading-subtitle">of September</p>
+              <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">With a variety of accountants available at our company, you can always choose one that fits your corporate requirements.</span></p>
+              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#" data-wow-delay=".1s">Read more</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section novi-background section-lg text-center">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Testimonials</span></h3>
+          <!-- Owl Carousel-->
+          <div class="owl-carousel wow fadeIn" data-items="1" data-md-items="2" data-lg-items="3" data-dots="true" data-nav="false" data-loop="true" data-autoplay="true" data-autoplay-speed="731" data-autoplay-timeout="4268" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-6-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Albert Webb</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>I have just bought an apartment in LA thanks to you and your brokers. Everything went smooth and easy, the price was quite affordable, and I’m sure I will use your services again in the future.</p>
+              </div>
+            </blockquote>
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-1-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Kelly McMillan</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>I have recently sold my rental property in Nelson via inHouse. Everything about the sale was made seamless by your team. You gave me great advice about what was necessary to expedite the sale.</p>
+              </div>
+            </blockquote>
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Harold Barnett</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>I really appreciate your time and expertise in helping me find and buy my current home in Seattle, WA. Hope we can do business again in the future and I will recommend you to family and friends.</p>
+              </div>
+            </blockquote>
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-3-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Bill Warner</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>I have just sold a property with inHouse and I can’t thank them enough. Their team has great communication skills and they have regularly communicated with me throughout the whole process.</p>
+              </div>
+            </blockquote>
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-4-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Ann Lee</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>Your skilled team helped me make the dream of selling my old property a reality. The sale went smoothly, and I just closed on an ideal new place I am excited to call home. Thank you for your great services!</p>
+              </div>
+            </blockquote>
+            <blockquote class="quote-classic">
+              <div class="quote-classic-meta">
+                <div class="quote-classic-avatar"><img src="images/testimonials-person-5-96x96.jpg" alt="" width="96" height="96"/>
+                </div>
+                <div class="quote-classic-info">
+                  <cite class="quote-classic-cite">Peter Clarkson</cite>
+                  <p class="quote-classic-caption">Regular Client</p>
+                </div>
+              </div>
+              <div class="quote-classic-text">
+                <p>I have to say that inHouse has the best brokers we've ever worked with. Their professionalism, personality, attention to detail, responsiveness and ability to close the deal are outstanding!</p>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section><a class="banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"><img src="images/intense_big_02.jpg" alt=""/></a>
+      <footer class="section novi-background footer-advanced bg-gray-700">
+        <div class="footer-advanced-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">About Us</h5>
+                <p class="footer-advanced-text">inHouse is the largest full-service real estate and property management company. We offer expertise in the marketing and sale of a wide range of properties, including residential real estate, farms and lifestyle blocks, as well as commercial and industrial properties that we hope may interest you.</p>
+              </div>
+              <div class="col-sm-7 col-md-5 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
+                  <ul class="post-inline-meta">
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+                <!-- Post Inline-->
+                <article class="post-inline">
+                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
+                  <ul class="post-inline-meta"> 
+                    <li>by Mike Barnes</li>
+                    <li><a href="#">2 days ago</a></li>
+                  </ul>
+                </article>
+              </div>
+              <div class="col-sm-5 col-md-7 col-lg-4">
+                <h5 class="font-weight-bold text-uppercase text-white">Gallery</h5>
+                <div class="row row-x-10" data-lightgallery="group">
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-1.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-1-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-2.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-2-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-3.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-3-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-4.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-4-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-5.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-5-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-6.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-6-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"> </div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-7.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-7-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                  <div class="col-3 col-sm-4 col-md-3"><a class="thumbnail-minimal" href="images/gallery-original-8.jpg" data-lightgallery="item"><img class="thumbnail-minimal-image" src="images/footer-gallery-8-85x85.jpg" alt=""/>
+                      <div class="thumbnail-minimal-caption"></div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-advanced-aside">
+          <div class="container">
+            <div class="footer-advanced-layout">
+              <div>
+                <ul class="list-nav"> 
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About</a></li>
+                  <li><a href="#">Properties</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="contacts.html">Contacts</a></li>
+                </ul>
+              </div>
+              <div>
+                <ul class="foter-social-links list-inline list-inline-md">
+                  <li><a class="icon novi-icon icon-sm link-default mdi mdi-facebook" href="#"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default mdi mdi-twitter" href="#"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default mdi mdi-instagram" href="#"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default mdi mdi-google" href="#"></a></li>
+                  <li><a class="icon novi-icon icon-sm link-default mdi mdi-linkedin" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <hr/>
+        </div>
+        <div class="footer-advanced-aside">
+          <div class="container">
+            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/logo-light-115x34.png" alt="" width="115" height="34" srcset="images/logo-light-115x34.png 2x"/></a>
+              <!-- Rights-->
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
-
