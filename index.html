@@ -11,7 +11,22 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css" id="main-styles-link">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+      <style>
+        .modal-square {
+            max-width: 90%;
+            width: 800px; /* Define a fixed width */
+            height: 800px; /* Define a fixed height */
+        }
+        .modal-content {
+            height: 100%;
+        }
+        .modal-body {
+            height: calc(100% - 56px - 60px); /* Adjust for header and footer heights */
+            overflow-y: auto; /* Ensure scrolling if content overflows */
+        }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -84,11 +99,11 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Offering Diverse</div>
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Protegendo o que importa</div>
                 </div>
-                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Properties</span></h1>
-                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">inHouse provides you with lots of great properties throughout the USA so that you could easily choose your dream property.</span></p>
-                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View Properties</a></div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Sempre</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Marpe Corretora de Seguros - sua segurança é nossa prioridade.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">Saiba mais</a></div>
               </div>
             </div>
           </div>
@@ -96,11 +111,11 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Easily</div>
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Segurança e confiança</div>
                 </div>
-                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Rent & Sale</span></h1>
-                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">With the help of our services and property management solutions, you can rent or sell any house or apartment.</span></p>
-                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View properties</a></div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Juntos por você</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Oferecemos soluções completas para proteger o que você ama.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">Conheça nossos serviços</a></div>
               </div>
             </div>
           </div>
@@ -108,15 +123,16 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">More Than 20 Years of</div>
+                  <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Sua proteção</div>
                 </div>
-                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Experience</span></h1>
-                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Founded in 1989, our company is a team of renowned property management and real estate experts always ready to help you.</span></p>
-                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">View properties</a></div>
+                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Nossa missão</span></h1>
+                <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Confie na Marpe Corretora de Seguros para cuidar do que é mais importante.</span></p>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#" data-wow-delay=".4s">Entre em contato</a></div>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="swiper-pagination-outer container">
           <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
         </div>
@@ -124,117 +140,7 @@
       <section class="section novi-background section-md text-center">
         <div class="container">
           <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">FAÇA UMA COTAÇÃO</span></h3>
-          <div class="row row-lg-50 row-35 offset-top-2">
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="https://marpe.corretordigital.site/assets/img/icons/auto.png" alt="" width="271" height="153"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Auto</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$1500/mon</a></li>
-                  <li>30 Sq. Ft.</li>
-                  <li>3 Bedrooms</li>
-                </ul>
-                <p>A comfortable residential property located in a quiet and cozy area.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-2-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Moto</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$1300/mon</a></li>
-                  <li>40 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>Perfect for those who love both city life and the countryside.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-3-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Caminhão</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">1800/mon</a></li>
-                  <li>50 Sq. Ft.</li>
-                  <li>4 Bedrooms</li>
-                </ul>
-                <p>Located in 5 mins from downtown, this property is great for anyone.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Residencial</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Residencial</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Condomínio</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Empresarial</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Vida</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#" style="background-color: #84bc04;"><img src="images/grid-blog-4-571x353.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">Diversos</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">$2700/mon</a></li>
-                  <li>90 Sq. Ft.</li>
-                  <li>2 Bedrooms</li>
-                </ul>
-                <p>A luxury mansion for people who enjoy the high-end amenities.</p>
-              </article>
-            </div>
-            <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view More properties</a></div>
-          </div>
+
         </div>
       </section>
       <section class="section novi-background section-lg bg-gray-100">
@@ -245,8 +151,8 @@
               <article class="box-minimal">
                 <div class="box-chloe__icon novi-icon linearicons-user wow fadeIn"></div>
                 <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown">Qualified Employees</h4>
-                  <p class="wow fadeInUpSmall">Our team consists of more than 20 qualified and experienced real estate brokers and property managers ready to help you.</p>
+                  <h4 class="box-minimal-title wow slideInDown">Funcionários Qualificados</h4>
+                  <p class="wow fadeInUpSmall">Nossa equipe é composta por corretores de seguros e gerentes de propriedade altamente qualificados e experientes, prontos para ajudar você.</p>
                 </div>
               </article>
             </div>
@@ -255,8 +161,8 @@
               <article class="box-minimal">
                 <div class="box-chloe__icon novi-icon linearicons-bubble-text wow fadeIn" data-wow-delay=".1s"></div>
                 <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s">Free Consultations</h4>
-                  <p class="wow fadeInUpSmall" data-wow-delay=".1s">Our acquaintance with a client always begins with a free consultation to find out what kind of property they are looking for.</p>
+                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s">Consultas Gratuitas</h4>
+                  <p class="wow fadeInUpSmall" data-wow-delay=".1s">Nosso atendimento ao cliente sempre começa com uma consulta gratuita para entender quais são suas necessidades de seguro e oferecer a melhor solução.</p>
                 </div>
               </article>
             </div>
@@ -265,8 +171,8 @@
               <article class="box-minimal">
                 <div class="box-chloe__icon novi-icon linearicons-star wow fadeIn" data-wow-delay=".2s"></div>
                 <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s">100% Guaranteed</h4>
-                  <p class="wow fadeInUpSmall" data-wow-delay=".2s">All the results that you get from our realtors are 100% guaranteed to offer you the best choice of properties throughout the USA.</p>
+                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s">100% Garantido</h4>
+                  <p class="wow fadeInUpSmall" data-wow-delay=".2s">Todos os serviços que você recebe de nossos corretores são 100% garantidos para oferecer as melhores opções de seguros disponíveis no mercado.</p>
                 </div>
               </article>
             </div>
@@ -281,222 +187,95 @@
           <div class="row row-35 row-xxl-70 offset-top-2">
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-1-270x300.jpg" alt="" width="270" height="300"/></a>
+              <!-- <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/carro.jpg" alt="" width="270" height="300"/></a>
                 <h4 class="thumbnail-light-title"><a href="#">Auto</a></h4>
+              </article> -->
+              <article class="thumbnail-light">
+                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#myModalAuto">
+                    <img class="thumbnail-light-image" src="images/carro.jpg" alt="" width="270" height="300"/>
+                </a>
+                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#myModalAuto">Auto</a></h4>
+            </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light">
+                  <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#motoModal">
+                      <img class="thumbnail-light-image" src="images/moto.webp" alt="" width="270" height="300"/>
+                  </a>
+                  <h4 class="thumbnail-light-title">
+                      <a href="#" data-toggle="modal" data-target="#motoModal">Moto</a>
+                  </h4>
+              </article>
+          </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light">
+                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#caminhaoModal">
+                  <img class="thumbnail-light-image" src="images/caminhao.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title">
+                  <a href="#" data-toggle="modal" data-target="#caminhaoModal">Caminhão</a></h4>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-2-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Moto</a></h4>
+              <article class="thumbnail-light">
+                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#residencialModal">
+                  <img class="thumbnail-light-image" src="images/residencial.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title">
+                  <a href="#" data-toggle="modal" data-target="#residencialModal">Residencial</a>
+                  
+                </h4>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-3-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Caminhão</a></h4>
+              <article class="thumbnail-light">
+                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#condominioModal">
+                  <img class="thumbnail-light-image" src="images/condominio.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title">
+                  <a href="#" data-toggle="modal" data-target="#condominioModal">Condomínio</a></h4>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Residencial</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#empresarialModal"><img class="thumbnail-light-image" src="images/empresarial.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#empresarialModal">Empresarial</a></h4>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Condomínio</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#vidaModal"><img class="thumbnail-light-image" src="images/vida.jpg" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#vidaModal">Vida</a></h4>
               </article>
             </div>
+            
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Empresarial</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#diversosModal"><img class="thumbnail-light-image" src="images/diversos.png" alt="" width="270" height="300"/></a>
+                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#diversosModal">Deversos</a></h4>
               </article>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Vida</a></h4>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-              <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/service-thumbnail-4-270x300.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Deversos</a></h4>
-              </article>
-            </div>
-            <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view all properties</a></div>
+            
+            <!-- <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view all properties</a></div> -->
           </div>
         </div>
       </section>
-      <section class="section novi-background section-lg text-center bg-gray-100">
-        <div class="container">
-          <h3 class="text-uppercase wow-outer"><span class="wow slideInUp">Our Team</span></h3>
-          <div class="row row-lg-50 row-35 row-xxl-70 justify-content-center justify-content-lg-start">
-            <div class="col-md-10 col-lg-6 wow-outer">
-              <!-- Profile Creative-->
-              <article class="profile-creative wow slideInLeft">
-                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/um_imagem.jpg" alt="" width="270" height="273"/>
-                </figure>
-                <div class="profile-creative-main">
-                  <h5 class="profile-creative-title"><a href="#">Nathalie Porter</a></h5>
-                  <p class="profile-creative-position">Founder, Broker</p>
-                  <div class="profile-creative-CONTATO">
-                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">(55) 99631-3233</a></div>
-                  </div>
-                  <p>Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states.</p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-10 col-lg-6 wow-outer">
-              <!-- Profile Creative-->
-              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/um_imagem.jpg" alt="" width="270" height="273"/>
-                </figure>
-                <div class="profile-creative-main">
-                  <h5 class="profile-creative-title"><a href="#">John Thompson</a></h5>
-                  <p class="profile-creative-position">Sales Associate</p>
-                  <div class="profile-creative-CONTATO">
-                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">(55) 99631-3233</a></div>
-                  </div>
-                  <p>John has been in sales and marketing for the past 15 years. He has excellent knowledge SOBRE the local market both residential and commercial.</p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-10 col-lg-6 wow-outer">
-              <!-- Profile Creative-->
-              <article class="profile-creative wow slideInLeft">
-                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/um_imagem.jpg" alt="" width="270" height="273"/>
-                </figure>
-                <div class="profile-creative-main">
-                  <h5 class="profile-creative-title"><a href="#">Brian Payne</a></h5>
-                  <p class="profile-creative-position">Realtor</p>
-                  <div class="profile-creative-CONTATO">
-                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">(55) 99631-3233</a></div>
-                  </div>
-                  <p>Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert.</p>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-10 col-lg-6 wow-outer">
-              <!-- Profile Creative-->
-              <article class="profile-creative wow slideInLeft" data-wow-delay=".2s">
-                <figure class="profile-creative-figure"><img class="profile-creative-image" src="images/um_imagem.jpg" alt="" width="270" height="273"/>
-                </figure>
-                <div class="profile-creative-main">
-                  <h5 class="profile-creative-title"><a href="#">Marie Fernandez</a></h5>
-                  <p class="profile-creative-position">Broker</p>
-                  <div class="profile-creative-CONTATO">
-                    <div class="object-inline"><span class="icon novi-icon icon-md mdi mdi-phone"></span><a href="tel:#">(55) 99631-3233</a></div>
-                  </div>
-                  <p>Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals.</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <!-- Best offer-->
       <section class="section novi-background section-1 bg-primary-darker text-center" style="background-image: url(images/banner9.png);">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-sm-10 col-lg-7 col-xl-6">
-              <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Best offers</span></h3>
-              <p class="heading-subtitle">of September</p>
-              <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">With a variety of accountants available at our company, you can always choose one that fits your corporate requirements.</span></p>
-              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#" data-wow-delay=".1s">Read more</a></div>
+              <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">MELHORES OFERTAS</span></h3>
+              <!-- <p class="heading-subtitle">of September</p> -->
+              <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">Com uma variedade de seguros disponíveis em nossa corretora, você sempre pode escolher um que se encaixe perfeitamente nas suas necessidades.</span></p>
+              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#" data-wow-delay=".1s">Volte ao topo</a></div>
             </div>
           </div>
         </div>
       </section>
-      <section class="section novi-background section-lg text-center">
-        <div class="container">
-          <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">Testimonials</span></h3>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel wow fadeIn" data-items="1" data-md-items="2" data-lg-items="3" data-dots="true" data-nav="false" data-loop="true" data-autoplay="true" data-autoplay-speed="731" data-autoplay-timeout="4268" data-margin="30" data-stage-padding="0" data-mouse-drag="false">
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-6-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Albert Webb</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>I have just bought an apartment in LA thanks to you and your brokers. Everything went smooth and easy, the price was quite affordable, and I’m sure I will use your services again in the future.</p>
-              </div>
-            </blockquote>
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-1-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Kelly McMillan</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>I have recently sold my rental property in Nelson via inHouse. Everything SOBRE the sale was made seamless by your team. You gave me great advice SOBRE what was necessary to expedite the sale.</p>
-              </div>
-            </blockquote>
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-2-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Harold Barnett</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>I really appreciate your time and expertise in helping me find and buy my current home in Seattle, WA. Hope we can do business again in the future and I will recommend you to family and friends.</p>
-              </div>
-            </blockquote>
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-3-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Bill Warner</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>I have just sold a property with inHouse and I can’t thank them enough. Their team has great communication skills and they have regularly communicated with me throughout the whole process.</p>
-              </div>
-            </blockquote>
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-4-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Ann Lee</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>Your skilled team helped me make the dream of selling my old property a reality. The sale went smoothly, and I just closed on an ideal new place I am excited to call home. Thank you for your great services!</p>
-              </div>
-            </blockquote>
-            <blockquote class="quote-classic">
-              <div class="quote-classic-meta">
-                <div class="quote-classic-avatar"><img src="images/testimonials-person-5-96x96.jpg" alt="" width="96" height="96"/>
-                </div>
-                <div class="quote-classic-info">
-                  <cite class="quote-classic-cite">Peter Clarkson</cite>
-                  <p class="quote-classic-caption">Regular Client</p>
-                </div>
-              </div>
-              <div class="quote-classic-text">
-                <p>I have to say that inHouse has the best brokers we've ever worked with. Their professionalism, personality, attention to detail, responsiveness and ability to close the deal are outstanding!</p>
-              </div>
-            </blockquote>
-          </div>
-        </div>
-      </section>
+
       <footer class="section novi-background footer-advanced bg-gray-700">
         <div class="footer-advanced-main">
           <div class="container">
@@ -516,21 +295,21 @@ Nosso escritório está localizado na cidade de São Sepé, região centro do es
 Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e não custa nada.</p>
               </div>
               <div class="col-sm-7 col-md-5 col-lg-4">
-                <h5 class="font-weight-bold text-uppercase text-white">Recent Blog Posts</h5>
+                <h5 class="font-weight-bold text-uppercase text-white">|</h5>
                 <!-- Post Inline-->
                 <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Real Estate Guide: 7 Important Tips for Buying a Home</a></p>
+                  <p class="post-inline-title"><a href="#">|</a></p>
                   <ul class="post-inline-meta">
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
+                    <li>|</li>
+                    <li><a href="#">|</a></li>
                   </ul>
                 </article>
                 <!-- Post Inline-->
                 <article class="post-inline">
-                  <p class="post-inline-title"><a href="#">Single-Family Homes as a Housing Option for Young Families</a></p>
+                  <p class="post-inline-title"><a href="#">|</a></p>
                   <ul class="post-inline-meta"> 
-                    <li>by Mike Barnes</li>
-                    <li><a href="#">2 days ago</a></li>
+                    <li>|</li>
+                    <li><a href="#">|</a></li>
                   </ul>
                 </article>
               </div>
@@ -586,7 +365,7 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
           <div class="container">
             <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/15326-1676668491144.png" alt="" width="115" height="34" srcset="images/15326-1676668491144.png 2x"/></a>
               <!-- Rights-->
-              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+              <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="http://gustavogarciapareira.com.br">Gustavo G. Pereira</a></p>
               <p class="rights">Marcel Foletto Pereira Ltda</p>
               <p class="rights">CNPJ 446976830001-53</p>
             </div>
@@ -594,10 +373,195 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
         </div>
       </footer>
     </div>
+    <style>
+      .whatsapp-button {
+          position: fixed;
+          bottom: 20px;
+          left: 100px; /* Espaçamento de 100px da borda esquerda */
+          background-color: #25D366;
+          color: white;
+          padding: 10px;
+          border-radius: 50%;
+          text-align: center;
+          text-decoration: none;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .whatsapp-button img {
+          width: 24px;
+          height: 24px;
+      }
+      .whatsapp-button:hover {
+          background-color: #1ebe55;
+      }
+  </style>
+    <a href="https://wa.me/5555996313233?text=Gostaria%20de%20mais%20informações%20a%20MARPE%20esta%20aqui%20para%20te%20atender,%20entre%20em%20contato%20e%20faça%20a%20sua%20cotação" class="whatsapp-button" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-  </body>
+
+
+    <div class="modal fade" id="myModalAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-square">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="examplemyModalAuto">Cotação</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <iframe src="https://marpe.corretordigital.site/#/formularios/auto" width="100%" height="100%" frameborder="0"></iframe>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="modal fade" id="motoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-square">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe src="https://marpe.corretordigital.site/#/formularios/moto" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="caminhaoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/caminhao" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="residencialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/residencial" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="condominioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/condominio" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="empresarialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/empresarial" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+<div class="modal fade" id="vidaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/vida" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+<div class="modal fade" id="diversosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-square">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://marpe.corretordigital.site/#/formularios/diversos" width="100%" height="100%" frameborder="0"></iframe>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+
+</body>
 </html>
