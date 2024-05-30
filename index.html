@@ -419,162 +419,46 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 
+      <!-- Modals Container -->
+    <div id="modals-container"></div> 
 
-    <div class="modal fade" id="myModalAuto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-square">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="examplemyModalAuto">Cotação</h5>
+    <script>
+      const modals = [
+        { id: 'myModalAuto', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/auto' },
+        { id: 'motoModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/moto' },
+        { id: 'caminhaoModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/caminhao' },
+        { id: 'residencialModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/residencial' },
+        { id: 'condominioModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/condominio' },
+        { id: 'empresarialModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/empresarial' },
+        { id: 'vidaModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/vida' },
+        { id: 'diversosModal', title: 'Cotação', src: 'https://marpe.corretordigital.site/#/formularios/diversos' }
+      ];
+
+      const container = document.getElementById('modals-container');
+
+      modals.forEach(modal => {
+        const modalHtml = `
+          <div class="modal fade" id="${modal.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-square">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">${modal.title}</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <iframe src="https://marpe.corretordigital.site/#/formularios/auto" width="100%" height="100%" frameborder="0"></iframe>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="modal fade" id="motoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-square">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe src="${modal.src}" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
-            <div class="modal-body">
-                <iframe src="https://marpe.corretordigital.site/#/formularios/moto" width="100%" height="100%" frameborder="0"></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="caminhaoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
           </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/caminhao" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="modal fade" id="residencialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/residencial" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-
-</div>
-
-<div class="modal fade" id="condominioModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/condominio" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-
-</div>
-
-<div class="modal fade" id="empresarialModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/empresarial" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-
-</div>
-
-<div class="modal fade" id="vidaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/vida" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-
-</div>
-<div class="modal fade" id="diversosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-square">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cotação</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <iframe src="https://marpe.corretordigital.site/#/formularios/diversos" width="100%" height="100%" frameborder="0"></iframe>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-      </div>
-  </div>
-
-</div>
-
-
+        `;
+        container.insertAdjacentHTML('beforeend', modalHtml);
+      });
+    </script>
 </body>
 </html>
