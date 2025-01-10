@@ -79,9 +79,16 @@
                       </div>
                     </article>
                     <article class="unit align-items-center">
-                      <div class="unit-left"><span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span></div>
-                      <div class="unit-body"><a class="link-default" href="tel:#">Rua Visconde do Rio Branco, 1379 - Sala 01, <br>Centro - São Sepé/RS</a></div>
-                    </article><!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a>-->
+                      <div class="unit-left">
+                          <span class="icon novi-icon icon-md icon-modern mdi mdi-map-marker"></span>
+                      </div>
+                      <div class="unit-body">
+                          <a class="link-default" href="#" id="open-map-link">Rua Visconde do Rio Branco, 1379 - Sala 01, <br>Centro - São Sepé/RS</a>
+                      </div>
+                  </article>
+                  
+                  <!-- Adicione um container para o mapa -->
+                  <div id="map" style="width: 100%; height: 400px; display: none;"></div><!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a>-->
                   </div>
                 </div>
               </div>
@@ -392,7 +399,12 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
     .whatsapp-button:hover {
         background-color: #1ebe55;
     }
-    
+    #map {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+  }
+  
       
   </style>
     <a href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informações%20a%20MARPE%20esta%20aqui%20para%20te%20atender,%20entre%20em%20contato%20e%20faça%20a%20sua%20cotação" class="whatsapp-button" target="_blank">
@@ -445,5 +457,31 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
         container.insertAdjacentHTML('beforeend', modalHtml);
       });
     </script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  document.getElementById('open-map-link').addEventListener('click', function (event) {
+    event.preventDefault(); // Evita que o link padrão seja seguido
+
+    // Exibe o mapa
+    const mapContainer = document.getElementById('map');
+    mapContainer.style.display = 'block';
+
+    // Inicializa o mapa
+    const map = L.map('map').setView([-30.1641, -53.5654], 15); // Coordenadas de São Sepé, RS
+
+    // Adiciona o tile layer do OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Adiciona um marcador
+    L.marker([-30.1641, -53.5654]).addTo(map)
+        .bindPopup('Rua Visconde do Rio Branco, 1379 - Sala 01<br>Centro - São Sepé/RS')
+        .openPopup();
+});
+
+</script>
 </body>
 </html>
