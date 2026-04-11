@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="css/style.css" id="main-styles-link">
     <!--- Secure Site Seal - DO NOT EDIT --->
 <span id="ss_img_wrapper_115-55_image_en">
-  <a href="http://www.alphassl.com/ssl-certificates/wildcard-ssl.html" 
+  <a href="https://www.alphassl.com/ssl-certificates/wildcard-ssl.html"
   target="_blank" title="SSL Certificates">
   <img alt="Wildcard SSL Certificates" border=0 id="ss_img"
   src="//seal.alphassl.com/SiteSeal/images/alpha_noscript_115-55_en.gif"
@@ -54,23 +54,43 @@
   src="//seal.alphassl.com/SiteSeal/alpha_image_115-55_en.js"></script>
   <!--- Secure Site Seal - DO NOT EDIT --->
     <style>
-      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-      <style>
-        .modal-square {
-            max-width: 90%;
-            width: 800px; /* Define a fixed width */
-            height: 800px; /* Define a fixed height */
-        }
-        .modal-content {
-            height: 100%;
-        }
-        .modal-body {
-            height: calc(100% - 56px - 60px); /* Adjust for header and footer heights */
-            overflow-y: auto; /* Ensure scrolling if content overflows */
-        }
+      /* IE legacy panel */
+      .ie-panel { display: none; background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align: center; position: relative; z-index: 1; }
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display: block; }
+
+      /* Modais de cotação */
+      .modal-square { max-width: 90%; width: 800px; height: 90vh; }
+      .modal-content { height: 100%; }
+      .modal-body { height: calc(100% - 56px - 60px); overflow-y: auto; }
+      @media (max-width: 600px) {
+        .modal-square { height: 100vh; width: 100% !important; }
+      }
+
+      /* Botão fixo WhatsApp */
+      .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .whatsapp-button img { width: 36px; height: 36px; }
+      .whatsapp-button:hover { background-color: #1ebe55; }
+
+      /* Mapa inline */
+      #map { margin-top: 20px; border: 1px solid #ccc; border-radius: 8px; max-height: 50vh; }
     </style>
   </head>
-  <body>
+  <body id="top">
     <div class="ie-panel"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
       <div class="preloader-logo"><img src="images/15326-1676668491144.png" alt="Marpe Seguros — Corretora de Seguros" width="151" height="44" srcset="images/15326-1676668491144.png 2x"/>
@@ -236,9 +256,6 @@
           <div class="row row-35 row-xxl-70 offset-top-2">
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <!-- <article class="thumbnail-light"><a class="thumbnail-light-media" href="#"><img class="thumbnail-light-image" src="images/carro.jpg" alt="" width="270" height="300"/></a>
-                <h4 class="thumbnail-light-title"><a href="#">Auto</a></h4>
-              </article>-->
               <article class="thumbnail-light">
                 <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#myModalAuto">
                     <img class="thumbnail-light-image" src="images/carro.jpg" alt="Seguro Auto" width="270" height="300"/>
@@ -319,7 +336,7 @@
               <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">MELHORES OFERTAS</span></h3>
               <!-- <p class="heading-subtitle">of September</p>-->
               <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">Com uma variedade de seguros disponíveis em nossa corretora, você sempre pode escolher um que se encaixe perfeitamente nas suas necessidades.</span></p>
-              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#" data-wow-delay=".1s">Volte ao topo</a></div>
+              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#top" data-wow-delay=".1s">Volte ao topo</a></div>
             </div>
           </div>
         </div>
@@ -402,40 +419,6 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
         </div>
       </footer>
     </div>
-    <style>
-      .whatsapp-button {
-        position: fixed;
-        bottom: 20px;
-        left: 100px; /* Espaçamento de 100px da borda esquerda */
-        background-color: #25D366;
-        color: white;
-        padding: 15px; /* Aumentado 50% */
-        border-radius: 50%;
-        text-align: center;
-        text-decoration: none;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999; /* Garante que o botão fique acima de outros elementos */
-    }
-    
-    .whatsapp-button img {
-        width: 36px; /* Aumentado 50% */
-        height: 36px; /* Aumentado 50% */
-    }
-    
-    .whatsapp-button:hover {
-        background-color: #1ebe55;
-    }
-    #map {
-      margin-top: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-  }
-  
-      
-  </style>
     <a href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informações%20a%20MARPE%20esta%20aqui%20para%20te%20atender,%20entre%20em%20contato%20e%20faça%20a%20sua%20cotação" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
