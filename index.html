@@ -39,7 +39,7 @@
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="images/bannernovo.webp">
+    <link rel="preload" as="image" href="images/bannernovo.webp" fetchpriority="high">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700&display=swap">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -90,6 +90,17 @@
       }
       .whatsapp-button img { width: 36px; height: 36px; }
       .whatsapp-button:hover { background-color: #1ebe55; }
+
+      /* Reserva espaço para o hero antes do Swiper inicializar — elimina CLS */
+      .swiper-container {
+        min-height: 600px;
+        contain: layout;
+      }
+      @media (max-width: 768px) {
+        .swiper-container {
+          min-height: 400px;
+        }
+      }
 
       /* Mapa inline */
       #map { margin-top: 20px; border: 1px solid #ccc; border-radius: 8px; max-height: 50vh; }
