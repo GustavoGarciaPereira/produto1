@@ -54,6 +54,8 @@
   src="//seal.alphassl.com/SiteSeal/alpha_image_115-55_en.js"></script>
   <!--- Secure Site Seal - DO NOT EDIT --->
     <style>
+      html { scroll-behavior: smooth; }
+
       /* IE legacy panel */
       .ie-panel { display: none; background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align: center; position: relative; z-index: 1; }
       html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display: block; }
@@ -136,8 +138,9 @@
                       </div>
                   </article>
                   
-                  <!-- Adicione um container para o mapa -->
-                  <div id="map" style="width: 100%; height: 400px; display: none;"></div><!-- <a class="button button-gray-bordered button-winona" href="#">Request a call</a>-->
+                  <!-- Mapa inline -->
+                  <div id="map" style="width: 100%; height: 400px; display: none;"></div>
+                  <button id="close-map-btn" type="button" class="btn btn-sm btn-secondary" style="display:none; margin-top:8px;" aria-label="Fechar mapa">Fechar mapa</button>
                   </div>
                 </div>
               </div>
@@ -489,30 +492,46 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
       });
     </script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-  document.getElementById('open-map-link').addEventListener('click', function (event) {
-    event.preventDefault(); // Evita que o link padrão seja seguido
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+      (function () {
+        var mapInitialized = false;
+        var leafletMap = null;
+        var mapContainer = document.getElementById('map');
+        var closeBtn = document.getElementById('close-map-btn');
 
-    // Exibe o mapa
-    const mapContainer = document.getElementById('map');
-    mapContainer.style.display = 'block';
+        document.getElementById('open-map-link').addEventListener('click', function (event) {
+          event.preventDefault();
 
-    // Inicializa o mapa
-    const map = L.map('map').setView([-30.1641, -53.5654], 15); // Coordenadas de São Sepé, RS
+          if (mapContainer.style.display === 'block') {
+            mapContainer.style.display = 'none';
+            closeBtn.style.display = 'none';
+            return;
+          }
 
-    // Adiciona o tile layer do OpenStreetMap
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+          mapContainer.style.display = 'block';
+          closeBtn.style.display = 'inline-block';
 
-    // Adiciona um marcador
-    L.marker([-30.1641, -53.5654]).addTo(map)
-        .bindPopup('Rua Visconde do Rio Branco, 1379 - Sala 01<br>Centro - São Sepé/RS')
-        .openPopup();
-});
+          if (!mapInitialized) {
+            mapInitialized = true;
+            leafletMap = L.map('map').setView([-30.1641, -53.5654], 15);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              maxZoom: 19,
+              attribution: '© OpenStreetMap contributors'
+            }).addTo(leafletMap);
+            L.marker([-30.1641, -53.5654]).addTo(leafletMap)
+              .bindPopup('Rua Visconde do Rio Branco, 1379 - Sala 01<br>Centro - São Sepé/RS')
+              .openPopup();
+          } else {
+            leafletMap.invalidateSize();
+          }
+        });
 
-</script>
+        closeBtn.addEventListener('click', function () {
+          mapContainer.style.display = 'none';
+          closeBtn.style.display = 'none';
+        });
+      })();
+    </script>
 </body>
 </html>
