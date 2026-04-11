@@ -3,8 +3,9 @@
 * Trunk version 2.0.0
 */
 a:focus,
-button:focus {SOBRESOBRE
-	outline: none !important;
+button:focus {
+	outline: 2px solid #007bff;
+	outline-offset: 2px;
 }
 
 button::-moz-focus-inner {
@@ -12,7 +13,8 @@ button::-moz-focus-inner {
 }
 
 *:focus {
-	outline: none;
+	outline: 2px solid #007bff;
+	outline-offset: 2px;
 }
 
 blockquote {
