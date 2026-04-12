@@ -36,10 +36,11 @@ Apenas `index.html` está ativo. As páginas `about-us.html`, `contacts.html` e 
 | Preloader | Exibe o logo (`images/logo.webp`) durante carregamento. |
 | `rd-navbar` | Navbar responsiva com logo, número de WhatsApp e endereço clicável que abre mapa Leaflet inline. Ícones (WhatsApp, pin) são SVG inline. |
 | Slider hero | Swiper.js com 3 slides, todos usando `images/bannernovo.webp` como fundo, com efeito fade e autoplay a cada 5000ms. Há um `<img>` placeholder com `fetchpriority="high"` antes do `swiper-wrapper` para antecipar o LCP. |
-| Seção de diferenciais | 3 cards: "Funcionários Qualificados", "Consultas Gratuitas", "100% Garantido". Ícones são SVG inline. |
+| Seção de diferenciais | 3 cards (`section-md bg-gray-100`): "Funcionários Qualificados", "Consultas Gratuitas", "100% Garantido". Ícones SVG inline com 48×48px e cor `#0d6efd`. |
+| Seção "Faça uma Cotação" | Título + subtítulo + 6 botões de ação rápida que disparam diretamente os modais (Auto, Moto, Residencial, Empresarial, Vida, Outros). |
 | **Seção de serviços** | 8 cards de seguros — cada um abre um modal Bootstrap com iframe de cotação (lazy load). |
 | Banner "Melhores Ofertas" | Seção com fundo `images/banner9.png`, botão "Volte ao topo". |
-| Footer | Texto institucional, links sociais (SVG inline), logo e copyright. |
+| Footer | 2 colunas: "Sobre nós" (col-lg-7) + "Contato" com WhatsApp, endereço e redes sociais (col-lg-5). Rodapé inferior com `flex-wrap` e `gap:12px`. |
 | Botão WhatsApp fixo | `position: fixed`, canto inferior esquerdo (100px da borda), cor `#25D366`. |
 | `#modals-container` | Todos os modais são gerados dinamicamente por JS inline no fim do body, dentro de `DOMContentLoaded`. |
 | Mapa Leaflet | Carregado sob demanda ao clicar no endereço; coordenadas fixas `[-30.1641, -53.5654]`. |
@@ -110,7 +111,7 @@ Imagens ativas usadas pelo site (todas em WebP):
 | `images/condominio.webp` | Card Condomínio |
 | `images/empresarial.webp` | Card Empresarial |
 | `images/vida.webp` | Card Vida |
-| `images/diversos.webp` | Card Diversos |
+| `images/diversos.webp` | Card Diversos (foto Unsplash — pessoa assinando documento, 800×600px) |
 | `images/icon_whatsapp.webp` | Botão WhatsApp fixo |
 
 Os originais `.jpg`/`.png` foram mantidos em disco como backup. As demais imagens em `images/` são resíduos do template original e não estão em uso.
@@ -147,6 +148,7 @@ Resumo das otimizações já feitas — não refazer sem necessidade:
 | LCP placeholder | `<img fetchpriority="high">` do banner hero inserido antes do `swiper-wrapper` para antecipar renderização sem aguardar o JS do Swiper. |
 | `font-display: swap` | Adicionado nos 4 blocos `@font-face` de `fonts.css` e já presente na URL do Google Fonts (`&display=swap`). |
 | Dimensões SSL Seal | `width="115" height="55"` adicionados na `<img>` do AlphaSSL para eliminar CLS. |
+| Melhorias visuais | Seção "Faça uma Cotação" com 6 botões de ação rápida; ícones SVG dos diferenciais com cor e tamanho explícitos; footer reestruturado em 2 colunas com conteúdo real; `section-lg` → `section-md` nos diferenciais; imagem `diversos.webp` substituída por foto real. |
 
 ---
 
