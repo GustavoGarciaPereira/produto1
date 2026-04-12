@@ -467,6 +467,7 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
     <div id="modals-container"></div>
 
     <script>
+      document.addEventListener('DOMContentLoaded', function() {
       const modals = [
         { id: 'myModalAuto',      labelId: 'modalLabelAuto',       title: 'Cotação — Seguro Auto',        iframeTitle: 'Formulário de cotação — Seguro Auto',        src: 'https://marpe.corretordigital.site/#/formularios/auto' },
         { id: 'motoModal',        labelId: 'modalLabelMoto',       title: 'Cotação — Seguro de Moto',     iframeTitle: 'Formulário de cotação — Seguro de Moto',     src: 'https://marpe.corretordigital.site/#/formularios/moto' },
@@ -502,13 +503,16 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
 
         const body = document.createElement('div');
         body.className = 'modal-body';
+        body.style.height = '700px';
+        body.style.padding = '0';
         const iframe = document.createElement('iframe');
-        iframe.width = '100%';
-        iframe.height = '100%';
+        iframe.style.width = '100%';
+        iframe.style.height = '700px';
         iframe.style.border = 'none';
+        iframe.style.display = 'block';
         iframe.title = modal.iframeTitle;
-        iframe.setAttribute('sandbox', 'allow-forms allow-scripts allow-same-origin');
-        iframe.src = modal.src;
+        // sandbox removido — corretordigital.site é serviço próprio via HTTPS e o Angular requer permissões amplas
+        // src não é definido aqui — lazy load via evento shown.bs.modal
         body.appendChild(iframe);
 
         const footer = document.createElement('div');
@@ -521,7 +525,19 @@ Contate-nos, tire suas dúvidas e faça um orçamento. É simples, rápido e nã
         dialog.appendChild(content);
         el.appendChild(dialog);
         container.appendChild(el);
-      });
+
+        // Lazy load: injeta src APÓS animação completar, limpa ao fechar (destrói reCAPTCHA/Angular)
+        // Usa jQuery porque Bootstrap 4 emite eventos de modal via $.fn.trigger, não via dispatchEvent
+        $(el).on('shown.bs.modal', function() {
+          if (!iframe.src || iframe.src === window.location.href) {
+            iframe.src = modal.src;
+          }
+        });
+        $(el).on('hidden.bs.modal', function() {
+          iframe.src = '';
+        });
+      }); // fim modals.forEach
+      }); // fim DOMContentLoaded
     </script>
     <script>
       (function () {
