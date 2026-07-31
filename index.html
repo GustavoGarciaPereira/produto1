@@ -10,6 +10,10 @@
     <meta property="og:title" content="Marpe Seguros — Corretora de Seguros em São Sepé, RS">
     <meta property="og:description" content="Corretora de seguros em São Sepé, RS. Seguros auto, moto, caminhão, residencial, empresarial, vida e mais. Cotação grátis.">
     <meta property="og:image" content="https://www.marpeseguros.com.br/images/bannernovo.jpeg">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="609">
+    <meta property="og:site_name" content="Marpe Seguros">
+    <meta property="og:locale" content="pt_BR">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
     {
@@ -18,18 +22,47 @@
       "name": "Marpe Corretora de Seguros",
       "legalName": "Marcel Foletto Pereira Ltda",
       "url": "https://www.marpeseguros.com.br",
+      "@id": "https://www.marpeseguros.com.br/#insurance-agency",
+      "image": "https://www.marpeseguros.com.br/images/bannernovo.webp",
+      "logo": "https://www.marpeseguros.com.br/images/logo.webp",
       "telephone": "+55-55-99150-4477",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Visconde do Rio Branco, 1379 - Sala 01",
         "addressLocality": "São Sepé",
         "addressRegion": "RS",
+        "postalCode": "97340-000",
         "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -30.1641,
+        "longitude": -53.5654
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "São Sepé, RS"
       },
       "sameAs": [
         "https://facebook.com/marpeseguros",
         "https://instagram.com/marpeseguros"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de seguros e consórcios",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Auto" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Moto" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Caminhão" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Residencial" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Condomínio" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Empresarial" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Vida" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguros Diversos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consórcios" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Crédito" } }
+        ]
+      }
     }
     </script>
     <meta name="format-detection" content="telephone=no">
@@ -37,11 +70,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#0d6efd">
     <link rel="preload" as="image" href="images/bannernovo.webp" fetchpriority="high">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700&display=swap">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="preload" href="fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/work-sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css" id="main-styles-link">
     <!--- Secure Site Seal - DO NOT EDIT --->
 <span id="ss_img_wrapper_115-55_image_en">
@@ -49,7 +84,7 @@
   target="_blank" title="SSL Certificates">
   <img alt="Wildcard SSL Certificates" border=0 id="ss_img" width="115" height="55"
   src="//seal.alphassl.com/SiteSeal/images/alpha_noscript_115-55_en.gif"
-  title="SSL Certificate" width="65" height="55">
+  title="SSL Certificate">
   </a>
   </span>
   <script type="text/javascript"
@@ -58,16 +93,32 @@
     <style>
       html { scroll-behavior: smooth; }
 
-      /* IE legacy panel */
-      .ie-panel { display: none; background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align: center; position: relative; z-index: 1; }
-      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel { display: block; }
+      /* IE legacy panel (removido — imagem não existia e IE está descontinuado) */
 
       /* Modais de cotação */
       .modal-square { max-width: 90%; width: 800px; height: 90vh; }
       .modal-content { height: 100%; }
-      .modal-body { height: calc(100% - 56px - 60px); overflow-y: auto; }
+      .modal-square .modal-body { height: calc(100% - 56px - 60px); padding: 0; overflow-y: auto; }
+      .modal-square .modal-body iframe { width: 100%; height: 100%; border: none; display: block; }
       @media (max-width: 600px) {
-        .modal-square { height: 100vh; width: 100% !important; }
+        .modal-square { height: 100vh; width: 100% !important; margin: 0 !important; }
+      }
+
+      /* Botões secundários (Fechar) dos modais — classe ausente do bootstrap.css original */
+      .btn-secondary { color: #fff; background-color: #6c757d; border-color: #6c757d; }
+      .btn-secondary:hover { color: #fff; background-color: #5a6268; border-color: #545b62; }
+
+      /* Esconde o botão flutuante do WhatsApp enquanto um modal de cotação estiver aberto */
+      .modal-open .whatsapp-button { display: none; }
+
+      /* Respeita a preferência do usuário por menos movimento */
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
       }
 
       /* Botão fixo WhatsApp */
@@ -110,10 +161,30 @@
       /* Footer inferior */
       .footer-advanced-layout { flex-wrap: wrap; gap: 12px; align-items: center; }
       .footer-advanced-layout .rights { margin-bottom: 0; }
+
+      /* Descrição curta nos cards de serviços */
+      .thumbnail-light-text {
+        margin-top: 8px;
+        font-size: 14px;
+      }
+
+      /* Barra superior (logo + contato) com mais destaque */
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
+        border-bottom: 1px solid #e8e9ee;
+      }
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img {
+        max-height: 104px;
+        width: auto;
+        height: auto;
+      }
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
     </style>
   </head>
   <body id="top">
-    <div class="ie-panel"><a href="https://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <a class="sr-only sr-only-focusable" href="#main">Pular para o conteúdo</a>
     <div class="preloader">
       <div class="preloader-logo"><img src="images/logo.webp" alt="Marpe Seguros — Corretora de Seguros" width="180" height="60" srcset="images/logo.webp 2x"/>
       </div>
@@ -134,18 +205,18 @@
                 <!-- RD Navbar Panel-->
                 <div class="rd-navbar-panel">
                   <!-- RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1" aria-label="Abrir menu"><span></span></button>
                   <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="images/logo.webp" alt="Marpe Seguros — Corretora de Seguros" width="180" height="60" srcset="images/logo.webp 2x"/></a>
                 </div>
                 <div class="rd-navbar-collapse">
-                  <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
+                  <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1" aria-label="Mostrar contatos"><span></span></button>
                   <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
                     <article class="unit align-items-center">
                       <div class="unit-left"><span class="icon novi-icon icon-md icon-modern"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span></div>
                       <div class="unit-body">
                         <ul class="list-0">
                           
-                          <li><a class="link-default" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informações%20a%20MARPE%20esta%20aqui%20para%20te%20atender,%20entre%20em%20contato%20e%20faça%20a%20sua%20cotação">55991504477</a></li>
+                          <li><a class="link-default" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o">55991504477</a></li>
                         </ul>
                       </div>
                     </article>
@@ -170,14 +241,7 @@
                 <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
-                    </li>
-                    <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">Sobre nós</a> -->
-                    </li>
-                    <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Typography</a>-->
-                    </li>
-                    <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">CONTATO</a> -->
-                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
                   </ul>
                 </div>
               </div>
@@ -185,7 +249,7 @@
           </nav>
         </div>
       </header>
-      <section class="section swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="5000" data-simulate-touch="true">
+      <section id="main" class="section swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="5000" data-simulate-touch="true">
         <img src="images/bannernovo.webp" alt="" aria-hidden="true" fetchpriority="high" width="1920" height="800" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide_video" data-slide-bg="images/bannernovo.webp">
@@ -206,7 +270,7 @@
                 <div class="wow-outer">
                   <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Segurança e confiança</div>
                 </div>
-                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Juntos por você</span></h1>
+                <h2 class="heading-1 text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Juntos por você</span></h2>
                 <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Oferecemos soluções completas para proteger o que você ama.</span></p>
                 <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#services" data-wow-delay=".4s">Conheça nossos serviços</a></div>
               </div>
@@ -218,7 +282,7 @@
                 <div class="wow-outer">
                   <div class="title-docor-text font-weight-bold title-decorated text-uppercase wow slideInLeft text-white">Sua proteção</div>
                 </div>
-                <h1 class="text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Nossa missão</span></h1>
+                <h2 class="heading-1 text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Nossa missão</span></h2>
                 <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Confie na Marpe Corretora de Seguros para cuidar do que é mais importante.</span></p>
                 <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#footer" data-wow-delay=".4s">Entre em contato</a></div>
               </div>
@@ -228,20 +292,6 @@
         
         <div class="swiper-pagination-outer container">
           <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
-        </div>
-      </section>
-      <section class="section novi-background section-md text-center">
-        <div class="container">
-          <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Faça uma Cotação</span></h3>
-          <p class="text-muted">Escolha o tipo de seguro e receba sua cotação gratuitamente</p>
-          <div class="row justify-content-center offset-top-3" style="gap:10px 0">
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#myModalAuto">Auto</a></div>
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#motoModal">Moto</a></div>
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#residencialModal">Residencial</a></div>
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#empresarialModal">Empresarial</a></div>
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#vidaModal">Vida</a></div>
-            <div class="col-auto"><a class="button button-sm button-primary button-winona" href="#" data-toggle="modal" data-target="#diversosModal">Outros</a></div>
-          </div>
         </div>
       </section>
       <section class="section novi-background section-md bg-gray-100">
@@ -283,78 +333,101 @@
       <!-- Services-->
       <section id="services" class="section novi-background section-lg text-center">
         <div class="container">
-          <h3 class="text-uppercase">Nossos serviços</h3>
-          <p><span class="text-width-1">Trabalhando com esses serviços descritos abaixo</span></p>
+          <h3 class="text-uppercase">Conheça e cote os nossos serviços</h3>
+          <p><span class="text-width-1">Conheça cada um dos nossos seguros e solicite sua cotação gratuita</span></p>
           <div class="row row-35 row-xxl-70 offset-top-2">
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#myModalAuto">
+                <a class="thumbnail-light-media" href="#myModalAuto" data-toggle="modal" data-target="#myModalAuto">
                     <img class="thumbnail-light-image" src="images/carro.jpg" alt="Seguro Auto" width="400" height="300" loading="lazy"/>
                 </a>
-                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#myModalAuto">Auto</a></h4>
+                <h4 class="thumbnail-light-title"><a href="#myModalAuto" data-toggle="modal" data-target="#myModalAuto">Auto</a></h4>
+                <p class="thumbnail-light-text text-muted">Proteção completa para seu carro contra acidentes, roubo e danos a terceiros.</p>
             </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                  <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#motoModal">
+                  <a class="thumbnail-light-media" href="#motoModal" data-toggle="modal" data-target="#motoModal">
                       <img class="thumbnail-light-image" src="images/moto.webp" alt="Seguro de Moto" width="400" height="300" loading="lazy"/>
                   </a>
                   <h4 class="thumbnail-light-title">
-                      <a href="#" data-toggle="modal" data-target="#motoModal">Moto</a>
+                      <a href="#motoModal" data-toggle="modal" data-target="#motoModal">Moto</a>
                   </h4>
+                  <p class="thumbnail-light-text text-muted">Cobertura sob medida para sua moto, com preços acessíveis e assistência 24h.</p>
               </article>
           </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#caminhaoModal">
+                <a class="thumbnail-light-media" href="#caminhaoModal" data-toggle="modal" data-target="#caminhaoModal">
                   <img class="thumbnail-light-image" src="images/caminhao.jpg" alt="Seguro de Caminhão" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title">
-                  <a href="#" data-toggle="modal" data-target="#caminhaoModal">Caminhão</a></h4>
+                  <a href="#caminhaoModal" data-toggle="modal" data-target="#caminhaoModal">Caminhão</a></h4>
+                <p class="thumbnail-light-text text-muted">Seguro para caminhões e frotas, protegendo sua carga e seu sustento.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#residencialModal">
+                <a class="thumbnail-light-media" href="#residencialModal" data-toggle="modal" data-target="#residencialModal">
                   <img class="thumbnail-light-image" src="images/residencial.webp" alt="Seguro Residencial" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title">
-                  <a href="#" data-toggle="modal" data-target="#residencialModal">Residencial</a>
-                  
+                  <a href="#residencialModal" data-toggle="modal" data-target="#residencialModal">Residencial</a>
                 </h4>
+                <p class="thumbnail-light-text text-muted">Proteja sua casa contra incêndio, roubo e danos elétricos.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
               <article class="thumbnail-light">
-                <a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#condominioModal">
+                <a class="thumbnail-light-media" href="#condominioModal" data-toggle="modal" data-target="#condominioModal">
                   <img class="thumbnail-light-image" src="images/condominio.webp" alt="Seguro de Condomínio" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title">
-                  <a href="#" data-toggle="modal" data-target="#condominioModal">Condomínio</a></h4>
+                  <a href="#condominioModal" data-toggle="modal" data-target="#condominioModal">Condomínio</a></h4>
+                <p class="thumbnail-light-text text-muted">Cobertura completa para as áreas comuns e unidades do seu condomínio.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#empresarialModal"><img class="thumbnail-light-image" src="images/empresarial.webp" alt="Seguro Empresarial" width="400" height="300" loading="lazy"/></a>
-                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#empresarialModal">Empresarial</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#empresarialModal" data-toggle="modal" data-target="#empresarialModal"><img class="thumbnail-light-image" src="images/empresarial.webp" alt="Seguro Empresarial" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title"><a href="#empresarialModal" data-toggle="modal" data-target="#empresarialModal">Empresarial</a></h4>
+                <p class="thumbnail-light-text text-muted">Proteção para o seu negócio contra incêndio, roubo e responsabilidade civil.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#vidaModal"><img class="thumbnail-light-image" src="images/vida.webp" alt="Seguro de Vida" width="400" height="300" loading="lazy"/></a>
-                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#vidaModal">Vida</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#vidaModal" data-toggle="modal" data-target="#vidaModal"><img class="thumbnail-light-image" src="images/vida.webp" alt="Seguro de Vida" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title"><a href="#vidaModal" data-toggle="modal" data-target="#vidaModal">Vida</a></h4>
+                <p class="thumbnail-light-text text-muted">Garanta o futuro da sua família com um seguro de vida completo.</p>
               </article>
             </div>
             
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#" data-toggle="modal" data-target="#diversosModal"><img class="thumbnail-light-image" src="images/diversos.webp" alt="Seguros Diversos" width="400" height="300" loading="lazy"/></a>
-                <h4 class="thumbnail-light-title"><a href="#" data-toggle="modal" data-target="#diversosModal">Diversos</a></h4>
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#diversosModal" data-toggle="modal" data-target="#diversosModal"><img class="thumbnail-light-image" src="images/diversos.webp" alt="Seguros Diversos" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title"><a href="#diversosModal" data-toggle="modal" data-target="#diversosModal">Diversos</a></h4>
+                <p class="thumbnail-light-text text-muted">Seguros para bike, celular, viagem e muito mais, sob medida para você.</p>
               </article>
             </div>
-            
+
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal"><img class="thumbnail-light-image" src="images/consorcio.webp" alt="Consórcio" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title"><a href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Consórcios</a></h4>
+                <p class="thumbnail-light-text text-muted">Conquiste seu carro ou seu imóvel sem juros, com parcelas que cabem no seu bolso.</p>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#creditoModal" data-toggle="modal" data-target="#creditoModal"><img class="thumbnail-light-image" src="images/credito.webp" alt="Crédito" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title"><a href="#creditoModal" data-toggle="modal" data-target="#creditoModal">Crédito</a></h4>
+                <p class="thumbnail-light-text text-muted">Crédito pessoal facilitado para você realizar seus projetos com tranquilidade.</p>
+              </article>
+            </div>
+
             <!-- <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view all properties</a></div>-->
           </div>
         </div>
@@ -368,7 +441,10 @@
               <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">MELHORES OFERTAS</span></h3>
               <!-- <p class="heading-subtitle">of September</p>-->
               <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">Com uma variedade de seguros disponíveis em nossa corretora, você sempre pode escolher um que se encaixe perfeitamente nas suas necessidades.</span></p>
-              <div class="wow-outer button-outer"><a class="button button-primary-white button-winona wow slideInDown" href="#top" data-wow-delay=".1s">Volte ao topo</a></div>
+              <div class="wow-outer button-outer">
+                <a class="button button-primary-white button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" data-wow-delay=".1s">Cote agora pelo WhatsApp</a>
+                <a class="button button-primary-outline button-winona wow slideInDown" href="#top" data-wow-delay=".2s">Volte ao topo</a>
+              </div>
             </div>
           </div>
         </div>
@@ -407,10 +483,6 @@
               <div>
                 <ul class="list-nav">
                   <li><a href="index.html">Home</a></li>
-                  <!-- <li><a href="about-us.html">SOBRE</a></li> -->
-                  <!--  <li><a href="#">Properties</a></li>-->
-                  <!-- <li><a href="#">Blog</a></li>-->
-                  <!-- <li><a href="contacts.html">CONTATO</a></li> -->
                 </ul>
               </div>
               <div>
@@ -437,19 +509,19 @@
         </div>
       </footer>
     </div>
-    <a href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informações%20a%20MARPE%20esta%20aqui%20para%20te%20atender,%20entre%20em%20contato%20e%20faça%20a%20sua%20cotação" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
+    <a href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o" class="whatsapp-button" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
       <img src="images/icon_whatsapp.webp" alt="WhatsApp" width="50" height="50">
     </a>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <!-- jQuery 3 (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous" defer></script>
     <!-- Bootstrap 4 JS (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous" defer></script>
     <!-- WOW.js (CDN) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha384-V27yAyb3yYhZbiwaK9Sgxh9Cywkf/H2al4wcrcp/hKF9ZYT7d5saGJFoO/0v1Cgs" crossorigin="anonymous" defer></script>
     <!-- device.js — adiciona classe desktop ao <html>, necessário para WOW.js -->
     <script src="js/device.min.js" defer></script>
     <!-- UItoTop — evita TypeError no console -->
@@ -462,7 +534,7 @@
     <script src="js/stubs.min.js" defer></script>
     <!-- Page Transition / Preloader (local) -->
     <script src="js/page-transition.min.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/script.min.js" defer></script>
 
       <!-- Modals Container -->
     <div id="modals-container"></div>
@@ -477,7 +549,9 @@
         { id: 'condominioModal',  labelId: 'modalLabelCondominio', title: 'Cotação — Seguro de Condomínio',iframeTitle: 'Formulário de cotação — Seguro de Condomínio',src: 'https://marpe.corretordigital.site/#/formularios/condominio' },
         { id: 'empresarialModal', labelId: 'modalLabelEmpresarial',title: 'Cotação — Seguro Empresarial', iframeTitle: 'Formulário de cotação — Seguro Empresarial', src: 'https://marpe.corretordigital.site/#/formularios/empresarial' },
         { id: 'vidaModal',        labelId: 'modalLabelVida',       title: 'Cotação — Seguro de Vida',     iframeTitle: 'Formulário de cotação — Seguro de Vida',     src: 'https://marpe.corretordigital.site/#/formularios/vida' },
-        { id: 'diversosModal',    labelId: 'modalLabelDiversos',   title: 'Cotação — Seguros Diversos',   iframeTitle: 'Formulário de cotação — Seguros Diversos',   src: 'https://marpe.corretordigital.site/#/formularios/diversos' }
+        { id: 'diversosModal',    labelId: 'modalLabelDiversos',   title: 'Cotação — Seguros Diversos',   iframeTitle: 'Formulário de cotação — Seguros Diversos',   src: 'https://marpe.corretordigital.site/#/formularios/diversos' },
+        { id: 'consorcioModal',   labelId: 'modalLabelConsorcio',  title: 'Cotação — Consórcios',         iframeTitle: 'Formulário de cotação — Consórcios',         src: 'https://marpe.corretordigital.site/#/formularios/consorcio' },
+        { id: 'creditoModal',     labelId: 'modalLabelCredito',    title: 'Cotação — Crédito',            iframeTitle: 'Formulário de cotação — Crédito',            src: 'https://marpe.corretordigital.site/#/formularios/credito' }
       ];
 
       const container = document.getElementById('modals-container');
@@ -504,13 +578,7 @@
 
         const body = document.createElement('div');
         body.className = 'modal-body';
-        body.style.height = '700px';
-        body.style.padding = '0';
         const iframe = document.createElement('iframe');
-        iframe.style.width = '100%';
-        iframe.style.height = '700px';
-        iframe.style.border = 'none';
-        iframe.style.display = 'block';
         iframe.title = modal.iframeTitle;
         // sandbox removido — corretordigital.site é serviço próprio via HTTPS e o Angular requer permissões amplas
         // src não é definido aqui — lazy load via evento shown.bs.modal
@@ -539,6 +607,17 @@
         });
       }); // fim modals.forEach
       }); // fim DOMContentLoaded
+    </script>
+    <script>
+      // Fallback: esconde o preloader em até 2,5s mesmo se window.load demorar (rede lenta/CDN)
+      document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+          var preloader = document.querySelector('.preloader');
+          if (preloader && !preloader.classList.contains('loaded')) {
+            preloader.classList.add('loaded');
+          }
+        }, 2500);
+      });
     </script>
     <script>
       (function () {

@@ -5,3 +5,18 @@ bat/
 b/
 bkbat/*
 bkb/*
+
+# Backups locais de imagens (não publicar — os .webp são os usados)
+images/15326-1676668491144.png
+images/condominio.jpg
+images/diversos.png
+images/empresarial.jpg
+images/residencial.jpg
+images/vida.jpg
+images/icon_whatsapp.png
+
+# Diretório local do Claude Code
+.claude/
+
+# Config local da ferramenta de edição
+reasonix.toml
