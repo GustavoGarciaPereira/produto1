@@ -69,7 +69,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/logo-favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <meta name="theme-color" content="#0d6efd">
     <link rel="preload" as="image" href="images/bannernovo.webp" fetchpriority="high">
@@ -152,12 +152,6 @@
         }
       }
 
-      /* Mapa inline */
-      #map { margin-top: 20px; border: 1px solid #ccc; border-radius: 8px; max-height: 50vh; }
-
-      /* Ícones SVG dos diferenciais */
-      .box-chloe__icon svg { width: 48px; height: 48px; color: #0d6efd; }
-
       /* Footer inferior */
       .footer-advanced-layout { flex-wrap: wrap; gap: 12px; align-items: center; }
       .footer-advanced-layout .rights { margin-bottom: 0; }
@@ -166,6 +160,11 @@
       .thumbnail-light-text {
         margin-top: 8px;
         font-size: 14px;
+      }
+
+      /* Barra do menu (rd-navbar-main-outer) um pouco mais escura p/ usabilidade */
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
+        background: rgba(51, 51, 51, 0.3);
       }
 
       /* Barra superior (logo + contato) com mais destaque */
@@ -220,18 +219,7 @@
                         </ul>
                       </div>
                     </article>
-                    <article class="unit align-items-center">
-                      <div class="unit-left">
-                          <span class="icon novi-icon icon-md icon-modern"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></span>
-                      </div>
-                      <div class="unit-body">
-                          <a class="link-default" href="#" id="open-map-link" aria-label="Ver localização no mapa">Rua Visconde do Rio Branco, 1379 - Sala 01, <br>Centro - São Sepé/RS</a>
-                      </div>
-                  </article>
-                  
-                  <!-- Mapa inline -->
-                  <div id="map" style="width: 100%; height: 400px; display: none;"></div>
-                  <button id="close-map-btn" type="button" class="btn btn-sm btn-secondary" style="display:none; margin-top:8px;" aria-label="Fechar mapa">Fechar mapa</button>
+
                   </div>
                 </div>
               </div>
@@ -242,6 +230,12 @@
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Seguros</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Consórcios</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Créditos</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#cartas-contempladas">Cartas Contempladas</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#footer">Sobre Nós</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="https://marpe.corretordigital.site" target="_blank" rel="noopener noreferrer">Portal do Parceiro</a></li>
                   </ul>
                 </div>
               </div>
@@ -292,42 +286,6 @@
         
         <div class="swiper-pagination-outer container">
           <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
-        </div>
-      </section>
-      <section class="section novi-background section-md bg-gray-100">
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Minimal-->
-              <article class="box-minimal">
-                <div class="box-chloe__icon novi-icon wow fadeIn"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg></div>
-                <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown">Funcionários Qualificados</h4>
-                  <p class="wow fadeInUpSmall">Nossa equipe é composta por corretores de seguros e gerentes de propriedade altamente qualificados e experientes, prontos para ajudar você.</p>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Minimal-->
-              <article class="box-minimal">
-                <div class="box-chloe__icon novi-icon wow fadeIn" data-wow-delay=".1s"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3 11H7v-2h10v2zm0-3H7V8h10v2z"/></svg></div>
-                <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".1s">Consultas Gratuitas</h4>
-                  <p class="wow fadeInUpSmall" data-wow-delay=".1s">Nosso atendimento ao cliente sempre começa com uma consulta gratuita para entender quais são suas necessidades de seguro e oferecer a melhor solução.</p>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 wow-outer">
-              <!-- Box Minimal-->
-              <article class="box-minimal">
-                <div class="box-chloe__icon novi-icon wow fadeIn" data-wow-delay=".2s"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></div>
-                <div class="box-minimal-main wow-outer">
-                  <h4 class="box-minimal-title wow slideInDown" data-wow-delay=".2s">100% Garantido</h4>
-                  <p class="wow fadeInUpSmall" data-wow-delay=".2s">Todos os serviços que você recebe de nossos corretores são 100% garantidos para oferecer as melhores opções de seguros disponíveis no mercado.</p>
-                </div>
-              </article>
-            </div>
-          </div>
         </div>
       </section>
       <!-- Services-->
@@ -429,6 +387,17 @@
             </div>
 
             <!-- <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">view all properties</a></div>-->
+          </div>
+        </div>
+      </section>
+
+      <!-- Cartas Contempladas-->
+      <section id="cartas-contempladas" class="section novi-background section-lg text-center">
+        <div class="container">
+          <h3 class="text-uppercase">Cartas Contempladas</h3>
+          <p><span class="text-width-1">Adquira ou venda sua carta contemplada de veículos e imóveis com segurança e transparência. Com a Marpe, você conta com intermediação especializada, análise criteriosa e acompanhamento em todo o processo — para receber seu bem na hora, sem depender de sorteio e com condições que cabem no seu bolso.</span></p>
+          <div class="wow-outer button-outer">
+            <a class="button button-primary button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cartas%20Contempladas" target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a>
           </div>
         </div>
       </section>
@@ -618,65 +587,6 @@
           }
         }, 2500);
       });
-    </script>
-    <script>
-      (function () {
-        var leafletLoaded = false;
-        var mapInitialized = false;
-        var leafletMap = null;
-        var mapContainer = document.getElementById('map');
-        var closeBtn = document.getElementById('close-map-btn');
-
-        function initMap() {
-          mapInitialized = true;
-          leafletMap = L.map('map').setView([-30.1641, -53.5654], 15);
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap contributors'
-          }).addTo(leafletMap);
-          L.marker([-30.1641, -53.5654]).addTo(leafletMap)
-            .bindPopup('Rua Visconde do Rio Branco, 1379 - Sala 01<br>Centro - São Sepé/RS')
-            .openPopup();
-        }
-
-        function loadLeaflet(callback) {
-          if (leafletLoaded) { callback(); return; }
-          var css = document.createElement('link');
-          css.rel = 'stylesheet';
-          css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-          document.head.appendChild(css);
-          var js = document.createElement('script');
-          js.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-          js.onload = function () { leafletLoaded = true; callback(); };
-          document.body.appendChild(js);
-        }
-
-        document.getElementById('open-map-link').addEventListener('click', function (event) {
-          event.preventDefault();
-
-          if (mapContainer.style.display === 'block') {
-            mapContainer.style.display = 'none';
-            closeBtn.style.display = 'none';
-            return;
-          }
-
-          mapContainer.style.display = 'block';
-          closeBtn.style.display = 'inline-block';
-
-          loadLeaflet(function () {
-            if (!mapInitialized) {
-              initMap();
-            } else {
-              leafletMap.invalidateSize();
-            }
-          });
-        });
-
-        closeBtn.addEventListener('click', function () {
-          mapContainer.style.display = 'none';
-          closeBtn.style.display = 'none';
-        });
-      })();
     </script>
 </body>
 </html>
