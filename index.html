@@ -162,23 +162,165 @@
         font-size: 14px;
       }
 
-      /* Barra do menu (rd-navbar-main-outer) um pouco mais escura p/ usabilidade */
-      .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
-        background: rgba(51, 51, 51, 0.3);
-      }
-
       /* Barra superior (logo + contato) com mais destaque */
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside-outer {
+        background: #ffffff;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      }
       .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
-        border-bottom: 1px solid #e8e9ee;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-bottom: none;
       }
       .rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img {
-        max-height: 104px;
+        max-height: 90px;
         width: auto;
         height: auto;
+        transition: transform 0.3s ease;
       }
-      .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
-        padding-top: 20px;
-        padding-bottom: 20px;
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img:hover {
+        transform: scale(1.02);
+      }
+
+      /* Badge de Contato no Header */
+      .rd-navbar-collapse-content .unit {
+        background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(37, 211, 102, 0.18) 100%);
+        border: 1px solid rgba(37, 211, 102, 0.35);
+        padding: 8px 20px;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(37, 211, 102, 0.12);
+      }
+      .rd-navbar-collapse-content .unit:hover {
+        background: linear-gradient(135deg, rgba(37, 211, 102, 0.18) 0%, rgba(37, 211, 102, 0.32) 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+      }
+      .rd-navbar-collapse-content .unit .icon {
+        color: #25D366 !important;
+        font-size: 22px;
+      }
+      .rd-navbar-collapse-content .link-default {
+        color: #12572b !important;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        text-decoration: none !important;
+      }
+
+      /* Barra principal do Menu (rd-navbar-main-outer) — Destaque Premium */
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-main-outer {
+        background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%) !important;
+        border-bottom: 3px solid #0d6efd;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+      }
+
+      /* Navbar Fixa / Stuck */
+      .rd-navbar-corporate.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-main-outer,
+      .rd-navbar-corporate.rd-navbar-static.rd-navbar--is-clone .rd-navbar-main-outer {
+        background: linear-gradient(135deg, #071322 0%, #0d233a 100%) !important;
+        border-bottom: 3px solid #0d6efd;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-main {
+        padding: 8px 0;
+      }
+
+      /* Itens e Links do Menu */
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+      @media (min-width: 1200px) {
+        .rd-navbar-corporate.rd-navbar-static .rd-nav-item + .rd-nav-item {
+          margin-left: 4px !important;
+        }
+      }
+
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-link {
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #f1f5f9 !important;
+        padding: 10px 18px !important;
+        border-radius: 8px;
+        transition: all 0.25s ease-in-out;
+        position: relative;
+      }
+
+      /* Hover em itens normais */
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-item:hover .rd-nav-link,
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-item.focus .rd-nav-link {
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Item Ativo */
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-item.active .rd-nav-link {
+        color: #ffffff !important;
+        background: #0d6efd !important;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.45);
+        font-weight: 700;
+      }
+
+      /* Destaque botão "Portal do Parceiro" */
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-item:last-child .rd-nav-link {
+        background: linear-gradient(135deg, #0d6efd 0%, #0044b3 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 50px;
+        padding: 9px 22px !important;
+        margin-left: 10px;
+        box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4);
+        font-weight: 700;
+      }
+      .rd-navbar-corporate.rd-navbar-static .rd-nav-item:last-child:hover .rd-nav-link {
+        background: linear-gradient(135deg, #1a75ff 0%, #0052cc 100%) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.6);
+      }
+
+      /* Adaptabilidade Mobile */
+      @media (max-width: 991.98px) {
+        .rd-navbar-fixed .rd-navbar-panel {
+          background: #ffffff;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .rd-navbar-fixed .rd-navbar-nav-wrap {
+          background: #0b1e36;
+          border-right: 3px solid #0d6efd;
+        }
+        .rd-navbar-fixed .rd-nav-link {
+          color: #e2e8f0 !important;
+          font-weight: 600;
+          padding: 14px 24px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+          transition: all 0.2s ease;
+        }
+        .rd-navbar-fixed .rd-nav-item.active .rd-nav-link,
+        .rd-navbar-fixed .rd-nav-link:hover {
+          color: #ffffff !important;
+          background: #0d6efd !important;
+          padding-left: 30px;
+        }
+        .rd-navbar-fixed .rd-nav-item:last-child {
+          margin: 16px;
+        }
+        .rd-navbar-fixed .rd-nav-item:last-child .rd-nav-link {
+          background: linear-gradient(135deg, #0d6efd 0%, #0044b3 100%) !important;
+          border-radius: 8px;
+          text-align: center;
+          box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+        }
       }
     </style>
   </head>
@@ -215,7 +357,7 @@
                       <div class="unit-body">
                         <ul class="list-0">
                           
-                          <li><a class="link-default" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o">55991504477</a></li>
+                          <li><a class="link-default" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o">(55) 99150-4477</a></li>
                         </ul>
                       </div>
                     </article>
