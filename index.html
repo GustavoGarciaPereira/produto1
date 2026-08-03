@@ -185,6 +185,10 @@
 
       /* Badge de Contato no Header */
       .rd-navbar-collapse-content .unit {
+        display: inline-flex !important;
+        align-items: center !important;
+        flex-wrap: nowrap !important;
+        white-space: nowrap !important;
         background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(37, 211, 102, 0.18) 100%);
         border: 1px solid rgba(37, 211, 102, 0.35);
         padding: 8px 20px;
@@ -201,12 +205,17 @@
         color: #25D366 !important;
         font-size: 22px;
       }
+      .rd-navbar-collapse-content .unit-body {
+        white-space: nowrap !important;
+      }
       .rd-navbar-collapse-content .link-default {
         color: #12572b !important;
         font-weight: 700;
         font-size: 15px;
         letter-spacing: 0.3px;
         text-decoration: none !important;
+        white-space: nowrap !important;
+        display: inline-block;
       }
 
       /* Barra principal do Menu (rd-navbar-main-outer) — Destaque Premium */
