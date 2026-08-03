@@ -169,44 +169,92 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
       }
       .rd-navbar-corporate.rd-navbar-static .rd-navbar-aside {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
         border-bottom: none;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-panel + .rd-navbar-collapse {
+        margin-left: 0 !important;
+      }
+      .rd-navbar-corporate.rd-navbar-static .rd-navbar-collapse {
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
       }
       .rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img {
-        max-height: 90px;
+        max-height: 75px;
         width: auto;
         height: auto;
         transition: transform 0.3s ease;
+        display: block;
       }
       .rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img:hover {
         transform: scale(1.02);
       }
 
       /* Badge de Contato no Header */
+      .rd-navbar-collapse-content {
+        display: flex !important;
+        align-items: center !important;
+        margin: 0 !important;
+      }
       .rd-navbar-collapse-content .unit {
         display: inline-flex !important;
         align-items: center !important;
+        justify-content: center !important;
         flex-wrap: nowrap !important;
         white-space: nowrap !important;
         background: linear-gradient(135deg, rgba(37, 211, 102, 0.08) 0%, rgba(37, 211, 102, 0.18) 100%);
         border: 1px solid rgba(37, 211, 102, 0.35);
         padding: 8px 20px;
         border-radius: 50px;
+        margin: 0 !important;
         transition: all 0.3s ease;
         box-shadow: 0 2px 8px rgba(37, 211, 102, 0.12);
       }
       .rd-navbar-collapse-content .unit:hover {
         background: linear-gradient(135deg, rgba(37, 211, 102, 0.18) 0%, rgba(37, 211, 102, 0.32) 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.25);
+      }
+      .rd-navbar-collapse-content .unit-left {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding-right: 0 !important;
+        margin: 0 !important;
+        margin-right: 8px !important;
+      }
+      .rd-navbar-collapse-content .unit-body {
+        margin: 0 !important;
       }
       .rd-navbar-collapse-content .unit .icon {
         color: #25D366 !important;
         font-size: 22px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        line-height: 1 !important;
       }
       .rd-navbar-collapse-content .unit-body {
         white-space: nowrap !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .rd-navbar-collapse-content .list-0 {
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .rd-navbar-collapse-content .list-0 li {
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
       }
       .rd-navbar-collapse-content .link-default {
         color: #12572b !important;
@@ -215,7 +263,9 @@
         letter-spacing: 0.3px;
         text-decoration: none !important;
         white-space: nowrap !important;
-        display: inline-block;
+        display: inline-flex !important;
+        align-items: center !important;
+        line-height: 1 !important;
       }
 
       /* Barra principal do Menu (rd-navbar-main-outer) — Destaque Premium */
