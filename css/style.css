@@ -5385,7 +5385,7 @@ html:not(.tablet):not(.mobile) .thumbnail-indigo:hover .thumbnail-indigo-caption
 }
 
 .footer-advanced-text {
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.6);
 }
 
 @media (min-width: 768px) {
@@ -14873,14 +14873,6 @@ button.owl-dot::-moz-focus-inner {
 	background-color: rgba(0, 0, 0, 0.45);
 }
 
-@font-face {
-	font-family: lg;
-	src: url(../fonts/lg.eot?n1z373);
-	src: url(../fonts/lg.eot?#iefixn1z373) format("embedded-opentype"), url(../fonts/lg.woff?n1z373) format("woff"), url(../fonts/lg.ttf?n1z373) format("truetype"), url(../fonts/lg.svg?n1z373#lg) format("svg");
-	font-weight: 400;
-	font-style: normal;
-}
-
 .lg-icon {
 	font-family: lg;
 	speak: none;
@@ -15870,14 +15862,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .lg-sub-html, .lg-toolbar {
 	background-color: rgba(0, 0, 0, 0.45);
-}
-
-@font-face {
-	font-family: lg;
-	src: url(../fonts/lg.eot?n1z373);
-	src: url(../fonts/lg.eot?#iefixn1z373) format("embedded-opentype"), url(../fonts/lg.woff?n1z373) format("woff"), url(../fonts/lg.ttf?n1z373) format("truetype"), url(../fonts/lg.svg?n1z373#lg) format("svg");
-	font-weight: 400;
-	font-style: normal;
 }
 
 .lg-icon {

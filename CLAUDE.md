@@ -34,19 +34,18 @@ Apenas `index.html` está ativo. As páginas `about-us.html`, `contacts.html` e 
 |---|---|
 | `<head>` | Carrega Bootstrap 3, fontes Google (Work Sans, Poppins), `style.min.css`. Inclui SSL Seal da AlphaSSL (bloco marcado como "DO NOT EDIT" — não editar). |
 | Preloader | Exibe o logo (`images/logo.webp`) durante carregamento. |
-| `rd-navbar` | Navbar responsiva com logo, número de WhatsApp e endereço clicável que abre mapa Leaflet inline. Ícones (WhatsApp, pin) são SVG inline. |
+| `rd-navbar` | Navbar responsiva com logo e badge de contato (número de WhatsApp). Ícone (WhatsApp) é SVG inline. |
 | Slider hero | Swiper.js com 3 slides, todos usando `images/bannernovo.webp` como fundo, com efeito fade e autoplay a cada 5000ms. Há um `<img>` placeholder com `fetchpriority="high"` antes do `swiper-wrapper` para antecipar o LCP. **1 único `<h1>`** (slide 1); slides 2–3 usam `<h2 class="heading-1">` com o mesmo visual. |
-| Seção de diferenciais | 3 cards (`section-md bg-gray-100`): "Funcionários Qualificados", "Consultas Gratuitas", "100% Garantido". Ícones SVG inline com 48×48px e cor `#0d6efd`. |
-| **Seção de serviços** ("Conheça e cote os nossos serviços") | 10 cards (8 seguros + Consórcios + Crédito) — cada um com imagem, título e descrição curta, e abre um modal Bootstrap com iframe de cotação (lazy load). |
-| Banner "Melhores Ofertas" | Seção com fundo `images/banner9.png`, botão "Volte ao topo". |
+| **Seção de serviços** ("Conheça e cote os nossos serviços") | 11 cards (8 seguros + Plano de Saúde + Consórcios + Crédito) — cada um com imagem, título e descrição curta. Os 10 de cotação abrem modal Bootstrap com iframe (lazy load); Plano de Saúde abre modal com CTA para WhatsApp. |
+| **Seção "Sobre a Marpe"** | `#sobre` (o nav "Sobre Nós" aponta para ela): história (19 anos desde 2007), 3 cards de valores (Clareza, Cuidado, Confiança — `.sobre-value`, CSS inline) e CTA "Fale com a Marpe" (WhatsApp). |
+| Banner "Melhores Ofertas" | Seção com fundo `images/banner9.webp`, botão "Volte ao topo". |
 | Footer | 2 colunas: "Sobre nós" (col-lg-7) + "Contato" com WhatsApp, endereço e redes sociais (col-lg-5). Rodapé inferior com `flex-wrap` e `gap:12px`. |
 | Botão WhatsApp fixo | `position: fixed`, canto **inferior direito** (20px da borda), cor `#25D366`. Some enquanto um modal de cotação estiver aberto (`.modal-open .whatsapp-button`). |
 | `#modals-container` | Todos os modais são gerados dinamicamente por JS inline no fim do body, dentro de `DOMContentLoaded`. |
-| Mapa Leaflet | Carregado sob demanda ao clicar no endereço; coordenadas fixas `[-30.1641, -53.5654]`. |
 
 ### Sistema de Cotação (modal + iframe)
 
-Os 10 serviços disparam modais Bootstrap (800px de largura, 90vh de altura, classe `.modal-square` — corpo e iframe preenchem via CSS, sem heights inline) que carregam iframes apontando para o sistema externo de cotação:
+Os 10 cards de cotação disparam modais Bootstrap (800px de largura, 90vh de altura, classe `.modal-square` — corpo e iframe preenchem via CSS, sem heights inline) que carregam iframes apontando para o sistema externo de cotação:
 
 ```
 https://marpe.corretordigital.site/#/formularios/{tipo}
@@ -64,10 +63,11 @@ https://marpe.corretordigital.site/#/formularios/{tipo}
 | Diversos | `#diversosModal` | `diversos` |
 | Consórcios | `#consorcioModal` | `consorcio` |
 | Crédito | `#creditoModal` | `credito` |
+| Plano de Saúde | `#saudeModal` | — (modal com CTA para WhatsApp, sem iframe) |
 
-Os modais são gerados por um array `modals` em JS inline no fim do `<body>`, dentro de `document.addEventListener('DOMContentLoaded', ...)` (necessário porque o script usa jQuery com `defer`). Para adicionar um novo serviço, basta adicionar um objeto ao array.
+Os modais são gerados por um array `modals` em JS inline no fim do `<body>`, dentro de `document.addEventListener('DOMContentLoaded', ...)` (necessário porque o script usa jQuery com `defer`). Para adicionar um novo serviço, basta adicionar um objeto ao array. Um modal **sem iframe** usa `whatsapp: true` + `waLink` (ex.: Plano de Saúde) — o loop renderiza um CTA estilizado (`.modal-whatsapp-cta` + `.btn-wa-cta`, CSS inline no `index.html`) em vez do iframe e não registra eventos de lazy load.
 
-**Lazy load dos iframes:** o `src` do iframe **não** é definido na criação do DOM. Ele é injetado via `$(el).on('shown.bs.modal')` e limpo via `$(el).on('hidden.bs.modal')`. Isso evita que 8 instâncias de reCAPTCHA + Angular inicializem simultaneamente no carregamento da página. **Não adicionar `iframe.src` fora desses eventos.**
+**Lazy load dos iframes:** o `src` do iframe **não** é definido na criação do DOM. Ele é injetado via `$(el).on('shown.bs.modal')` e limpo via `$(el).on('hidden.bs.modal')`. Isso evita que 8 instâncias de reCAPTCHA + Angular inicializem simultaneamente no carregamento da página. **Não adicionar `iframe.src` fora desses eventos** (aplica-se apenas aos modais com iframe; o modal de Plano de Saúde não usa lazy load).
 
 ### JavaScript
 
@@ -83,7 +83,7 @@ Os modais são gerados por um array `modals` em JS inline no fim do `<body>`, de
 
 - **`css/bootstrap.css`** (138KB) — **Bootstrap 4.1.3** (não é BS3 como parecia), já pré-purgado em sessão anterior (não tem `.btn-secondary` nem variantes coloridas de `.btn`). Mantido como backup.
 - **`css/bootstrap.min.css`** (11,5KB, −92%) — PurgeCSS do `bootstrap.css` com safelist para classes dinâmicas (modal, collapse, sr-only, grid, botões). **É o carregado pelo site.** Para regenerar: PurgeCSS com `content` = `index.html` + `js/*.js` (o `.btn-secondary` é estilizado no CSS inline do `index.html`).
-- **`css/style.min.css`** (169KB) — CSS do template Novi gerado via PurgeCSS a partir de `style.css` (original 332KB, redução de 49%). **É o arquivo carregado pelo site.** Para regenerar, usar o script Node.js com safelist (ver commits `ed73a87` e `15991b7`).
+- **`css/style.min.css`** (~146KB) — CSS do template Novi gerado via PurgeCSS a partir de `style.css` (original 332KB). **É o arquivo carregado pelo site.** Para regenerar: `npx --yes purgecss --config purgecss.config.js` (config na raiz, com safelist das classes dinâmicas: rd-navbar, swiper, wow, modais). Última rodada: 2026-08 (172KB → 146KB, −15%).
 - **`css/style.css`** (332KB) — original intacto, mantido como backup para regenerar o `.min.css`.
 - **`css/fonts.css`** — **fontes self-hosted** (Google Fonts, subset latin): Work Sans (fonte **variável**, 1 arquivo `fonts/work-sans.woff2` cobre os pesos 300–800) + Poppins 300/400/700 em `fonts/poppins-*.woff2`. Todos os `@font-face` com `font-display: swap`. Os webfonts antigos de ícones (FA/MDI/Linearicons, ~4MB) foram movidos para `b/fonts-backup/` (gitignored).
 
@@ -93,11 +93,7 @@ Todos os ícones são **SVG inline** diretamente no HTML. Não há dependência 
 
 | SVG | Localização |
 |---|---|
-| WhatsApp | Navbar mobile (linha ~138) |
-| Map pin | Navbar mobile (linha ~148) |
-| Pessoa (user) | Card "Funcionários Qualificados" |
-| Chat (bubble) | Card "Consultas Gratuitas" |
-| Estrela (star) | Card "100% Garantido" |
+| WhatsApp | Navbar (badge de contato) e modal de Plano de Saúde |
 | Facebook | Footer |
 | Instagram | Footer |
 
@@ -109,23 +105,24 @@ Imagens ativas usadas pelo site (todas em WebP):
 |---|---|
 | `images/logo.webp` | Logo (preloader, navbar e footer) |
 | `images/bannernovo.webp` | Background dos 3 slides do hero + placeholder LCP |
-| `images/banner9.png` | Background da seção "Melhores Ofertas" |
-| `images/favicon.png` | Ícone da aba |
-| `images/apple-touch-icon.png` | Ícone iOS (180×180, gerado do favicon) |
+| `images/banner9.webp` | Background da seção "Melhores Ofertas" |
+| `images/logo-favicon.png` | Ícone da aba (512×512) |
+| `images/apple-touch-icon.png` | Ícone iOS (180×180, otimizado p/ ~13 KB) |
 | `images/bannernovo.jpeg` | Só para `og:image` (1600×609) |
-| `images/carro.jpg` | Card Auto |
+| `images/carro.webp` | Card Auto (convertido de .jpg em 2026-08) |
 | `images/moto.webp` | Card Moto |
-| `images/caminhao.jpg` | Card Caminhão |
+| `images/caminhao.webp` | Card Caminhão (convertido de .jpg em 2026-08) |
 | `images/residencial.webp` | Card Residencial |
 | `images/condominio.webp` | Card Condomínio |
 | `images/empresarial.webp` | Card Empresarial |
 | `images/vida.webp` | Card Vida |
+| `images/saude.webp` | Card Plano de Saúde (foto Unsplash — profissional de saúde, 800×533px) |
 | `images/diversos.webp` | Card Diversos (foto Unsplash — pessoa assinando documento, 800×600px) |
 | `images/consorcio.webp` | Card Consórcios (foto Unsplash — mão entregando chaves, 800×600px) |
 | `images/credito.webp` | Card Crédito (foto Unsplash — cofrinho com moedas, 800×600px) |
 | `images/icon_whatsapp.webp` | Botão WhatsApp fixo |
 
-Os originais `.jpg`/`.png` de backup (`condominio.jpg`, `empresarial.jpg`, `residencial.jpg`, `vida.jpg`, `diversos.png`, `icon_whatsapp.png`, `15326-1676668491144.png`) estão **fora do git** (`.gitignore`) mas mantidos em disco. `carro.jpg` e `caminhao.jpg` são os usados nos cards (trackeados).
+Os originais `.jpg`/`.png` de backup (`condominio.jpg`, `empresarial.jpg`, `residencial.jpg`, `vida.jpg`, `diversos.png`, `icon_whatsapp.png`, `15326-1676668491144.png`) estão **fora do git** (`.gitignore`) mas mantidos em disco. `carro.jpg` e `caminhao.jpg` foram convertidos para WebP e removidos do git (recuperáveis via history).
 
 ### Backend PHP (formulário de contato)
 
@@ -152,7 +149,7 @@ Resumo das otimizações já feitas — não refazer sem necessidade:
 
 | Otimização | Detalhe |
 |---|---|
-| PurgeCSS | `style.css` (332KB) → `style.min.css` (169KB, −49%) e `bootstrap.css` (138KB, BS4.1.3) → `bootstrap.min.css` (11,5KB, −92%). Safelist preserva classes dinâmicas (modal, collapse, sr-only, grid, botões). |
+| PurgeCSS | `style.css` (332KB) → `style.min.css` (172KB, −48%) e `bootstrap.css` (138KB, BS4.1.3) → `bootstrap.min.css` (11,5KB, −92%). Safelist preserva classes dinâmicas (modal, collapse, sr-only, grid, botões). Rodada 2026-08: 172KB → 146KB (−15%) via `purgecss.config.js`. |
 | Imagens WebP | Cards e logo convertidos para WebP com ImageMagick (redução média −81%). Originais mantidos como backup no disco. |
 | Lazy load iframes | 10 iframes de cotação carregados apenas no `shown.bs.modal`, destruídos no `hidden.bs.modal`. Elimina instâncias simultâneas de reCAPTCHA + Angular no carregamento. |
 | SVG inline | Ícones de FontAwesome, MDI e Linearicons substituídos por SVG inline (~150KB de webfonts eliminados). |
@@ -162,8 +159,16 @@ Resumo das otimizações já feitas — não refazer sem necessidade:
 | SRI | `integrity="sha384-…"` + `crossorigin` nos 4 scripts de CDN (jquery, popper, bootstrap, wow) — hashes gerados com `openssl dgst -sha384`. |
 | Preloader timeout | Fallback inline: preloader some em até 2,5s mesmo se `window.load` demorar. |
 | Acessibilidade | Skip-link "Pular para o conteúdo" → `#main`; hrefs reais (`#modalId`) nos cards de serviço; `prefers-reduced-motion` desativa animações; aria-labels nos toggles da navbar; botões `Fechar` estilizados (`.btn-secondary` no CSS inline). |
-| SEO | 1 `<h1>` por página (slides 2–3 viraram `h2.heading-1`); JSON-LD `InsuranceAgency` rico (`geo`, `areaServed`, `hasOfferCatalog` com os 10 serviços); OG completa (`site_name`, `locale`, dimensões da imagem); `theme-color`; `apple-touch-icon`; sitemap com `lastmod`. |
+| SEO | 1 `<h1>` por página com keyword ("Seguros, Consórcios e Créditos"; slides 2–3 viraram `h2.heading-1`); JSON-LD `InsuranceAgency` rico (`geo`, `areaServed` nacional — São Sepé + Brasil, `foundingDate` 2007, `openingHoursSpecification`, `priceRange`, `slogan`, `hasOfferCatalog` com os 11 serviços); OG completa (`site_name`, `locale`, dimensões + tipo + alt da imagem); Twitter Cards completos (title/description/image); `theme-color`; `apple-touch-icon`; sitemap com `lastmod`. |
 | Conversão | CTA da seção "Melhores Ofertas" agora é "Cote agora pelo WhatsApp" (wa.me com mensagem pré-preenchida); URLs wa.me com percent-encoding completo. |
+| Contraste footer | `.footer-advanced-text` → `rgba(255,255,255,0.6)` (~6,5:1, AA) sobre o fundo `#232426`. |
+| preconnect CDN | `preconnect` + `dns-prefetch` para `cdnjs.cloudflare.com` (4 scripts CDN com SRI). |
+| Plano de Saúde | Card + modal com CTA para WhatsApp (padrão Instagram/Linktree), sem iframe externo. |
+| Seção "Sobre a Marpe" | Nova seção na home: 19 anos (desde 2007), valores (clareza, cuidado, confiança) e atendimento nacional; nav "Sobre Nós" aponta para `#sobre`. |
+| Selo Instagram | "Siga @marpeseguros no Instagram" no footer (coluna Contato). |
+| Copy emocional | Cards Vida ("Planejar também é amar…") e Consórcios ("Planejamento e previsibilidade…") com o tom do Instagram. |
+| CSS morto removido | 2 `@font-face` do ícone-font `lg.*` eliminados de `style.min.css`/`style.css` + arquivos `fonts/lg.*` (git rm). |
+| Imagens otimizadas | `carro.jpg`/`caminhao.jpg` → WebP (−17%/−54%); `banner9.webp` 108→62 KB; `moto.webp` 39,7→26 KB; `apple-touch-icon.png` 40→12,9 KB. |
 
 ---
 
