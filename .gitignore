@@ -16,6 +16,9 @@ images/vida.jpg
 images/icon_whatsapp.png
 images/logo_original_backup.webp
 
+# Artes de referência enviadas pelo cliente (contexto — as finais otimizadas estão em images/destaques/)
+imagens_cliente_contexto/
+
 # Diretório local do Claude Code
 .claude/
 
@@ -26,3 +29,5 @@ opencode.json
 
 # Artefatos de sessão do navegador (análises)
 .playwright-mcp/
+session-ses_fba1.md
+imagens_cliente_contexto/*

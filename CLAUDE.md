@@ -36,7 +36,8 @@ Apenas `index.html` está ativo. As páginas `about-us.html`, `contacts.html` e 
 | Preloader | Exibe o logo (`images/logo.webp`) durante carregamento. |
 | `rd-navbar` | Navbar responsiva com logo e badge de contato (número de WhatsApp). Ícone (WhatsApp) é SVG inline. |
 | Slider hero | Swiper.js com 3 slides, todos usando `images/bannernovo.webp` como fundo, com efeito fade e autoplay a cada 5000ms. Há um `<img>` placeholder com `fetchpriority="high"` antes do `swiper-wrapper` para antecipar o LCP. **1 único `<h1>`** (slide 1); slides 2–3 usam `<h2 class="heading-1">` com o mesmo visual. |
-| **Seção de serviços** ("Conheça e cote os nossos serviços") | 11 cards (8 seguros + Plano de Saúde + Consórcios + Crédito) — cada um com imagem, título e descrição curta. Os 10 de cotação abrem modal Bootstrap com iframe (lazy load); Plano de Saúde abre modal com CTA para WhatsApp. |
+| **Seção de serviços** ("Conheça e cote os nossos serviços") | 12 cards (9 seguros + Plano de Saúde + Consórcios + Crédito) — cada um com imagem, título e descrição curta. Os 10 de cotação abrem modal Bootstrap com iframe (lazy load); Plano de Saúde e Agrícola abrem modal com CTA para WhatsApp. |
+| **Seção "Marpe em destaque"** | `#destaques` — carrossel Swiper 3 (bundle legacy local, **API de params planos**: `autoplay: 5000`, `pagination: '.sel'`, `nextButton/prevButton` — não usar API de objetos do Swiper 5+) com 15 artes da campanha do cliente (`images/destaques/*.webp`, originais em `imagens_cliente_contexto/`, gitignored), cada slide com CTA WhatsApp pré-preenchido. Init inline no fim do body; CSS inline (`.destaque-card`, `.destaques-*`). Setas só em desktop; swipe nativo no mobile. |
 | **Seção "Sobre a Marpe"** | `#sobre` (o nav "Sobre Nós" aponta para ela): história (19 anos desde 2007), 3 cards de valores (Clareza, Cuidado, Confiança — `.sobre-value`, CSS inline) e CTA "Fale com a Marpe" (WhatsApp). |
 | Banner "Melhores Ofertas" | Seção com fundo `images/banner9.webp`, botão "Volte ao topo". |
 | Footer | 2 colunas: "Sobre nós" (col-lg-7) + "Contato" com WhatsApp, endereço e redes sociais (col-lg-5). Rodapé inferior com `flex-wrap` e `gap:12px`. |
@@ -63,9 +64,10 @@ https://marpe.corretordigital.site/#/formularios/{tipo}
 | Diversos | `#diversosModal` | `diversos` |
 | Consórcios | `#consorcioModal` | `consorcio` |
 | Crédito | `#creditoModal` | `credito` |
+| Agrícola | `#agricolaModal` | — (modal com CTA para WhatsApp, sem iframe) |
 | Plano de Saúde | `#saudeModal` | — (modal com CTA para WhatsApp, sem iframe) |
 
-Os modais são gerados por um array `modals` em JS inline no fim do `<body>`, dentro de `document.addEventListener('DOMContentLoaded', ...)` (necessário porque o script usa jQuery com `defer`). Para adicionar um novo serviço, basta adicionar um objeto ao array. Um modal **sem iframe** usa `whatsapp: true` + `waLink` (ex.: Plano de Saúde) — o loop renderiza um CTA estilizado (`.modal-whatsapp-cta` + `.btn-wa-cta`, CSS inline no `index.html`) em vez do iframe e não registra eventos de lazy load.
+Os modais são gerados por um array `modals` em JS inline no fim do `<body>`, dentro de `document.addEventListener('DOMContentLoaded', ...)` (necessário porque o script usa jQuery com `defer`). Para adicionar um novo serviço, basta adicionar um objeto ao array. Um modal **sem iframe** usa `whatsapp: true` + `waLink` + `texto` (ex.: Plano de Saúde, Agrícola) — o loop renderiza um CTA estilizado (`.modal-whatsapp-cta` + `.btn-wa-cta`, CSS inline no `index.html`) em vez do iframe e não registra eventos de lazy load.
 
 **Lazy load dos iframes:** o `src` do iframe **não** é definido na criação do DOM. Ele é injetado via `$(el).on('shown.bs.modal')` e limpo via `$(el).on('hidden.bs.modal')`. Isso evita que 8 instâncias de reCAPTCHA + Angular inicializem simultaneamente no carregamento da página. **Não adicionar `iframe.src` fora desses eventos** (aplica-se apenas aos modais com iframe; o modal de Plano de Saúde não usa lazy load).
 
@@ -121,6 +123,8 @@ Imagens ativas usadas pelo site (todas em WebP):
 | `images/consorcio.webp` | Card Consórcios (foto Unsplash — mão entregando chaves, 800×600px) |
 | `images/credito.webp` | Card Crédito (foto Unsplash — cofrinho com moedas, 800×600px) |
 | `images/icon_whatsapp.webp` | Botão WhatsApp fixo |
+| `images/agricola.webp` | Card Agrícola (crop da arte da campanha do cliente) |
+| `images/destaques/*.webp` | 15 artes da campanha (carrossel "Marpe em destaque") |
 
 Os originais `.jpg`/`.png` de backup (`condominio.jpg`, `empresarial.jpg`, `residencial.jpg`, `vida.jpg`, `diversos.png`, `icon_whatsapp.png`, `15326-1676668491144.png`) estão **fora do git** (`.gitignore`) mas mantidos em disco. `carro.jpg` e `caminhao.jpg` foram convertidos para WebP e removidos do git (recuperáveis via history).
 
@@ -159,7 +163,7 @@ Resumo das otimizações já feitas — não refazer sem necessidade:
 | SRI | `integrity="sha384-…"` + `crossorigin` nos 4 scripts de CDN (jquery, popper, bootstrap, wow) — hashes gerados com `openssl dgst -sha384`. |
 | Preloader timeout | Fallback inline: preloader some em até 2,5s mesmo se `window.load` demorar. |
 | Acessibilidade | Skip-link "Pular para o conteúdo" → `#main`; hrefs reais (`#modalId`) nos cards de serviço; `prefers-reduced-motion` desativa animações; aria-labels nos toggles da navbar; botões `Fechar` estilizados (`.btn-secondary` no CSS inline). |
-| SEO | 1 `<h1>` por página com keyword ("Seguros, Consórcios e Créditos"; slides 2–3 viraram `h2.heading-1`); JSON-LD `InsuranceAgency` rico (`geo`, `areaServed` nacional — São Sepé + Brasil, `foundingDate` 2007, `openingHoursSpecification`, `priceRange`, `slogan`, `hasOfferCatalog` com os 11 serviços); OG completa (`site_name`, `locale`, dimensões + tipo + alt da imagem); Twitter Cards completos (title/description/image); `theme-color`; `apple-touch-icon`; sitemap com `lastmod`. |
+| SEO | 1 `<h1>` por página com keyword ("Seguros, Consórcios e Créditos"; slides 2–3 viraram `h2.heading-1`); JSON-LD `InsuranceAgency` rico (`geo`, `areaServed` nacional — São Sepé + Brasil, `foundingDate` 2007, `openingHoursSpecification`, `priceRange`, `slogan`, `hasOfferCatalog` com os 12 serviços); OG completa (`site_name`, `locale`, dimensões + tipo + alt da imagem); Twitter Cards completos (title/description/image); `theme-color`; `apple-touch-icon`; sitemap com `lastmod`. |
 | Conversão | CTA da seção "Melhores Ofertas" agora é "Cote agora pelo WhatsApp" (wa.me com mensagem pré-preenchida); URLs wa.me com percent-encoding completo. |
 | Contraste footer | `.footer-advanced-text` → `rgba(255,255,255,0.6)` (~6,5:1, AA) sobre o fundo `#232426`. |
 | preconnect CDN | `preconnect` + `dns-prefetch` para `cdnjs.cloudflare.com` (4 scripts CDN com SRI). |

@@ -69,6 +69,7 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Auto" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Moto" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Caminhão" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Agrícola" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Residencial" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro de Condomínio" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Seguro Empresarial" } },
@@ -148,6 +149,83 @@
         box-shadow: 0 3px 10px rgba(37, 211, 102, .35);
       }
       .btn-wa-cta:hover { background: #1ebe55; color: #fff; text-decoration: none; transform: translateY(-1px); }
+
+      /* Carrossel de destaques — artes da campanha (Swiper legacy, 1 slide por vez) */
+      /* Carrossel de destaques — artes da campanha (Swiper legacy, 1 slide por vez) */
+      .destaque-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        max-width: 620px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 24px;
+        background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%);
+        border-radius: 16px;
+      }
+      .destaque-card img {
+        max-width: 100%;
+        max-height: 56vh;
+        width: auto;
+        height: auto;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      .destaque-cta { flex-shrink: 0; width: max-content; }
+      .destaques-swiper { position: relative; padding: 4px 0 52px; }
+      .destaques-prev, .destaques-next {
+        position: absolute;
+        top: 50%;
+        margin-top: -22px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(13, 110, 253, 0.9);
+        cursor: pointer;
+        z-index: 10;
+        transition: background .2s ease;
+      }
+      .destaques-prev { left: 10px; }
+      .destaques-next { right: 10px; }
+      .destaques-prev::after, .destaques-next::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        margin: auto;
+        border-left: 3px solid #fff;
+        border-top: 3px solid #fff;
+      }
+      .destaques-prev::after { transform: rotate(-45deg) translate(2px, -2px); }
+      .destaques-next::after { transform: rotate(135deg) translate(2px, -2px); }
+      .destaques-prev:hover, .destaques-next:hover { background: #0a58ca; }
+      .destaques-pagination {
+        position: absolute;
+        bottom: 12px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+      }
+      .destaques-pagination .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        border-radius: 50%;
+        background: #0b1e36;
+        opacity: .25;
+        cursor: pointer;
+        transition: opacity .2s ease, background .2s ease;
+      }
+      .destaques-pagination .swiper-pagination-bullet-active { background: #0d6efd; opacity: 1; }
+      @media (max-width: 767.98px) {
+        .destaque-card { padding: 14px; gap: 12px; }
+        .destaque-card img { max-height: 46vh; }
+        .destaques-prev, .destaques-next { display: none; }
+      }
 
       /* Seção Sobre nós — cards de valores */
       .sobre-value {
@@ -642,7 +720,7 @@
                     <img class="thumbnail-light-image" src="images/carro.webp" alt="Seguro Auto" width="400" height="300" loading="lazy"/>
                 </a>
                 <h4 class="thumbnail-light-title"><a href="#myModalAuto" data-toggle="modal" data-target="#myModalAuto">Auto</a></h4>
-                <p class="thumbnail-light-text text-muted">Proteção completa para seu carro contra acidentes, roubo e danos a terceiros.</p>
+                <p class="thumbnail-light-text text-muted">Proteção completa com Assistência 24h, carro reserva e até 10x sem juros.</p>
             </article>
             </div>
             <div class="col-sm-6 col-lg-3">
@@ -665,6 +743,16 @@
                 <h4 class="thumbnail-light-title">
                   <a href="#caminhaoModal" data-toggle="modal" data-target="#caminhaoModal">Caminhão</a></h4>
                 <p class="thumbnail-light-text text-muted">Seguro para caminhões e frotas, protegendo sua carga e seu sustento.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <!-- Thumbnail Light-->
+              <article class="thumbnail-light">
+                <a class="thumbnail-light-media" href="#agricolaModal" data-toggle="modal" data-target="#agricolaModal">
+                  <img class="thumbnail-light-image" src="images/agricola.webp" alt="Seguro Agrícola" width="400" height="300" loading="lazy"/></a>
+                <h4 class="thumbnail-light-title">
+                  <a href="#agricolaModal" data-toggle="modal" data-target="#agricolaModal">Agrícola</a></h4>
+                <p class="thumbnail-light-text text-muted">Proteção da lavoura contra seca, geada, granizo, chuvas excessivas e mais.</p>
               </article>
             </div>
             <div class="col-sm-6 col-lg-3">
@@ -707,7 +795,7 @@
               <!-- Thumbnail Light-->
               <article class="thumbnail-light"><a class="thumbnail-light-media" href="#saudeModal" data-toggle="modal" data-target="#saudeModal"><img class="thumbnail-light-image" src="images/saude.webp" alt="Plano de Saúde" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title"><a href="#saudeModal" data-toggle="modal" data-target="#saudeModal">Plano de Saúde</a></h4>
-                <p class="thumbnail-light-text text-muted">Planos de saúde e odontológicos com as melhores operadoras, para cuidar de quem você ama.</p>
+                <p class="thumbnail-light-text text-muted">Para você, sua família e sua empresa (CNPJ e MEI), com descontos em mais de 12 mil farmácias.</p>
               </article>
             </div>
 
@@ -723,7 +811,7 @@
               <!-- Thumbnail Light-->
               <article class="thumbnail-light"><a class="thumbnail-light-media" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal"><img class="thumbnail-light-image" src="images/consorcio.webp" alt="Consórcio" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title"><a href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Consórcios</a></h4>
-                <p class="thumbnail-light-text text-muted">Planejamento e previsibilidade: conquiste seu carro ou imóvel sem juros, com parcelas que cabem no seu bolso.</p>
+                <p class="thumbnail-light-text text-muted">Sem entrada e sem juros: carro, imóvel, caminhão ou área rural, com contemplação por lance ou sorteio.</p>
               </article>
             </div>
 
@@ -735,6 +823,100 @@
               </article>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      <!-- Destaques (artes da campanha do cliente — Instagram) -->
+      <section id="destaques" class="section novi-background section-lg text-center">
+        <div class="container">
+          <h3 class="text-uppercase">Marpe em destaque</h3>
+          <p><span class="text-width-1">Condições especiais e novidades direto das nossas campanhas. Toque em "Cotar pelo WhatsApp" e fale com um especialista.</span></p>
+        </div>
+        <div class="container">
+          <div class="destaques-swiper swiper-container-destaques">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/agricola.webp" alt="Seguro Agrícola — proteção contra seca, geada, granizo e mais" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Agr%C3%ADcola" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/propriedade-rural.webp" alt="Seguro Propriedade Rural — proteção contra imprevistos" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Propriedade%20Rural" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-automovel.webp" alt="Consórcio de Automóvel — sem entrada e sem juros" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Autom%C3%B3vel" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-imoveis.webp" alt="Consórcio de Imóveis — comprar, construir ou reformar, com uso do FGTS" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-imoveis-rurais.webp" alt="Consórcio de Imóveis Rurais — chácara, sítio ou área rural" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis%20Rurais" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-caminhoes.webp" alt="Consórcio de Caminhões e Pesados — créditos a partir de R$ 300 mil" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Caminh%C3%B5es" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/seguro-auto-coberturas.webp" alt="Seguro Auto — assistência 24h, carro reserva e parcelamento em até 10x sem juros" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/assistencia-24h.webp" alt="Assistência 24 Horas Auto — um corretor à sua disposição, de onde estiver" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Assist%C3%AAncia%2024h%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/vida.webp" alt="Seguro de Vida — proteger o futuro da sua família" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/vida-empresarial.webp" alt="Seguro de Vida Empresarial — proteja a empresa e a família dos colaboradores" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida%20Empresarial" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/plano-saude-mei.webp" alt="Você é MEI? Contrate um plano de saúde para sua família" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde%20para%20MEI" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/financiamento-imobiliario.webp" alt="Financiamento Imobiliário — seu imóvel agora, até 80% financiado" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20Imobili%C3%A1rio" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/financiamento-veiculos.webp" alt="Financiamento de Veículos — até 100% financiado, parcelas fixas" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/home-equity.webp" alt="Empréstimo com Garantia de Imóvel — home equity com juros a partir de 1,09% a.m." width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Im%C3%B3vel" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/emprestimo-garantia-veiculo.webp" alt="Empréstimo com Garantia de Veículos — transforme o valor do veículo em capital imediato" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-prev destaques-prev" role="button" aria-label="Destaque anterior"></div>
+            <div class="swiper-button-next destaques-next" role="button" aria-label="Próximo destaque"></div>
+            <div class="swiper-pagination destaques-pagination"></div>
           </div>
         </div>
       </section>
@@ -904,6 +1086,7 @@
         { id: 'myModalAuto',      labelId: 'modalLabelAuto',       title: 'Cotação — Seguro Auto',        iframeTitle: 'Formulário de cotação — Seguro Auto',        src: 'https://marpe.corretordigital.site/#/formularios/auto' },
         { id: 'motoModal',        labelId: 'modalLabelMoto',       title: 'Cotação — Seguro de Moto',     iframeTitle: 'Formulário de cotação — Seguro de Moto',     src: 'https://marpe.corretordigital.site/#/formularios/moto' },
         { id: 'caminhaoModal',    labelId: 'modalLabelCaminhao',   title: 'Cotação — Seguro de Caminhão', iframeTitle: 'Formulário de cotação — Seguro de Caminhão', src: 'https://marpe.corretordigital.site/#/formularios/caminhao' },
+        { id: 'agricolaModal',    labelId: 'modalLabelAgricola',   title: 'Seguro Agrícola e Propriedade Rural', whatsapp: true, waLink: 'https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Agr%C3%ADcola', texto: 'Proteja sua lavoura contra seca, geada, granizo e outros imprevistos do campo. Atendimento para o produtor de São Sepé e região.' },
         { id: 'residencialModal', labelId: 'modalLabelResidencial',title: 'Cotação — Seguro Residencial', iframeTitle: 'Formulário de cotação — Seguro Residencial', src: 'https://marpe.corretordigital.site/#/formularios/residencial' },
         { id: 'condominioModal',  labelId: 'modalLabelCondominio', title: 'Cotação — Seguro de Condomínio',iframeTitle: 'Formulário de cotação — Seguro de Condomínio',src: 'https://marpe.corretordigital.site/#/formularios/condominio' },
         { id: 'empresarialModal', labelId: 'modalLabelEmpresarial',title: 'Cotação — Seguro Empresarial', iframeTitle: 'Formulário de cotação — Seguro Empresarial', src: 'https://marpe.corretordigital.site/#/formularios/empresarial' },
@@ -911,7 +1094,7 @@
         { id: 'diversosModal',    labelId: 'modalLabelDiversos',   title: 'Cotação — Seguros Diversos',   iframeTitle: 'Formulário de cotação — Seguros Diversos',   src: 'https://marpe.corretordigital.site/#/formularios/diversos' },
         { id: 'consorcioModal',   labelId: 'modalLabelConsorcio',  title: 'Cotação — Consórcios',         iframeTitle: 'Formulário de cotação — Consórcios',         src: 'https://marpe.corretordigital.site/#/formularios/consorcio' },
         { id: 'creditoModal',     labelId: 'modalLabelCredito',    title: 'Cotação — Crédito',            iframeTitle: 'Formulário de cotação — Crédito',            src: 'https://marpe.corretordigital.site/#/formularios/credito' },
-        { id: 'saudeModal',       labelId: 'modalLabelSaude',      title: 'Plano de Saúde e Odontológico', whatsapp: true, waLink: 'https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde' }
+        { id: 'saudeModal',       labelId: 'modalLabelSaude',      title: 'Plano de Saúde e Odontológico', whatsapp: true, waLink: 'https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde', texto: 'Encontre o plano de saúde ideal para você e sua família, com as melhores operadoras do mercado.' }
       ];
 
       const container = document.getElementById('modals-container');
@@ -947,7 +1130,7 @@
           cta.innerHTML =
             '<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>' +
             '<h6>Fale com um especialista</h6>' +
-            '<p>Encontre o plano de saúde ideal para você e sua família, com as melhores operadoras do mercado.</p>' +
+            '<p>' + (modal.texto || 'Fale com um especialista da Marpe e receba uma proposta sob medida para você.') + '</p>' +
             '<a class="btn-wa-cta" href="' + modal.waLink + '" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>' +
             '<small>Atendimento pelo WhatsApp — resposta rápida</small>';
           body.appendChild(cta);
@@ -994,6 +1177,26 @@
             preloader.classList.add('loaded');
           }
         }, 2500);
+      });
+    </script>
+    <script>
+      // Carrossel de destaques — bundle local é Swiper 3 (params planos, não API de objetos do Swiper 5+)
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof Swiper === 'function' && document.querySelector('.destaques-swiper .swiper-slide')) {
+          new Swiper('.destaques-swiper', {
+            loop: true,
+            speed: 600,
+            simulateTouch: true,
+            preventClicks: true,
+            autoplay: 5000,
+            autoplayDisableOnInteraction: false,
+            pagination: '.destaques-pagination',
+            paginationClickable: true,
+            nextButton: '.destaques-next',
+            prevButton: '.destaques-prev',
+            keyboardControl: true
+          });
+        }
       });
     </script>
 </body>
