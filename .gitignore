@@ -22,3 +22,7 @@ images/logo_original_backup.webp
 # Config local da ferramenta de edição
 reasonix.toml
 session-20260803-223427.md
+opencode.json
+
+# Artefatos de sessão do navegador (análises)
+.playwright-mcp/

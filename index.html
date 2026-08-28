@@ -225,6 +225,34 @@
       .whatsapp-button img { width: 36px; height: 36px; }
       .whatsapp-button:hover { background-color: #1ebe55; }
 
+      /* Botão "voltar ao topo" — seta em CSS puro (o glifo \f239 usava a webfont MDI, removida)
+         e reposicionado acima do botão WhatsApp, que o cobria por completo (z-index 9999 vs 100) */
+      .ui-to-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 104px;
+      }
+      .ui-to-top::before, .ui-to-top::after {
+        content: '';
+        font-family: inherit;
+        font-size: 0;
+      }
+      .ui-to-top::before {
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-left: 3px solid #fff;
+        border-top: 3px solid #fff;
+        transform: rotate(45deg) translate(2px, 2px);
+      }
+      .ui-to-top::after { display: none; }
+      .ui-to-top:hover::before, .ui-to-top:focus::before {
+        opacity: 1;
+        transform: rotate(45deg) translate(0, 0);
+      }
+      .ui-to-top:hover::after, .ui-to-top:focus::after { opacity: 0; }
+
       /* Reserva espaço para o hero antes do Swiper inicializar — elimina CLS */
       .swiper-container {
         min-height: 600px;

@@ -738,7 +738,7 @@
 		// UI To Top
 		if (isDesktop && !isNoviBuilder) {
 			$().UItoTop({
-				easingType: 'easeOutQuad',
+				easingType: 'swing', // 'easeOutQuad' exige jQuery UI (não carregado) — TypeError a cada frame
 				containerClass: 'ui-to-top'
 			});
 		}
