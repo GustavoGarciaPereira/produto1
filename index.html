@@ -151,18 +151,31 @@
       .btn-wa-cta:hover { background: #1ebe55; color: #fff; text-decoration: none; transform: translateY(-1px); }
 
       /* Carrossel de destaques — artes da campanha (Swiper legacy, 1 slide por vez) */
-      /* Carrossel de destaques — artes da campanha (Swiper legacy, 1 slide por vez) */
+      /* Carrossel de destaques no topo — capa escura fundindo com a navbar.
+         O menu (.rd-navbar-main-outer) é position:absolute sobre o conteúdo
+         (~59px) — o padding-top compensa para o título não ficar sob ele. */
+      .destaques-topo {
+        background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%);
+        border-bottom: 3px solid #0d6efd;
+        padding-top: 84px;
+        padding-bottom: 24px;
+      }
+      .destaques-topo h3 { color: #fff; margin-bottom: 6px; }
+      .destaques-topo p { color: rgba(226, 232, 240, 0.85); margin-bottom: 20px; }
+      .destaques-topo .destaques-swiper { padding-bottom: 50px; }
+      .destaques-topo .destaque-slide img { max-height: 44vh; }
+      .destaques-swiper { position: relative; }
+      .destaques-swiper .swiper-wrapper { display: flex; }
+      .destaques-swiper .swiper-slide { width: 100%; flex-shrink: 0; }
       .destaque-card {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 18px;
-        max-width: 620px;
+        gap: 14px;
+        max-width: 720px;
         height: 100%;
         margin: 0 auto;
-        padding: 24px;
-        background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%);
-        border-radius: 16px;
+        padding: 0 12px;
       }
       .destaque-card img {
         max-width: 100%;
@@ -171,10 +184,9 @@
         height: auto;
         border-radius: 12px;
         background: #fff;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
       }
       .destaque-cta { flex-shrink: 0; width: max-content; }
-      .destaques-swiper { position: relative; padding: 4px 0 52px; }
       .destaques-prev, .destaques-next {
         position: absolute;
         top: 50%;
@@ -205,7 +217,7 @@
       .destaques-prev:hover, .destaques-next:hover { background: #0a58ca; }
       .destaques-pagination {
         position: absolute;
-        bottom: 12px;
+        bottom: 10px;
         left: 0;
         right: 0;
         display: flex;
@@ -217,15 +229,16 @@
         height: 10px;
         margin: 0;
         border-radius: 50%;
-        background: #0b1e36;
-        opacity: .25;
+        background: #fff;
+        opacity: .35;
         cursor: pointer;
         transition: opacity .2s ease, background .2s ease;
       }
-      .destaques-pagination .swiper-pagination-bullet-active { background: #0d6efd; opacity: 1; }
+      .destaques-pagination .swiper-pagination-bullet-active { background: #fff; opacity: 1; }
       @media (max-width: 767.98px) {
-        .destaque-card { padding: 14px; gap: 12px; }
-        .destaque-card img { max-height: 46vh; }
+        .destaques-topo { padding-top: 34px; padding-bottom: 20px; }
+        .destaques-topo .destaque-slide img { max-height: 46vh; }
+        .destaque-card { gap: 12px; padding: 0 4px; }
         .destaques-prev, .destaques-next { display: none; }
       }
 
@@ -312,7 +325,9 @@
         align-items: center;
         justify-content: center;
         bottom: 104px;
+        transition: transform 0.45s ease-in-out, background 0.3s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
       }
+      .ui-to-top:not(.active) { opacity: 0; visibility: hidden; }
       .ui-to-top::before, .ui-to-top::after {
         content: '';
         font-family: inherit;
@@ -664,6 +679,100 @@
           </nav>
         </div>
       </header>
+      <!-- Destaques no topo (artes da campanha do cliente — Instagram) -->
+      <section id="destaques" class="section destaques-topo text-center">
+        <div class="container">
+          <h3 class="text-uppercase">Marpe em destaque</h3>
+          <p><span class="text-width-1">Condições especiais das nossas campanhas — fale com um especialista pelo WhatsApp.</span></p>
+        </div>
+        <div class="container">
+          <div class="destaques-swiper swiper-container-destaques">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/agricola.webp" alt="Seguro Agrícola — proteção contra seca, geada, granizo e mais" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Agr%C3%ADcola" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/propriedade-rural.webp" alt="Seguro Propriedade Rural — proteção contra imprevistos" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Propriedade%20Rural" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-automovel.webp" alt="Consórcio de Automóvel — sem entrada e sem juros" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Autom%C3%B3vel" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-imoveis.webp" alt="Consórcio de Imóveis — comprar, construir ou reformar, com uso do FGTS" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-imoveis-rurais.webp" alt="Consórcio de Imóveis Rurais — chácara, sítio ou área rural" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis%20Rurais" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/consorcio-caminhoes.webp" alt="Consórcio de Caminhões e Pesados — créditos a partir de R$ 300 mil" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Caminh%C3%B5es" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/seguro-auto-coberturas.webp" alt="Seguro Auto — assistência 24h, carro reserva e parcelamento em até 10x sem juros" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/assistencia-24h.webp" alt="Assistência 24 Horas Auto — um corretor à sua disposição, de onde estiver" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Assist%C3%AAncia%2024h%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/vida.webp" alt="Seguro de Vida — proteger o futuro da sua família" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/vida-empresarial.webp" alt="Seguro de Vida Empresarial — proteja a empresa e a família dos colaboradores" width="660" height="792" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida%20Empresarial" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/plano-saude-mei.webp" alt="Você é MEI? Contrate um plano de saúde para sua família" width="720" height="720" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde%20para%20MEI" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/financiamento-imobiliario.webp" alt="Financiamento Imobiliário — seu imóvel agora, até 80% financiado" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20Imobili%C3%A1rio" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/financiamento-veiculos.webp" alt="Financiamento de Veículos — até 100% financiado, parcelas fixas" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/home-equity.webp" alt="Empréstimo com Garantia de Imóvel — home equity com juros a partir de 1,09% a.m." width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Im%C3%B3vel" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="destaque-card">
+                <img src="images/destaques/emprestimo-garantia-veiculo.webp" alt="Empréstimo com Garantia de Veículos — transforme o valor do veículo em capital imediato" width="540" height="960" loading="lazy" decoding="async">
+                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+              </div>
+
+            </div>
+            <div class="swiper-button-prev destaques-prev" role="button" aria-label="Destaque anterior"></div>
+            <div class="swiper-button-next destaques-next" role="button" aria-label="Próximo destaque"></div>
+            <div class="swiper-pagination destaques-pagination"></div>
+          </div>
+        </div>
+      </section>
+
       <section id="main" class="section swiper-container swiper-slider swiper-slider-minimal" data-loop="true" data-slide-effect="fade" data-autoplay="5000" data-simulate-touch="true">
         <img src="images/bannernovo.webp" alt="" aria-hidden="true" fetchpriority="high" width="1920" height="800" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;">
         <div class="swiper-wrapper">
@@ -825,100 +934,6 @@
               </article>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- Destaques (artes da campanha do cliente — Instagram) -->
-      <section id="destaques" class="section novi-background section-lg text-center">
-        <div class="container">
-          <h3 class="text-uppercase">Marpe em destaque</h3>
-          <p><span class="text-width-1">Condições especiais e novidades direto das nossas campanhas. Toque em "Cotar pelo WhatsApp" e fale com um especialista.</span></p>
-        </div>
-        <div class="container">
-          <div class="destaques-swiper swiper-container-destaques">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/agricola.webp" alt="Seguro Agrícola — proteção contra seca, geada, granizo e mais" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Agr%C3%ADcola" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/propriedade-rural.webp" alt="Seguro Propriedade Rural — proteção contra imprevistos" width="660" height="792" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Propriedade%20Rural" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-automovel.webp" alt="Consórcio de Automóvel — sem entrada e sem juros" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Autom%C3%B3vel" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-imoveis.webp" alt="Consórcio de Imóveis — comprar, construir ou reformar, com uso do FGTS" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-imoveis-rurais.webp" alt="Consórcio de Imóveis Rurais — chácara, sítio ou área rural" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis%20Rurais" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-caminhoes.webp" alt="Consórcio de Caminhões e Pesados — créditos a partir de R$ 300 mil" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Caminh%C3%B5es" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/seguro-auto-coberturas.webp" alt="Seguro Auto — assistência 24h, carro reserva e parcelamento em até 10x sem juros" width="540" height="960" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/assistencia-24h.webp" alt="Assistência 24 Horas Auto — um corretor à sua disposição, de onde estiver" width="660" height="792" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Assist%C3%AAncia%2024h%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/vida.webp" alt="Seguro de Vida — proteger o futuro da sua família" width="660" height="792" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/vida-empresarial.webp" alt="Seguro de Vida Empresarial — proteja a empresa e a família dos colaboradores" width="660" height="792" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida%20Empresarial" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/plano-saude-mei.webp" alt="Você é MEI? Contrate um plano de saúde para sua família" width="720" height="720" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde%20para%20MEI" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/financiamento-imobiliario.webp" alt="Financiamento Imobiliário — seu imóvel agora, até 80% financiado" width="540" height="960" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20Imobili%C3%A1rio" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/financiamento-veiculos.webp" alt="Financiamento de Veículos — até 100% financiado, parcelas fixas" width="540" height="960" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/home-equity.webp" alt="Empréstimo com Garantia de Imóvel — home equity com juros a partir de 1,09% a.m." width="540" height="960" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Im%C3%B3vel" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/emprestimo-garantia-veiculo.webp" alt="Empréstimo com Garantia de Veículos — transforme o valor do veículo em capital imediato" width="540" height="960" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-
-            </div>
-            <div class="swiper-button-prev destaques-prev" role="button" aria-label="Destaque anterior"></div>
-            <div class="swiper-button-next destaques-next" role="button" aria-label="Próximo destaque"></div>
-            <div class="swiper-pagination destaques-pagination"></div>
           </div>
         </div>
       </section>
