@@ -82,6 +82,49 @@
       }
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como faço uma cotação?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Escolha o seguro ou serviço no site — o formulário abre na hora — ou chame a gente no WhatsApp (55) 99150-4477. A cotação é gratuita e sem compromisso." }
+        },
+        {
+          "@type": "Question",
+          "name": "O seguro auto é obrigatório?",
+          "acceptedAnswer": { "@type": "Answer", "text": "O seguro particular não é obrigatório por lei, mas é a forma mais segura de proteger seu carro contra roubo, colisão, incêndio e danos a terceiros." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto custa um seguro?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Depende do veículo, do perfil do condutor, da cidade e das coberturas escolhidas. Por isso a cotação é personalizada e gratuita: em poucos minutos você recebe a melhor proposta." }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona um consórcio?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Um grupo de pessoas contribui mensalmente e, a cada mês, um ou mais integrantes são contemplados por lance ou sorteio. Não há juros — apenas taxa de administração — e no consórcio de imóveis você ainda pode usar o FGTS." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais coberturas o Seguro Agrícola oferece?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A apólice pode cobrir seca, geada, granizo, incêndio, chuvas excessivas, variação excessiva de temperatura, tromba d'água e ventos fortes." }
+        },
+        {
+          "@type": "Question",
+          "name": "A Marpe atende em todo o Brasil?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim! Atendemos de São Sepé, RS, para todo o país, com atendimento próximo e humano pelo WhatsApp e canais digitais." }
+        },
+        {
+          "@type": "Question",
+          "name": "Vocês fazem plano de saúde para MEI e empresas?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sim. Oferecemos planos de saúde individuais, familiares e empresariais — inclusive para MEI e CNPJ — com as melhores operadoras e descontos em mais de 12 mil farmácias." }
+        }
+      ]
+    }
+    </script>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -235,11 +278,25 @@
         transition: opacity .2s ease, background .2s ease;
       }
       .destaques-pagination .swiper-pagination-bullet-active { background: #fff; opacity: 1; }
+      /* Dica de swipe (mobile): some no primeiro toque no carrossel */
+      .destaques-hint {
+        display: none;
+        position: absolute;
+        bottom: 28px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        font-size: 13px;
+        color: rgba(226, 232, 240, 0.6);
+        pointer-events: none;
+        transition: opacity .4s ease;
+      }
       @media (max-width: 767.98px) {
         .destaques-topo { padding-top: 34px; padding-bottom: 20px; }
         .destaques-topo .destaque-slide img { max-height: 46vh; }
         .destaque-card { gap: 12px; padding: 0 4px; }
         .destaques-prev, .destaques-next { display: none; }
+        .destaques-hint { display: block; }
       }
 
       /* Seção Sobre nós — cards de valores */
@@ -347,6 +404,91 @@
         transform: rotate(45deg) translate(0, 0);
       }
       .ui-to-top:hover::after, .ui-to-top:focus::after { opacity: 0; }
+
+      /* Coesão de marca: azul único #0d6efd (substitui #007bff/#4854ed do template) */
+      .button.button-primary, .button.button-primary:focus {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+      .button.button-primary:hover, .button.button-primary:active,
+      .bg-gray-700 .button-primary:hover, .bg-primary-darker .button-primary:hover {
+        background: #0a58ca;
+        border-color: #0a58ca;
+      }
+      .button-primary-outline, .button-primary-outline:focus { border-color: #0d6efd; color: #0d6efd; }
+      .button-primary-outline:hover, .button-primary-outline:active,
+      .button-primary-white:hover, .button-primary-white:active {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+      }
+      .ui-to-top { background: #0d6efd; }
+      .ui-to-top:hover { background: #0a58ca; }
+
+      /* Alvos de toque ≥44px (mobile): títulos dos cards, ícones sociais e links do footer */
+      .thumbnail-light-title a {
+        display: inline-block;
+        padding: 10px 14px;
+        margin: -10px -14px;
+      }
+      .foter-social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        transition: background .2s ease;
+      }
+      .foter-social-links a:hover { background: rgba(255, 255, 255, 0.1); }
+      .footer-advanced-text a.link-default { display: inline-block; padding: 8px 0; }
+      .footer-advanced-aside .list-nav a { display: inline-block; padding: 8px 12px; margin: -8px -12px; }
+
+      /* Âncoras dos cards abaixo da navbar fixa (deep-links do menu) */
+      #consorcio-card, #credito-card { scroll-margin-top: 140px; }
+
+      /* Contraste AA reforçado nas descrições dos cards */
+      .thumbnail-light-text { color: #5f666d !important; }
+
+      /* FAQ — accordion leve no padrão visual dos cards */
+      .faq-list { max-width: 820px; margin: 0 auto; text-align: left; }
+      .faq-item {
+        background: #fff;
+        border: 1px solid rgba(13, 110, 253, 0.15);
+        border-radius: 12px;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+      }
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 18px 20px;
+        border: 0;
+        background: none;
+        font-weight: 700;
+        color: #0b1e36;
+        cursor: pointer;
+        text-align: left;
+      }
+      .faq-question::after {
+        content: "+";
+        font-size: 24px;
+        line-height: 1;
+        color: #0d6efd;
+        margin-left: 14px;
+        flex-shrink: 0;
+        transition: transform 0.25s ease;
+      }
+      .faq-question[aria-expanded="true"]::after { transform: rotate(45deg); }
+      .faq-answer-inner {
+        padding: 0 20px 18px;
+        color: #5f666d;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .collapse:not(.show) { display: none; }
 
       /* Reserva espaço para o hero antes do Swiper inicializar — elimina CLS */
       .swiper-container {
@@ -667,10 +809,10 @@
                   <ul class="rd-navbar-nav">
                     <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Seguros</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Consórcios</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Crédito</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#cartas-contempladas">Cartas Contempladas</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#consorcio-card">Consórcios</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#credito-card">Crédito</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre">Sobre Nós</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#cartas-contempladas">Cartas Contempladas</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="https://marpe.corretordigital.site" target="_blank" rel="noopener noreferrer">Portal do Parceiro</a></li>
                   </ul>
                 </div>
@@ -769,6 +911,7 @@
             <div class="swiper-button-prev destaques-prev" role="button" aria-label="Destaque anterior"></div>
             <div class="swiper-button-next destaques-next" role="button" aria-label="Próximo destaque"></div>
             <div class="swiper-pagination destaques-pagination"></div>
+            <p class="destaques-hint">Arraste para o lado e veja todas as ofertas</p>
           </div>
         </div>
       </section>
@@ -808,7 +951,7 @@
                 </div>
                 <h2 class="heading-1 text-uppercase text-white font-weight-bold wow-outer"><span class="wow slideInDown" data-wow-delay=".2s">Nossa missão</span></h2>
                 <p class="text-white wow-outer"><span class="wow slideInDown" data-wow-delay=".35s">Confie na Marpe Corretora de Seguros para cuidar do que é mais importante.</span></p>
-                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="#footer" data-wow-delay=".4s">Entre em contato</a></div>
+                <div class="wow-outer button-outer"><a class="button button-md button-primary button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20falar%20com%20um%20corretor%20da%20Marpe" target="_blank" rel="noopener noreferrer" data-wow-delay=".4s">Fale pelo WhatsApp</a></div>
               </div>
             </div>
           </div>
@@ -920,7 +1063,7 @@
 
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal"><img class="thumbnail-light-image" src="images/consorcio.webp" alt="Consórcio" width="400" height="300" loading="lazy"/></a>
+              <article class="thumbnail-light" id="consorcio-card"><a class="thumbnail-light-media" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal"><img class="thumbnail-light-image" src="images/consorcio.webp" alt="Consórcio" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title"><a href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Consórcios</a></h4>
                 <p class="thumbnail-light-text text-muted">Sem entrada e sem juros: carro, imóvel, caminhão ou área rural, com contemplação por lance ou sorteio.</p>
               </article>
@@ -928,7 +1071,7 @@
 
             <div class="col-sm-6 col-lg-3">
               <!-- Thumbnail Light-->
-              <article class="thumbnail-light"><a class="thumbnail-light-media" href="#creditoModal" data-toggle="modal" data-target="#creditoModal"><img class="thumbnail-light-image" src="images/credito.webp" alt="Crédito" width="400" height="300" loading="lazy"/></a>
+              <article class="thumbnail-light" id="credito-card"><a class="thumbnail-light-media" href="#creditoModal" data-toggle="modal" data-target="#creditoModal"><img class="thumbnail-light-image" src="images/credito.webp" alt="Crédito" width="400" height="300" loading="lazy"/></a>
                 <h4 class="thumbnail-light-title"><a href="#creditoModal" data-toggle="modal" data-target="#creditoModal">Crédito</a></h4>
                 <p class="thumbnail-light-text text-muted">Crédito pessoal facilitado para você realizar seus projetos com tranquilidade.</p>
               </article>
@@ -989,6 +1132,66 @@
         </div>
       </section>
 
+      <!-- FAQ -->
+      <section id="faq" class="section novi-background section-lg bg-gray-100 text-center">
+        <div class="container">
+          <h3 class="text-uppercase">Perguntas frequentes</h3>
+          <p><span class="text-width-1">Respostas rápidas para as dúvidas mais comuns — e para o que não estiver aqui, fale com a gente no WhatsApp.</span></p>
+          <div class="faq-list">
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="faq1">Como faço uma cotação?</button>
+              <div id="faq1" class="collapse faq-answer">
+                <div class="faq-answer-inner">É simples: escolha o seguro ou serviço no site — o formulário abre na hora — ou chame a gente no WhatsApp (55) 99150-4477. A cotação é gratuita e sem compromisso.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">O seguro auto é obrigatório?</button>
+              <div id="faq2" class="collapse faq-answer">
+                <div class="faq-answer-inner">O seguro particular não é obrigatório por lei, mas é a forma mais segura de proteger seu carro contra roubo, colisão, incêndio e danos a terceiros. Um acidente pode custar muito mais do que a mensalidade do seguro.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">Quanto custa um seguro?</button>
+              <div id="faq3" class="collapse faq-answer">
+                <div class="faq-answer-inner">Depende do veículo, do perfil do condutor, da cidade e das coberturas escolhidas. Por isso a cotação é personalizada e gratuita: em poucos minutos você recebe a melhor proposta.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="faq4">Como funciona um consórcio?</button>
+              <div id="faq4" class="collapse faq-answer">
+                <div class="faq-answer-inner">Um grupo de pessoas contribui mensalmente e, a cada mês, um ou mais integrantes são contemplados por lance ou sorteio. Não há juros — apenas taxa de administração — e no consórcio de imóveis você ainda pode usar o FGTS.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="faq5">Quais coberturas o Seguro Agrícola oferece?</button>
+              <div id="faq5" class="collapse faq-answer">
+                <div class="faq-answer-inner">A apólice pode cobrir seca, geada, granizo, incêndio, chuvas excessivas, variação excessiva de temperatura, tromba d'água e ventos fortes. Fale com a gente para avaliar a proteção ideal para a sua lavoura.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq6" aria-expanded="false" aria-controls="faq6">A Marpe atende em todo o Brasil?</button>
+              <div id="faq6" class="collapse faq-answer">
+                <div class="faq-answer-inner">Sim! Atendemos de São Sepé, RS, para todo o país, com atendimento próximo e humano pelo WhatsApp e canais digitais.</div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button" data-toggle="collapse" data-target="#faq7" aria-expanded="false" aria-controls="faq7">Vocês fazem plano de saúde para MEI e empresas?</button>
+              <div id="faq7" class="collapse faq-answer">
+                <div class="faq-answer-inner">Sim. Oferecemos planos de saúde individuais, familiares e empresariais — inclusive para MEI e CNPJ — com as melhores operadoras e descontos em mais de 12 mil farmácias.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       <!-- Best offer-->
       <section class="section novi-background section-1 bg-primary-darker text-center" style="background-image: url(images/banner9.webp);">
         <div class="container">
@@ -998,7 +1201,7 @@
               <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">Com uma variedade de seguros disponíveis em nossa corretora, você sempre pode escolher um que se encaixe perfeitamente nas suas necessidades.</span></p>
               <div class="wow-outer button-outer">
                 <a class="button button-primary-white button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" data-wow-delay=".1s">Cote agora pelo WhatsApp</a>
-                <a class="button button-primary-outline button-winona wow slideInDown" href="#top" data-wow-delay=".2s">Volte ao topo</a>
+                <a class="button button-primary-outline button-winona wow slideInDown" href="#services" data-wow-delay=".2s">Ver todos os serviços</a>
               </div>
             </div>
           </div>
@@ -1018,6 +1221,10 @@
                 <p class="footer-advanced-text">
                   <strong style="color:#fff">WhatsApp:</strong><br>
                   <a class="link-default" href="https://wa.me/55991504477" target="_blank" rel="noopener noreferrer">55 99150-4477</a>
+                </p>
+                <p class="footer-advanced-text">
+                  <strong style="color:#fff">Atendimento:</strong><br>
+                  Segunda a sexta, das 8h30 às 18h
                 </p>
                 <p class="footer-advanced-text">
                   <strong style="color:#fff">Endereço:</strong><br>
@@ -1205,7 +1412,7 @@
             speed: 600,
             simulateTouch: true,
             preventClicks: true,
-            autoplay: 5000,
+            autoplay: 6500,
             autoplayDisableOnInteraction: false,
             pagination: '.destaques-pagination',
             paginationClickable: true,
@@ -1213,7 +1420,28 @@
             prevButton: '.destaques-prev',
             keyboardControl: true
           });
+
+          // Dica de swipe some no primeiro toque
+          var hint = document.querySelector('.destaques-hint');
+          var carousel = document.querySelector('.destaques-swiper');
+          if (hint && carousel) {
+            carousel.addEventListener('touchstart', function esconde() {
+              if (hint) hint.style.opacity = '0';
+              carousel.removeEventListener('touchstart', esconde);
+            }, { passive: true });
+          }
         }
+
+        // Acessibilidade: Swiper clona slides no modo loop (h1 duplicado + foco repetido)
+        // — esconde os clones de leitores de tela e do tab
+        setTimeout(function() {
+          document.querySelectorAll('.swiper-slide-duplicate').forEach(function(slide) {
+            slide.setAttribute('aria-hidden', 'true');
+            slide.querySelectorAll('a, button').forEach(function(el) {
+              el.setAttribute('tabindex', '-1');
+            });
+          });
+        }, 100);
       });
     </script>
 </body>
