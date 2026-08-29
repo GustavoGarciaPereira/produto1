@@ -1,0 +1,9 @@
+{
+  "name": "marpe-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional da Marpe Corretora de Seguros — HTML/CSS/JS puro, sem build. Playwright usado apenas para testes locais via shell.",
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

@@ -19,6 +19,9 @@ images/logo_original_backup.webp
 # Artes de referência enviadas pelo cliente (contexto — as finais otimizadas estão em images/destaques/)
 imagens_cliente_contexto/
 
+# Dependências locais de dev (Playwright via shell — não publicar no Pages)
+node_modules/
+
 # Diretório local do Claude Code
 .claude/
 
@@ -31,3 +34,4 @@ opencode.json
 .playwright-mcp/
 session-ses_fba1.md
 imagens_cliente_contexto/*
+.reasonix/*
