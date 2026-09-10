@@ -104,10 +104,19 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     
     
-      // Carrossel de destaques — bundle local é Swiper 3 (params planos, não API de objetos do Swiper 5+)
+      // Vitrine de campanhas — bundle local é Swiper 3 (params planos, não API de objetos do Swiper 5+)
+      // Breakpoints não são aplicados pela build legada — calculamos manualmente via onResize.
       document.addEventListener('DOMContentLoaded', function() {
         if (typeof Swiper === 'function' && document.querySelector('.destaques-swiper .swiper-slide')) {
-          new Swiper('.destaques-swiper', {
+          function vitrineParams() {
+            var w = window.innerWidth;
+            if (w >= 992) return { slidesPerView: 3, spaceBetween: 24 };
+            if (w >= 768) return { slidesPerView: 2.2, spaceBetween: 18 };
+            if (w >= 480) return { slidesPerView: 1.6, spaceBetween: 16 };
+            return { slidesPerView: 1.05, spaceBetween: 12 };
+          }
+          var vp = vitrineParams();
+          var vitrineSwiper = new Swiper('.destaques-swiper', {
             loop: true,
             speed: 600,
             simulateTouch: true,
@@ -118,7 +127,23 @@ document.addEventListener('DOMContentLoaded', function() {
             paginationClickable: true,
             nextButton: '.destaques-next',
             prevButton: '.destaques-prev',
-            keyboardControl: true
+            keyboardControl: true,
+            slidesPerView: vp.slidesPerView,
+            spaceBetween: vp.spaceBetween,
+            loopedSlides: 4
+          });
+
+          // A build legada não dispara onResize — recalculamos manualmente
+          var vitrineTimer;
+          window.addEventListener('resize', function() {
+            clearTimeout(vitrineTimer);
+            vitrineTimer = setTimeout(function() {
+              var p = vitrineParams();
+              vitrineSwiper.params.slidesPerView = p.slidesPerView;
+              vitrineSwiper.params.spaceBetween = p.spaceBetween;
+              vitrineSwiper.update();
+              vitrineSwiper.onResize();
+            }, 150);
           });
 
           // Dica de swipe some no primeiro toque
