@@ -1,0 +1,481 @@
+{
+  "components": {},
+  "createdAt": "2026-09-14T20:05:03.087Z",
+  "id": "L6ssOLu_VP",
+  "lastModified": "2026-09-14T20:05:26.668Z",
+  "metadata": {
+    "provenance": {
+      "at": "2026-09-14T20:05:13.308Z",
+      "axes": {
+        "alignment": "left",
+        "density": "balanced",
+        "heroTreatment": "none",
+        "rhythm": "uniform"
+      },
+      "structure": "catalogue"
+    }
+  },
+  "name": "Marpe — Ofertas como cards (padrão Bradesco)",
+  "projectId": "repo-proj-_6TAeddo",
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "color": "$text-primary",
+                "content": "Ofertas e campanhas em destaque",
+                "fontSize": "$title",
+                "fontWeight": 700,
+                "id": "cat-title",
+                "type": "text"
+              },
+              {
+                "color": "$text-secondary",
+                "content": "Seguros • Consórcios • Crédito — fale com um especialista",
+                "fontSize": "$body",
+                "id": "cat-filter",
+                "type": "text"
+              }
+            ],
+            "id": "cat-header",
+            "justifyContent": "space-between",
+            "layout": "horizontal",
+            "name": "Header",
+            "responsive": "stack",
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "car",
+                        "iconColor": "$accent",
+                        "iconSize": 56,
+                        "id": "lxyivpLNNj",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$accent-tint",
+                    "height": 200,
+                    "id": "cat-1-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Seguro Auto",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-1-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Assistência 24h, carro reserva de 7 a 30 dias e até 10x sem juros.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-1-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "JVNBI-qe2P",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-1-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-1",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "home",
+                        "iconColor": "$success",
+                        "iconSize": 56,
+                        "id": "IMC98SeeVA",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$success-tint",
+                    "height": 200,
+                    "id": "cat-2-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Consórcio de Imóveis",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-2-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Comprar, construir ou reformar — com uso do FGTS.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-2-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "uKtyAl0oOV",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-2-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-2",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "landmark",
+                        "iconColor": "$warning",
+                        "iconSize": 56,
+                        "id": "DbvMiLsBfR",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$warning-tint",
+                    "height": 200,
+                    "id": "cat-3-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Empréstimo com Garantia de Imóvel",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-3-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Home equity: juros a partir de 1,09% a.m., prazos de 12 a 240 meses.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-3-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "tKjFW19du8",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-3-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-3",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "leaf",
+                        "iconColor": "$success",
+                        "iconSize": 56,
+                        "id": "Q4smDc_nef",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$success-tint",
+                    "height": 200,
+                    "id": "cat-4-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Seguro Agrícola",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-4-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Lavoura protegida contra seca, geada, granizo e chuvas excessivas.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-4-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "3YUQjgFqEt",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-4-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-4",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "heart-pulse",
+                        "iconColor": "$accent",
+                        "iconSize": 56,
+                        "id": "zsF_mTBwEQ",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$accent-tint",
+                    "height": 200,
+                    "id": "cat-5-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Plano de Saúde para MEI",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-5-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Planos para você, sua família e sua empresa — inclusive MEI e CNPJ.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-5-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "J_G6IQlryn",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-5-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-5",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "icon": "truck",
+                        "iconColor": "$text-primary",
+                        "iconSize": 56,
+                        "id": "oDTgMP4NGC",
+                        "type": "icon"
+                      }
+                    ],
+                    "fill": "$neutral-tint",
+                    "height": 200,
+                    "id": "cat-6-media",
+                    "justifyContent": "center",
+                    "layout": "vertical",
+                    "name": "Media",
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "$text-primary",
+                        "content": "Financiamento de Veículos",
+                        "fontSize": "$heading",
+                        "fontWeight": 600,
+                        "id": "cat-6-title",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$text-secondary",
+                        "content": "Até 100% financiado, com parcelas fixas. Simule sem compromisso.",
+                        "fontSize": "$text-sm",
+                        "id": "cat-6-meta",
+                        "type": "text"
+                      },
+                      {
+                        "color": "$accent",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": "$label",
+                        "id": "qEyrChYeCX",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": "$space-xs",
+                    "id": "cat-6-content",
+                    "layout": "vertical",
+                    "padding": "$space-md",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "cornerRadius": "$radius-lg",
+                "fill": "$bg-surface",
+                "id": "cat-6",
+                "layout": "vertical",
+                "name": "Catalogue item",
+                "overflow": "hidden",
+                "stroke": "$border",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 368
+              }
+            ],
+            "gap": "$space-lg",
+            "id": "cat-grid",
+            "layout": "horizontal",
+            "name": "Catalogue grid",
+            "responsive": "wrap",
+            "type": "frame",
+            "width": "100%",
+            "wrap": true
+          }
+        ],
+        "fill": "$bg-primary",
+        "gap": "$space-xl",
+        "id": "cat-page",
+        "layout": "vertical",
+        "name": "Page",
+        "padding": [
+          "$space-2xl",
+          "$space-2xl"
+        ],
+        "type": "frame",
+        "width": "100%"
+      }
+    ],
+    "fill": "$bg-primary",
+    "height": 900,
+    "id": "tKNuJ6F8EB",
+    "name": "Document",
+    "type": "document",
+    "width": 1440
+  },
+  "variables": {}
+}

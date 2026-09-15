@@ -169,3 +169,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
       });
 
+
+      // Simulador da capa — escolhe o serviço e abre o modal de cotação correspondente
+      // (o iframe continua com lazy load no shown.bs.modal; nada de src aqui)
+      document.addEventListener('DOMContentLoaded', function() {
+        var simBtn = document.getElementById('simulador-btn');
+        var simSel = document.getElementById('simulador-servico');
+        if (!simBtn || !simSel) return;
+
+        var destinos = {
+          auto: '#myModalAuto',
+          moto: '#motoModal',
+          caminhao: '#caminhaoModal',
+          agricola: '#agricolaModal',
+          residencial: '#residencialModal',
+          condominio: '#condominioModal',
+          empresarial: '#empresarialModal',
+          vida: '#vidaModal',
+          diversos: '#diversosModal',
+          consorcio: '#consorcioModal',
+          credito: '#creditoModal',
+          saude: '#saudeModal'
+        };
+
+        simBtn.addEventListener('click', function() {
+          var valor = simSel.value;
+          if (!valor) { simSel.focus(); return; }
+          if (destinos[valor]) {
+            $(destinos[valor]).modal('show');
+          } else {
+            var rotulo = simSel.options[simSel.selectedIndex].text;
+            window.open('https://wa.me/55991504477?text=' + encodeURIComponent('Olá! Gostaria de uma cotação de ' + rotulo + ' com a Marpe.'), '_blank', 'noopener');
+          }
+        });
+      });
+

@@ -28,7 +28,7 @@
 /* 2) Base / utilidades */
 html { scroll-behavior: smooth; }
 
-#destaques, #services, #sobre, #cartas-contempladas, #faq {
+#destaques, #services, #ofertas, #como-funciona, #sobre, #cartas-contempladas, #faq {
   scroll-margin-top: 80px;
 }
 

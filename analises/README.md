@@ -14,3 +14,4 @@ Pasta de **documentos de análise e pesquisa** do site da Marpe (auditorias, pla
 | Arquivo | Data | Status |
 |---|---|---|
 | `ANALISE-MELHORIAS.md` | 2026-08 | ✅ Implementado/decidido |
+| `ANALISE-REMODELACAO-HOME.md` | 2026-09 | 🚧 Em andamento (wireframe em validação; pendências de conteúdo) |

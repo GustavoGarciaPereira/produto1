@@ -1,0 +1,182 @@
+{
+  "boundAt": "2026-09-14T20:04:47.002Z",
+  "projects": [
+    {
+      "designSystem": {
+        "colors": {
+          "accent": "#0663B7",
+          "accent-tint": "#D8EAFF",
+          "bg-elevated": "#F2F7FE",
+          "bg-primary": "#F2F7FE",
+          "bg-surface": "#FFFFFF",
+          "border": "#D1D6DC",
+          "chart-1": "#2581DF",
+          "chart-2": "#CC4C76",
+          "chart-3": "#BD6600",
+          "chart-4": "#818800",
+          "chart-5": "#009773",
+          "chart-6": "#B854AA",
+          "danger": "#BC4A41",
+          "danger-tint": "#FFF2F0",
+          "neutral-100": "#EAEFF5",
+          "neutral-200": "#D1D6DC",
+          "neutral-300": "#B9BEC4",
+          "neutral-400": "#A2A7AC",
+          "neutral-50": "#F2F7FE",
+          "neutral-500": "#8B9095",
+          "neutral-600": "#75797F",
+          "neutral-700": "#5F6469",
+          "neutral-800": "#4B4F54",
+          "neutral-900": "#373B40",
+          "neutral-tint": "#D6EBFF",
+          "primary-100": "#E3F0FF",
+          "primary-200": "#B9D9FF",
+          "primary-300": "#8EC2FF",
+          "primary-400": "#5FA9FF",
+          "primary-50": "#F1F7FF",
+          "primary-500": "#3891F1",
+          "primary-600": "#1A79D7",
+          "primary-700": "#0663B7",
+          "primary-800": "#004E94",
+          "primary-900": "#003A71",
+          "success": "#007F38",
+          "success-tint": "#DAF8DF",
+          "text-primary": "#373B40",
+          "text-secondary": "#5F6469",
+          "warning": "#956300",
+          "warning-tint": "#FFEFDB"
+        },
+        "dark": {
+          "colors": {
+            "accent": "#5FA9FF",
+            "accent-tint": "#192F49",
+            "bg-elevated": "#373B40",
+            "bg-primary": "#373B40",
+            "bg-surface": "#2D3136",
+            "border": "#5F6469",
+            "chart-1": "#3B94F4",
+            "chart-2": "#E15F88",
+            "chart-3": "#D77500",
+            "chart-4": "#939B00",
+            "chart-5": "#00AC83",
+            "chart-6": "#CC66BD",
+            "danger": "#FB8276",
+            "danger-tint": "#46221E",
+            "neutral-tint": "#153048",
+            "success": "#59BE73",
+            "success-tint": "#17351F",
+            "text-primary": "#F2F7FE",
+            "text-secondary": "#A2A7AC",
+            "warning": "#D5A052",
+            "warning-tint": "#3E2909"
+          }
+        },
+        "motion": {
+          "base": {
+            "duration": 220,
+            "easing": "cubic-bezier(0.34, 1.2, 0.64, 1)"
+          },
+          "fast": {
+            "duration": 150,
+            "easing": "cubic-bezier(0.34, 1.2, 0.64, 1)"
+          },
+          "slow": {
+            "duration": 320,
+            "easing": "ease-in-out"
+          }
+        },
+        "radius": {
+          "radius-lg": 20,
+          "radius-md": 16,
+          "radius-sm": 12
+        },
+        "spacing": {
+          "space-2xl": 48,
+          "space-2xs": 4,
+          "space-3xl": 64,
+          "space-3xs": 2,
+          "space-lg": 24,
+          "space-md": 16,
+          "space-sm": 12,
+          "space-xl": 32,
+          "space-xs": 8
+        },
+        "typography": {
+          "body": {
+            "fontFamily": "Inter",
+            "fontSize": 16,
+            "lineHeight": 1.5
+          },
+          "caption": {
+            "fontFamily": "Inter",
+            "fontSize": 11,
+            "lineHeight": 1.5
+          },
+          "display": {
+            "fontFamily": "Plus Jakarta Sans",
+            "fontSize": 39,
+            "fontWeight": 700,
+            "letterSpacing": -0.5,
+            "lineHeight": 1.2
+          },
+          "heading": {
+            "fontFamily": "Plus Jakarta Sans",
+            "fontSize": 25,
+            "fontWeight": 600,
+            "lineHeight": 1.35
+          },
+          "label": {
+            "fontFamily": "Inter",
+            "fontSize": 13,
+            "fontWeight": 500,
+            "letterSpacing": 0.25,
+            "lineHeight": 1.5
+          },
+          "text-2xl": {
+            "fontSize": 31,
+            "letterSpacing": -0.5,
+            "lineHeight": 1.2
+          },
+          "text-3xl": {
+            "fontSize": 39,
+            "letterSpacing": -0.5,
+            "lineHeight": 1.2
+          },
+          "text-base": {
+            "fontSize": 16,
+            "lineHeight": 1.5
+          },
+          "text-lg": {
+            "fontSize": 20,
+            "lineHeight": 1.35
+          },
+          "text-sm": {
+            "fontSize": 13,
+            "lineHeight": 1.5
+          },
+          "text-xl": {
+            "fontSize": 25,
+            "lineHeight": 1.35
+          },
+          "text-xs": {
+            "fontSize": 11,
+            "lineHeight": 1.5
+          },
+          "title": {
+            "fontFamily": "Plus Jakarta Sans",
+            "fontSize": 31,
+            "fontWeight": 700,
+            "letterSpacing": -0.25,
+            "lineHeight": 1.2
+          }
+        }
+      },
+      "dir": "marpe-remodel",
+      "id": "repo-proj-_6TAeddo",
+      "name": "Marpe Remodel"
+    }
+  ],
+  "schemaVersion": 1,
+  "workspaceId": "repo-ws-eeWXWevl",
+  "workspaceName": "Site Marcel"
+}

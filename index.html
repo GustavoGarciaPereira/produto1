@@ -139,6 +139,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css" id="main-styles-link">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/marpe-design-system.css">
   </head>
   <body id="top">
     <a class="sr-only sr-only-focusable" href="#destaques">Pular para o conteúdo</a>
@@ -191,8 +192,8 @@
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#services">Seguros</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#consorcio-card">Consórcios</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#credito-card">Crédito</a></li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre">Sobre Nós</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="#cartas-contempladas">Cartas Contempladas</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre">Sobre Nós</a></li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="https://marpe.corretordigital.site" target="_blank" rel="noopener noreferrer">Portal do Parceiro</a></li>
                   </ul>
                 </div>
@@ -213,101 +214,32 @@
                 <a class="button button-md button-primary button-winona" href="https://wa.me/55991504477?text=Gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20com%20a%20Marpe" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
                 <a class="button button-md button-primary-outline button-winona capa-btn-secundario" href="#services">Ver serviços</a>
               </div>
+              <div class="mp-simulador-wrap">
+                <p class="mp-simulador-rotulo">Simule sem compromisso:</p>
+                <div class="mp-simulador">
+                  <label class="sr-only" for="simulador-servico">Escolha o serviço para simular</label>
+                  <select id="simulador-servico">
+                    <option value="">Qual seguro você procura?</option>
+                    <option value="auto">Seguro Auto</option>
+                    <option value="moto">Seguro de Moto</option>
+                    <option value="caminhao">Seguro de Caminhão</option>
+                    <option value="agricola">Seguro Agrícola</option>
+                    <option value="residencial">Seguro Residencial</option>
+                    <option value="condominio">Seguro de Condomínio</option>
+                    <option value="empresarial">Seguro Empresarial</option>
+                    <option value="vida">Seguro de Vida</option>
+                    <option value="saude">Plano de Saúde</option>
+                    <option value="diversos">Seguros Diversos</option>
+                    <option value="consorcio">Consórcios</option>
+                    <option value="credito">Crédito</option>
+                  </select>
+                  <button type="button" class="mp-btn mp-btn--primary" id="simulador-btn">Simular</button>
+                </div>
+              </div>
             </div>
             <div class="capa-imagem">
               <img src="images/hero-familia.webp" alt="Família protegida pela Marpe Corretora de Seguros" width="770" height="609" fetchpriority="high" decoding="async">
             </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="vitrine-cabecalho">
-            <h2 class="text-uppercase">Ofertas e campanhas em destaque</h2>
-            <p>Condições especiais das nossas campanhas — fale com um especialista pelo WhatsApp.</p>
-          </div>
-          <div class="destaques-swiper swiper-container-destaques">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/agricola.webp" alt="Seguro Agrícola — proteção contra seca, geada, granizo e mais" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Agr%C3%ADcola" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/propriedade-rural.webp" alt="Seguro Propriedade Rural — proteção contra imprevistos" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Propriedade%20Rural" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-automovel.webp" alt="Consórcio de Automóvel — sem entrada e sem juros" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Autom%C3%B3vel" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-imoveis.webp" alt="Consórcio de Imóveis — comprar, construir ou reformar, com uso do FGTS" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-imoveis-rurais.webp" alt="Consórcio de Imóveis Rurais — chácara, sítio ou área rural" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Im%C3%B3veis%20Rurais" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/consorcio-caminhoes.webp" alt="Consórcio de Caminhões e Pesados — créditos a partir de R$ 300 mil" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cons%C3%B3rcio%20de%20Caminh%C3%B5es" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/seguro-auto-coberturas.webp" alt="Seguro Auto — assistência 24h, carro reserva e parcelamento em até 10x sem juros" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/assistencia-24h.webp" alt="Assistência 24 Horas Auto — um corretor à sua disposição, de onde estiver" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Assist%C3%AAncia%2024h%20Auto" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/vida.webp" alt="Seguro de Vida — proteger o futuro da sua família" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/vida-empresarial.webp" alt="Seguro de Vida Empresarial — proteja a empresa e a família dos colaboradores" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Seguro%20de%20Vida%20Empresarial" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/plano-saude-mei.webp" alt="Você é MEI? Contrate um plano de saúde para sua família" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Plano%20de%20Sa%C3%BAde%20para%20MEI" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/financiamento-imobiliario.webp" alt="Financiamento Imobiliário — seu imóvel agora, até 80% financiado" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20Imobili%C3%A1rio" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/financiamento-veiculos.webp" alt="Financiamento de Veículos — até 100% financiado, parcelas fixas" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/home-equity.webp" alt="Empréstimo com Garantia de Imóvel — home equity com juros a partir de 1,09% a.m." width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Im%C3%B3vel" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-              <div class="swiper-slide"><div class="destaque-card">
-                <img src="images/destaques/emprestimo-garantia-veiculo.webp" alt="Empréstimo com Garantia de Veículos — transforme o valor do veículo em capital imediato" width="900" height="1125" loading="lazy" decoding="async">
-                <a class="btn-wa-cta destaque-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
-              </div>
-              </div>
-
-            </div>
-            <div class="swiper-button-prev destaques-prev" role="button" aria-label="Destaque anterior"></div>
-            <div class="swiper-button-next destaques-next" role="button" aria-label="Próximo destaque"></div>
-            <div class="swiper-pagination destaques-pagination"></div>
-            <p class="destaques-hint">Arraste para o lado e veja todas as ofertas</p>
           </div>
         </div>
       </section>
@@ -443,43 +375,198 @@
         </div>
       </section>
 
-      <!-- Sobre nós -->
-      <section id="sobre" class="section novi-background section-lg bg-gray-100 text-center">
+      <!-- Ofertas e campanhas — textos transcritos das artes do cliente (as imagens não são usadas) -->
+      <section id="ofertas" class="mp-secao mp-secao--fundo" aria-labelledby="ofertas-titulo">
         <div class="container">
-          <h3 class="text-uppercase">Sobre a Marpe</h3>
-          <p><span class="text-width-1">Há mais de 19 anos, a Marpe Corretora de Seguros une seguros, consórcios e crédito com clareza, cuidado e confiança — atendendo você em todo o Brasil a partir de São Sepé, RS.</span></p>
-          <div class="row row-35 offset-top-2 justify-content-center">
-            <div class="col-sm-6 col-lg-4">
-              <div class="sobre-value">
-                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></span>
-                <div class="sobre-value-body">
-                  <h4>Clareza</h4>
-                  <p>Orientação transparente em cada escolha de proteção.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <div class="sobre-value">
-                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
-                <div class="sobre-value-body">
-                  <h4>Cuidado</h4>
-                  <p>Atendimento humano, próximo e sem burocracia.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <div class="sobre-value">
-                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>
-                <div class="sobre-value-body">
-                  <h4>Confiança</h4>
-                  <p>Desde 2007, parceiros das principais seguradoras do mercado.</p>
-                </div>
-              </div>
-            </div>
+          <div class="mp-secao-cabecalho">
+            <h3 class="mp-secao-titulo" id="ofertas-titulo">Ofertas e campanhas em destaque</h3>
+            <p class="mp-secao-sub">Condições especiais das campanhas — fale com um especialista pelo WhatsApp.</p>
           </div>
-          <div class="wow-outer button-outer">
-            <a class="button button-primary button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Marpe" target="_blank" rel="noopener noreferrer">Fale com a Marpe</a>
-          </div>
+          <ul class="mp-ofertas-grid">
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Seguro Auto</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Assistências 24h sem custo adicional — guincho, troca de pneu, bateria, táxi e chaveiro</li>
+                  <li>Em caso de acidente, você só paga a franquia</li>
+                  <li>Carro reserva de 7, 15 ou 30 dias</li>
+                  <li>Parcelamento em até 10x sem juros</li>
+                  <li>Danos corporais a terceiros incluídos</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#myModalAuto" data-toggle="modal" data-target="#myModalAuto">Cotar pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"/><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"/><path d="M5 21h14"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Agrícola e Propriedade Rural</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Proteção contra seca, geada, granizo, incêndio, chuvas excessivas, variação de temperatura, tromba d'água e ventos fortes</li>
+                  <li>Soluções para a propriedade rural se proteger dos imprevistos</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#agricolaModal" data-toggle="modal" data-target="#agricolaModal">Cotar pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"/><path d="M15 6h1v4"/><path d="m6.134 14.768.866-.5 2 3.464"/><circle cx="16" cy="8" r="6"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Consórcio de Automóvel</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Créditos a partir de R$ 25.000,00</li>
+                  <li>Sem entrada e sem juros — só taxa de administração</li>
+                  <li>Contemplação mensal por lance e sorteio</li>
+                  <li>Parcelas reduzidas até a contemplação</li>
+                  <li>Carros novos e seminovos</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Consórcio de Imóveis</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Créditos a partir de R$ 70 mil, sem juros</li>
+                  <li>Compre, construa ou reforme seu imóvel</li>
+                  <li>Possibilidade de uso do FGTS</li>
+                  <li>Contemplação mensal por lance e sorteio</li>
+                  <li>Parcelas reduzidas até a contemplação</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Consórcio de Imóveis Rurais</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Créditos a partir de R$ 500.000,00</li>
+                  <li>Para chácara, sítio ou área rural</li>
+                  <li>Contemplação mensal por lance e sorteio</li>
+                  <li>Sem entrada e sem juros</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Consórcio de Caminhões e Pesados</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Créditos a partir de R$ 300.000,00</li>
+                  <li>Contemplação mensal por lance e sorteio</li>
+                  <li>Prêmios em R$ para pagamentos em dia</li>
+                  <li>Sem entrada e sem juros</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#consorcioModal" data-toggle="modal" data-target="#consorcioModal">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Seguro de Vida</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Mantenha o padrão de vida da família em caso de imprevistos</li>
+                  <li>Tratamento médico em caso de doença grave</li>
+                  <li>Versão empresarial — proteja a saúde financeira do negócio e das famílias dos colaboradores</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#vidaModal" data-toggle="modal" data-target="#vidaModal">Cotar pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Plano de Saúde MEI e CNPJ</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Você é MEI? Contrate agora mesmo o plano de saúde da sua família</li>
+                  <li>Hospitais de referência pertinho de você</li>
+                  <li>Ampla cobertura para internações, exames e terapias</li>
+                  <li>Descontos em mais de 12 mil farmácias</li>
+                </ul>
+                <a class="mp-oferta-cta" href="#saudeModal" data-toggle="modal" data-target="#saudeModal">Cotar pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 12h4"/><path d="M10 8h4"/><path d="M14 21v-3a2 2 0 0 0-4 0v3"/><path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Financiamento Imobiliário</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Financie até 80% do imóvel residencial ou 70% do comercial</li>
+                  <li>Prazo de 12 até 420 meses (35 anos)</li>
+                  <li>Juros a partir de 11,69% a.a. + TR</li>
+                  <li>Tabela SAC — pessoa física</li>
+                  <li>Imóvel mínimo de R$ 98.000,00 e renda mínima de R$ 3.200,00</li>
+                </ul>
+                <a class="mp-oferta-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20Imobili%C3%A1rio" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Financiamento de Veículos</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Até 100% financiado</li>
+                  <li>Carros e SUVs até 25 anos, motos até 10 e utilitários até 50</li>
+                  <li>Prazo de 3 a 60 meses</li>
+                  <li>Até 60 dias de carência</li>
+                  <li>Parcelas fixas</li>
+                </ul>
+                <a class="mp-oferta-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Financiamento%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Home Equity</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Imóvel residencial ou comercial como garantia</li>
+                  <li>Imóveis de R$ 70 mil a R$ 20 milhões</li>
+                  <li>Empréstimo a partir de R$ 30.000, até 60% do valor do imóvel</li>
+                  <li>Prazo de 12 a 240 meses, com carência de até 12 meses</li>
+                  <li>Juros a partir de 1,09% a.m. + IPCA ou juros fixos</li>
+                </ul>
+                <a class="mp-oferta-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Im%C3%B3vel%20(Home%20Equity)" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+            <li class="mp-oferta-card">
+              <div class="mp-oferta-topo">
+                <span class="mp-oferta-icone"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span>
+              </div>
+              <div class="mp-oferta-corpo">
+                <h4 class="mp-oferta-titulo">Empréstimo com Garantia de Veículos</h4>
+                <ul class="mp-oferta-lista">
+                  <li>Taxas menores que as do empréstimo tradicional</li>
+                  <li>Carros, caminhonetes e SUVs até 25 anos; caminhões até 50</li>
+                  <li>Financiamento de até 100%, prazo de 3 a 60 meses</li>
+                  <li>Carência de até 60 dias e parcelas fixas</li>
+                </ul>
+                <a class="mp-oferta-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Empr%C3%A9stimo%20com%20Garantia%20de%20Ve%C3%ADculos" target="_blank" rel="noopener noreferrer">Simular pelo WhatsApp</a>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -490,6 +577,41 @@
           <p><span class="text-width-1">Adquira ou venda sua carta contemplada de veículos e imóveis com segurança e transparência. Com a Marpe, você conta com intermediação especializada, análise criteriosa e acompanhamento em todo o processo — para receber seu bem na hora, sem depender de sorteio e com condições que cabem no seu bolso.</span></p>
           <div class="wow-outer button-outer">
             <a class="button button-primary button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20Cartas%20Contempladas" target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como funciona — 4 passos -->
+      <section id="como-funciona" class="mp-secao mp-secao--fundo" aria-labelledby="como-titulo">
+        <div class="container">
+          <div class="mp-secao-cabecalho">
+            <h3 class="mp-secao-titulo" id="como-titulo">Como funciona</h3>
+            <p class="mp-secao-sub">Da cotação à assinatura, você fala com gente de verdade.</p>
+          </div>
+          <ol class="mp-passos">
+            <li class="mp-passo">
+              <span class="mp-passo-numero" aria-hidden="true">1</span>
+              <h4 class="mp-passo-titulo">Solicite uma cotação</h4>
+              <p class="mp-passo-texto">Escolha o serviço e preencha em poucos minutos — ou fale no WhatsApp.</p>
+            </li>
+            <li class="mp-passo">
+              <span class="mp-passo-numero" aria-hidden="true">2</span>
+              <h4 class="mp-passo-titulo">Analisamos seu perfil</h4>
+              <p class="mp-passo-texto">Um corretor entende a sua necessidade e o seu orçamento.</p>
+            </li>
+            <li class="mp-passo">
+              <span class="mp-passo-numero" aria-hidden="true">3</span>
+              <h4 class="mp-passo-titulo">Comparamos as seguradoras</h4>
+              <p class="mp-passo-texto">Buscamos as melhores condições entre as principais do mercado.</p>
+            </li>
+            <li class="mp-passo">
+              <span class="mp-passo-numero" aria-hidden="true">4</span>
+              <h4 class="mp-passo-titulo">Você escolhe a melhor proposta</h4>
+              <p class="mp-passo-texto">Sem pressão — você decide com clareza e segurança.</p>
+            </li>
+          </ol>
+          <div class="mp-passos-cta">
+            <a class="mp-btn mp-btn--primary" href="https://wa.me/55991504477?text=Gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20com%20a%20Marpe" target="_blank" rel="noopener noreferrer">Começar agora</a>
           </div>
         </div>
       </section>
@@ -554,18 +676,56 @@
         </div>
       </section>
 
-      <!-- Best offer-->
-      <section class="section novi-background section-1 bg-primary-darker text-center" style="background-image: url(images/banner9.webp);">
+      <!-- Sobre nós -->
+      <section id="sobre" class="section novi-background section-lg text-center">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-sm-10 col-lg-7 col-xl-6">
-              <h3 class="wow-outer"><span class="wow slideInDown text-uppercase">MELHORES OFERTAS</span></h3>
-              <p class="wow-outer offset-top-4"><span class="wow slideInDown" data-wow-delay=".05s">Com uma variedade de seguros disponíveis em nossa corretora, você sempre pode escolher um que se encaixe perfeitamente nas suas necessidades.</span></p>
-              <div class="wow-outer button-outer">
-                <a class="button button-primary-white button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20a%20MARPE%20esta%20aqui%20para%20te%20atender%2C%20entre%20em%20contato%20e%20fa%C3%A7a%20a%20sua%20cota%C3%A7%C3%A3o" target="_blank" rel="noopener noreferrer" data-wow-delay=".1s">Cote agora pelo WhatsApp</a>
-                <a class="button button-primary-outline button-winona wow slideInDown" href="#services" data-wow-delay=".2s">Ver todos os serviços</a>
+          <h3 class="text-uppercase">Sobre a Marpe</h3>
+          <p><span class="text-width-1">Há mais de 19 anos, a Marpe oferece todos os tipos de seguros para proteção patrimonial e proteção à vida, além de linhas de crédito e consórcios para aquisição de bens e serviços — atendendo você em todo o Brasil a partir de São Sepé, RS.</span></p>
+          <div class="row row-35 offset-top-2 justify-content-center">
+            <div class="col-sm-6 col-lg-4">
+              <div class="sobre-value">
+                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></span>
+                <div class="sobre-value-body">
+                  <h4>Clareza</h4>
+                  <p>Orientação transparente em cada escolha de proteção.</p>
+                </div>
               </div>
             </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="sobre-value">
+                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+                <div class="sobre-value-body">
+                  <h4>Cuidado</h4>
+                  <p>Atendimento humano, próximo e sem burocracia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <div class="sobre-value">
+                <span class="sobre-value-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></span>
+                <div class="sobre-value-body">
+                  <h4>Confiança</h4>
+                  <p>Desde 2007, parceiros das principais seguradoras do mercado.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wow-outer button-outer">
+            <a class="button button-primary button-winona wow slideInDown" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20da%20Marpe" target="_blank" rel="noopener noreferrer">Fale com a Marpe</a>
+          </div>
+          <p class="mp-assinatura">Contigo em todos os momentos</p>
+        </div>
+      </section>
+
+
+      <!-- CTA final (antigo banner "Melhores Ofertas" fundido) -->
+      <section id="cta-final" class="mp-cta-final" aria-labelledby="cta-final-titulo">
+        <div class="container">
+          <h3 class="mp-cta-final-titulo" id="cta-final-titulo">Pronto para proteger o que importa?</h3>
+          <p class="mp-cta-final-sub">Cotação gratuita e sem compromisso — resposta rápida pelo WhatsApp.</p>
+          <div class="mp-cta-final-botoes">
+            <a class="mp-btn mp-btn--branco" href="https://wa.me/55991504477?text=Gostaria%20de%20fazer%20uma%20cota%C3%A7%C3%A3o%20com%20a%20Marpe" target="_blank" rel="noopener noreferrer">Cotar pelo WhatsApp</a>
+            <a class="mp-btn mp-btn--claro" href="#services">Ver serviços</a>
           </div>
         </div>
       </section>
@@ -577,6 +737,7 @@
               <div class="col-lg-7">
                 <h5 class="font-weight-bold text-uppercase text-white">Sobre nós</h5>
                 <p class="footer-advanced-text">Seguro é coisa séria e deve ser feito por quem entende do assunto. Nós, da Marpe Corretora de Seguros, somos habilitados há mais de 19 anos para oferecer soluções em todos os ramos de seguros, planos de saúde, odontológicos e consórcios. Somos parceiros das principais seguradoras do mercado e atendemos você em todo o Brasil.</p>
+                <p class="mp-assinatura mp-assinatura--clara">Contigo em todos os momentos</p>
               </div>
               <div class="col-lg-5">
                 <h5 class="font-weight-bold text-uppercase text-white">Contato</h5>

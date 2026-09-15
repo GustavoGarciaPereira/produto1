@@ -32,14 +32,14 @@ Guia para agentes de IA (opencode) neste repositório. O **`CLAUDE.md` é a font
 
 ## Testes no navegador (Playwright MCP)
 
-O `opencode.json` configura o MCP `playwright` (`npx @playwright/mcp@latest --browser chromium`). Neste Ubuntu 20.04 o Chromium rev. 1243 não instala; o workaround aplicado é um symlink para a rev. 1234:
+O `opencode.json` configura o MCP `playwright` (`npx @playwright/mcp@latest --browser chromium`). Neste Ubuntu 20.04 o Chromium exigido pelo `@latest` não instala; o workaround é apontar a revisão pedida para a rev. 1234 (a cada atualização do MCP o número muda — em 2026-09-14 passou a ser a **1244**):
 
 ```bash
-ln -sfn ~/.cache/ms-playwright/chromium-1234 ~/.cache/ms-playwright/chromium-1243
-ln -sfn ~/.cache/ms-playwright/chromium_headless_shell-1234 ~/.cache/ms-playwright/chromium_headless_shell-1243
+ln -sfn ~/.cache/ms-playwright/chromium-1234 ~/.cache/ms-playwright/chromium-1244
+ln -sfn ~/.cache/ms-playwright/chromium_headless_shell-1234 ~/.cache/ms-playwright/chromium_headless_shell-1244
 ```
 
-Se o MCP voltar a falhar após atualização, recrie os symlinks. Outras armadilhas:
+Se o MCP voltar a falhar após atualização, o erro diz a revisão esperada (`chromium-<N>`); recrie o symlink com esse número. Outras armadilhas:
 
 - **Screenshots caem na raiz do repo** por padrão — ao terminar, mova para `/tmp/opencode/` para não sujar o `git status`.
 - Use `window.scrollTo({top: X, behavior: 'instant'})`; o `scroll-behavior: smooth` do site faz o Playwright esperar/animações travarem capturas.

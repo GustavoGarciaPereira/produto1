@@ -1,0 +1,659 @@
+{
+  "components": {},
+  "createdAt": "2026-09-14T23:16:40.001Z",
+  "id": "UHla7pDHHe",
+  "lastModified": "2026-09-14T23:17:42.595Z",
+  "name": "Marpe — Serviços · estilo B (foto como fundo)",
+  "projectId": "repo-proj-_6TAeddo",
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "color": "#0b1e36",
+                "content": "Escolha o seguro ideal para você",
+                "fontFamily": "Poppins",
+                "fontSize": 32,
+                "fontWeight": 800,
+                "id": "pxw8gu_Oao",
+                "letterSpacing": -0.5,
+                "textAlign": "center",
+                "type": "text"
+              },
+              {
+                "color": "#5f666d",
+                "content": "Variante B — foto como fundo do card, com painel de texto sobreposto.",
+                "fontSize": 16,
+                "id": "wPRCRfKGRM",
+                "textAlign": "center",
+                "type": "text"
+              }
+            ],
+            "gap": 8,
+            "id": "m2LjzEz2fs",
+            "layout": "vertical",
+            "name": "Cabeçalho",
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "1JBXdvctvf",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/carro.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Auto",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "ileZOkSQFf",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Assistência 24h, carro reserva e parcelamento facilitado.",
+                            "fontSize": 13,
+                            "id": "6lwveDDXK2",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "SLpxsGqVWD",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "rl3DIzoWl_",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "gap": 0,
+                    "height": "100%",
+                    "id": "E-6tzpWF3X",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "padding": 0,
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "1pV_pEahYJ",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "name": "Card fundo",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "Uex50Dd-KI",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/moto.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Moto",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "UB2b_vIA_T",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Cobertura sob medida com preços acessíveis e assistência 24h.",
+                            "fontSize": 13,
+                            "id": "_KlzBh87w6",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "9jDUD_AorX",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "vscUlSPoOS",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "6jF1K5iZ1T",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "s3s9QJsNd0",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "IqnJJeTHEu",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/caminhao.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Caminhão",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "OqikAR7pFo",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Proteção para caminhões e frotas, incluindo a carga.",
+                            "fontSize": 13,
+                            "id": "KGouVu4akJ",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "oZLDbidJId",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "TgAdTEVIZy",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "3j5EYzPFeR",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "DwRJZjwPYh",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "CCSuVeD661",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/agricola.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Agrícola",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "7b-_CpNSJJ",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Lavoura protegida contra seca, geada, granizo e chuvas excessivas.",
+                            "fontSize": 13,
+                            "id": "2NLQJp8dfe",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "MiUONMwc81",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "Tip1x4wGab",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "S25LlZXmYR",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "lEC_z7puO4",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "4SsPn21QYa",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/residencial.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Residencial",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "DPQH5FteOb",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Casa protegida contra incêndio, roubo e danos elétricos.",
+                            "fontSize": 13,
+                            "id": "-HkLZtpAxs",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "3yxslKHRnP",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "DM4tZt3dVX",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "KJlpI8QWY-",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "Wzdr0ON88I",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "h5ZOABy0kT",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/condominio.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Condomínio",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "XZVge3mdYu",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Cobertura completa para áreas comuns e unidades.",
+                            "fontSize": 13,
+                            "id": "Q38VGCfiNM",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "AZyFeTZSDy",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "yyYiqyEa3l",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "Q0QLSdMBxw",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "tBaQukvCCn",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "AmoOtG7oeo",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/empresarial.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Empresarial",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "UD0rexFlBD",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Proteção para o negócio e responsabilidade civil.",
+                            "fontSize": 13,
+                            "id": "WRfw5AghV8",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "g-kmEw36DD",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "M8d40AomXo",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "Ddjl5uw7tb",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "fBzMC22smz",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "height": "100%",
+                    "id": "4nWidx8gRa",
+                    "objectFit": "cover",
+                    "position": "absolute",
+                    "src": "http://127.0.0.1:5502/images/vida.webp",
+                    "type": "image",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Vida",
+                            "fontFamily": "Poppins",
+                            "fontSize": 18,
+                            "fontWeight": 700,
+                            "id": "FxcUDMKpJd",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#dbe7f5",
+                            "content": "Garanta o futuro e a estabilidade da sua família.",
+                            "fontSize": 13,
+                            "id": "0pLmLdjH7e",
+                            "lineHeight": 1.45,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#8ecbff",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "7PO6YEkVab",
+                            "type": "text"
+                          }
+                        ],
+                        "fill": "rgba(11,30,54,0.82)",
+                        "gap": 6,
+                        "id": "_CEHrzaPBb",
+                        "layout": "vertical",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "fill": "rgba(0,0,0,0)",
+                    "height": "100%",
+                    "id": "CAOhei3fo3",
+                    "justifyContent": "flex-end",
+                    "layout": "vertical",
+                    "position": "absolute",
+                    "type": "frame",
+                    "width": "100%",
+                    "x": 0,
+                    "y": 0
+                  }
+                ],
+                "cornerRadius": 16,
+                "height": 380,
+                "id": "sAyW-eqQuN",
+                "justifyContent": "flex-end",
+                "layout": "vertical",
+                "overflow": "hidden",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "gap": 24,
+            "gridColumns": 4,
+            "id": "QJsE_3LfaB",
+            "layout": "grid",
+            "name": "Grade estilo B",
+            "type": "frame",
+            "width": "100%"
+          }
+        ],
+        "fill": "#f2f7fe",
+        "gap": 32,
+        "id": "FeKWUhNaUA",
+        "layout": "vertical",
+        "name": "Estilo B — teste",
+        "padding": 64,
+        "type": "frame",
+        "width": "100%"
+      }
+    ],
+    "fill": "#FFFFFF",
+    "height": 900,
+    "id": "CqqY1cVo1c",
+    "name": "Document",
+    "type": "document",
+    "width": 1440
+  },
+  "variables": {}
+}

@@ -32,17 +32,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 | Seção | Descrição |
 |---|---|
-| `<head>` | Carrega `css/fonts.css`, `bootstrap.min.css`, `style.min.css`, `custom.css`. Preload da imagem LCP (`images/hero-familia.webp` com `fetchpriority="high"`) e `preconnect` para o cdnjs. **Selo SSL da AlphaSSL fica no footer** (bloco marcado "DO NOT EDIT" — não editar o código; dentro do `<head>` era inválido e o parser jogava o `<img>` para o início do `<body>`). |
+| `<head>` | Carrega `css/fonts.css`, `bootstrap.min.css`, `style.min.css`, `custom.css` e `css/marpe-design-system.css` (folha do design system, 100% aditiva, prefixo `mp-`). Preload da imagem LCP (`images/hero-familia.webp` com `fetchpriority="high"`) e `preconnect` para o cdnjs. **Selo SSL da AlphaSSL fica no footer** (bloco marcado "DO NOT EDIT" — não editar o código; dentro do `<head>` era inválido e o parser jogava o `<img>` para o início do `<body>`). |
 | Preloader | Exibe o logo (`images/logo.webp`) durante carregamento; some via `.loaded` (com fallback de 2,5s em `js/custom.js`). |
 | `rd-navbar` | Navbar responsiva com logo e badge de contato (WhatsApp). "Portal do Parceiro" é ação secundária (outline) — o CTA principal é o WhatsApp. Ícone (WhatsApp) é SVG inline. |
-| **Capa (`#destaques`)** | Primeira seção desde 2026-09: grid em 2 colunas com **1 único `<h1>`** ("Seguros, Consórcios e Créditos"), eyebrow verde, subtítulo, CTAs "Cotar pelo WhatsApp" (primário) e "Ver serviços", e a foto `images/hero-familia.webp` (recorte limpo do banner antigo, sem texto sobreposto). Abaixo, a **vitrine de campanhas**: carrossel Swiper 3 (bundle legacy local, **API de params planos** — não usar API de objetos do Swiper 5+) com 15 artes do cliente em moldura uniforme 4:5 (`images/destaques/*.webp`, originais em `imagens_cliente_contexto/`, gitignored), CTA WhatsApp por slide. **3 slides no desktop / 2 no tablet / 1.05 no mobile** — a build legada não aplica `breakpoints`, então os params são recalculados em `js/custom.js` (`vitrineParams` + listener de resize). Setas só no desktop (bullets ocultos ≥992px); swipe nativo no mobile com hint `.destaques-hint`. Clones do loop recebem `aria-hidden` + `tabindex=-1`. |
+| **Capa (`#destaques`)** | Hero navy em 2 colunas com **1 único `<h1>`** ("Seguros, Consórcios e Créditos"), eyebrow verde, subtítulo, CTAs "Cotar pelo WhatsApp" (primário) e "Ver serviços", foto `images/hero-familia.webp` e o **simulador** (`#simulador-servico` + `#simulador-btn` — escolhe o serviço e abre o modal correspondente; lógica no fim do `js/custom.js`). A antiga vitrine de 15 artes foi **removida em 2026-09** — os textos viraram a seção "Ofertas e campanhas" e as imagens `images/destaques/*.webp` ficaram sem uso no site (arquivos mantidos no repo). |
 | Faixa de confiança | `.faixa-confianca` — 4 diferenciais factuais (+19 anos, atendimento nacional, grandes seguradoras, cotação gratuita). |
 | **Seção de serviços** ("Conheça e cote os nossos serviços") | 12 cards (9 seguros + Plano de Saúde + Consórcios + Crédito) — cada um com imagem, título e descrição curta. Os 10 de cotação abrem modal Bootstrap com iframe (lazy load); Plano de Saúde e Agrícola abrem modal com CTA para WhatsApp. Cards em `.thumbnail-light` reestilizados (card branco, faixa de acento verde/azul, hover elevado). |
-| **Seção "Sobre a Marpe"** | `#sobre` (o nav "Sobre Nós" aponta para ela): história (19 anos desde 2007), 3 cards de valores (Clareza, Cuidado, Confiança — `.sobre-value`, `h4`) e CTA "Fale com a Marpe" (WhatsApp). |
-| **Seção "Cartas Contempladas"** | `#cartas-contempladas` — texto institucional + CTA WhatsApp. |
-| **Seção FAQ** | `#faq` — 7 perguntas em accordion Bootstrap collapse com CSS inline (`.faq-*`, `+` vira `×` no aberto) + JSON-LD `FAQPage` espelhado no head. Antes do banner "Melhores Ofertas". |
-| Banner "Melhores Ofertas" | Seção com fundo `images/banner9.webp`, botões "Cote agora pelo WhatsApp" e "Ver todos os serviços" (outline branco — contraste AA sobre a foto). |
-| Footer | 2 colunas: "Sobre nós" (col-lg-7) + "Contato" com WhatsApp, **atendimento (seg–sex 8h30–18h)**, endereço com link de rota no Google Maps, **Política de Privacidade**, redes sociais e selo SSL. Rodapé inferior com `flex-wrap` e `gap:12px`; logo sobre cartão branco. |
+| **Ofertas e campanhas (`#ofertas`)** | Grade de 12 cards (`.mp-ofertas-grid` / `.mp-oferta-card`, folha `mp-`) com os **textos transcritos das artes do cliente** (coberturas do Auto, valores dos Consórcios, taxas dos Financiamentos etc.): bullets + CTA para o modal do serviço (Auto, Agrícola, Vida, Saúde, Consórcios) ou WhatsApp com mensagem específica (Financiamentos, Home Equity, Empréstimo com Garantia). Ícones SVG inline (Lucide). Atenção: valores/taxas das campanhas datam — revisar com o cliente periodicamente. |
+| **Seção "Cartas Contempladas"** | `#cartas-contempladas` — texto institucional + CTA WhatsApp (posicionada logo após as Ofertas, junto do conteúdo de consórcios). |
+| **Como funciona (`#como-funciona`)** | 4 passos numerados (`.mp-passos` / `.mp-passo`) + CTA "Começar agora". |
+| **Seção FAQ** | `#faq` — 7 perguntas em accordion Bootstrap collapse com CSS inline (`.faq-*`, `+` vira `×` no aberto) + JSON-LD `FAQPage` espelhado no head. Fica após o "Como funciona". |
+| **Seção "Sobre a Marpe"** | `#sobre` (o nav "Sobre Nós" aponta para ela): texto institucional (proteção patrimonial e de vida + crédito e consórcios), 3 cards de valores (Clareza, Cuidado, Confiança — `.sobre-value`, `h4`), CTA "Fale com a Marpe" (WhatsApp) e a assinatura **"Contigo em todos os momentos"** (`.mp-assinatura`). |
+| **CTA final (`#cta-final`)** | Faixa navy (`.mp-cta-final`): "Pronto para proteger o que importa?" + botões "Cotar pelo WhatsApp" (branco) e "Ver serviços" (outline). Substitui o antigo banner "Melhores Ofertas" (`images/banner9.webp` aposentado). |
+| Footer | 2 colunas: "Sobre nós" (col-lg-7, com a assinatura **"Contigo em todos os momentos"**) + "Contato" com WhatsApp, **atendimento (seg–sex 8h30–18h)**, endereço com link de rota no Google Maps, **Política de Privacidade**, redes sociais e selo SSL. Rodapé inferior com `flex-wrap` e `gap:12px`; logo sobre cartão branco. |
 | Botão WhatsApp fixo | `position: fixed`, canto **inferior direito** (20px da borda), cor `#25D366`. Some enquanto um modal de cotação estiver aberto (`.modal-open .whatsapp-button`) e é **oculto no mobile** (substituído pela barra fixa de conversão). |
 | Barra fixa de conversão (mobile) | `.cta-mobile` (<768px): "Cote pelo WhatsApp" + "Ver serviços". Some com modal aberto; `#footer` ganha `padding-bottom` para não cobrir conteúdo. |
 | `#modals-container` | Todos os modais são gerados dinamicamente por `js/custom.js` no fim do body, dentro de `DOMContentLoaded`. |
@@ -83,7 +85,7 @@ Os modais são gerados por um array `modals` em `js/custom.js`, dentro de `docum
 - **`js/stubs.min.js`** — stubs para plugins não carregados (evita TypeError).
 - **`js/ui-to-top.min.js`** — UItoTop.
 - **`js/script.js`** (~40KB, fonte) → **`js/script.min.js`** (21KB, minificado com terser; **é o carregado pelo site**). Lógica customizada do template: inicializa plugins via seletor jQuery, padrão `plugins = { ... }`, detecta mobile/IE/desktop via `userAgent`, `lazyInit()`. **Não editar para features novas** — use `js/custom.js`; edite o fonte e regenere o min com `npx terser js/script.js -c -m -o js/script.min.js`.
-- **`js/custom.js`** (146 linhas, editável) — modais de cotação (array `modals` + lazy load dos iframes), fallback do preloader (2,5s), vitrine de campanhas (Swiper 3: `vitrineParams()` recalcula slidesPerView/spaceBetween no resize — a build legada não aplica `breakpoints`) e acessibilidade (clones do loop com `aria-hidden`/`tabindex=-1`).
+- **`js/custom.js`** (~200 linhas, editável) — modais de cotação (array `modals` + lazy load dos iframes), fallback do preloader (2,5s), **simulador da capa** (`#simulador-btn` lê o `#simulador-servico` e abre o modal correspondente) e o código legado da vitrine (Swiper 3 — hoje **dormente**: o bloco checa a existência de `.destaques-swiper` e não faz nada; pode ser removido junto do `swiper-legacy.min.js` numa limpeza futura).
 
 ### CSS
 
@@ -92,7 +94,8 @@ Os modais são gerados por um array `modals` em `js/custom.js`, dentro de `docum
 - **`css/style.min.css`** (~146KB) — CSS do template Novi gerado via PurgeCSS a partir de `style.css` (original 332KB). **É o arquivo carregado pelo site.** Para regenerar: `npx --yes purgecss --config purgecss.config.js` (config na raiz, com safelist das classes dinâmicas: rd-navbar, swiper, wow, modais). Última rodada: 2026-08 (172KB → 146KB, −15%).
 - **`css/style.css`** (332KB) — original intacto, mantido como backup para regenerar o `.min.css`.
 - **`css/fonts.css`** — **fontes self-hosted** (Google Fonts, subset latin): Work Sans (fonte **variável**, 1 arquivo `fonts/work-sans.woff2` cobre os pesos 300–800) + Poppins 300/400/700 em `fonts/poppins-*.woff2`. Todos os `@font-face` com `font-display: swap`. Os webfonts antigos de ícones (FA/MDI/Linearicons, ~4MB) foram movidos para `b/fonts-backup/` (gitignored).
-- **`css/custom.css`** (~780 linhas, fonte) — CSS customizado, carregado por último (sobrescreve o template). Define as variáveis de marca (`--marpe-azul #0970cd`, `--marpe-verde #81bc04`, `--marpe-laranja #fd9116`, `--marpe-navy #0b1e36`), a capa, a vitrine, a faixa de confiança, os cards de serviços, o FAQ, o footer/selo, a barra de conversão mobile, os botões e a página de privacidade. **Editar aqui**, não no `styles.min.css`.
+- **`css/custom.css`** (~780 linhas, fonte) — CSS customizado, carregado por último (sobrescreve o template). Define as variáveis de marca (`--marpe-azul #0970cd`, `--marpe-verde #81bc04`, `--marpe-laranja #fd9116`, `--marpe-navy #0b1e36`), a capa, a faixa de confiança, os cards de serviços, o FAQ, o footer/selo, a barra de conversão mobile, os botões e a página de privacidade. **Editar aqui**, não no `styles.min.css`.
+- **`css/marpe-design-system.css`** (~450 linhas, fonte) — folha do **design system da remodelação** (2026-09): tokens `--mp-*` (cores da marca + tintas AA, tipografia Poppins/Work Sans, espaçamento, raios, sombras, movimento) e componentes `mp-*`: botões, chips, cabeçalho de seção, **grade de ofertas** (`.mp-ofertas-grid`/`.mp-oferta-card`), **Como funciona** (`.mp-passos`), **CTA final** (`.mp-cta-final`), simulador e assinatura da marca. **100% aditiva** (não sobrescreve classes existentes); carregada após o `custom.css`.
 
 ### Ícones
 
@@ -113,7 +116,7 @@ Imagens ativas usadas pelo site (todas em WebP):
 | `images/logo.webp` | Logo (preloader, navbar e footer) |
 | `images/hero-familia.webp` | Foto da capa (recorte 770×609 do banner antigo) + preload LCP |
 | `images/bannernovo.webp` | Só para `image` do JSON-LD (não aparece mais na página) |
-| `images/banner9.webp` | Background da seção "Melhores Ofertas" |
+| `images/banner9.webp` | **Sem uso desde 2026-09** (era o fundo do banner "Melhores Ofertas", substituído pelo CTA final navy) |
 | `images/logo-favicon.png` | Ícone da aba (64×64, ~8 KB) |
 | `images/apple-touch-icon.png` | Ícone iOS (180×180, otimizado p/ ~13 KB) |
 | `images/bannernovo.jpeg` | Só para `og:image` (1600×609) |
@@ -130,7 +133,7 @@ Imagens ativas usadas pelo site (todas em WebP):
 | `images/credito.webp` | Card Crédito (foto Unsplash — cofrinho com moedas, 800×600px) |
 | `images/icon_whatsapp.webp` | Botão WhatsApp fixo |
 | `images/agricola.webp` | Card Agrícola (crop da arte da campanha do cliente) |
-| `images/destaques/*.webp` | 15 artes da campanha normalizadas em 4:5 (900×1125, fundo desfocado) para a vitrine da capa |
+| `images/destaques/*.webp` | **Sem uso desde 2026-09** — eram as 15 artes da vitrine (removida); os textos viraram a seção "Ofertas e campanhas" |
 
 Os originais `.jpg`/`.png` de backup (`condominio.jpg`, `empresarial.jpg`, `residencial.jpg`, `vida.jpg`, `diversos.png`, `icon_whatsapp.png`, `15326-1676668491144.png`) estão **fora do git** (`.gitignore`) mas mantidos em disco. `carro.jpg` e `caminhao.jpg` foram convertidos para WebP e removidos do git (recuperáveis via history).
 

@@ -1,0 +1,448 @@
+/* ============================================================
+   Marpe Seguros — Folha de estilos do Design System
+   ------------------------------------------------------------
+   Fonte única dos tokens (cores, tipo, espaçamento, raios,
+   sombras, movimento) e dos componentes do padrão Bradesco
+   (grade de ofertas, simulador, botões, chips, cabeçalho
+   de seção) usados na remodelação do site.
+
+   Convenções:
+   - Tudo aqui usa o prefixo `mp-` (variáveis `--mp-*`,
+     classes `.mp-*`). Nada existente é sobrescrito: esta
+     folha é 100% aditiva — pode ser linkada APÓS o
+     `custom.css` sem risco de regressão visual.
+   - Cores idênticas às da identidade (`custom.css`):
+     azul #0970cd, verde #81bc04, laranja #fd9116,
+     navy #0b1e36. Os pares tinta/fundo (`-tint` + `-ink`)
+     têm contraste AA por construção.
+   - Fontes: 'Poppins' (títulos) + 'Work Sans' (texto),
+     já servidas em `css/fonts.css` — nada novo a carregar.
+   - Breakpoints alinhados ao site: 991.98px / 767.98px /
+     600px. Alvos de toque ≥ 44px no mobile.
+
+   Organização:
+   1) Tokens: marca, tintas, neutros e texto
+   2) Tokens: tipografia  3) Tokens: espaçamento, raios,
+      sombras, movimento   4) Base    5) Cabeçalho de seção
+   6) Botões  7) Chips     8) Grade de ofertas (padrão
+      Bradesco)  9) Simulador do hero  10) Responsivo
+   11) Acessibilidade (foco, movimento)
+   ============================================================ */
+
+/* ---------- 1) Tokens: marca, tintas, neutros e texto ---------- */
+:root {
+  /* Marca — mesmos valores da identidade atual */
+  --mp-azul: #0970cd;
+  --mp-azul-escuro: #075ba6;
+  --mp-azul-navy: #0b1e36;
+  --mp-azul-navy-2: #112d4e;
+  --mp-verde: #81bc04;
+  --mp-laranja: #fd9116;
+  --mp-whatsapp: #25d366;
+  --mp-whatsapp-escuro: #1ebe55;
+
+  /* Tintas (fundo suave) + tintas de texto AA sobre elas */
+  --mp-azul-tint: #e3f0fc;
+  --mp-azul-ink: #075ba6;
+  --mp-verde-tint: #eef6da;
+  --mp-verde-ink: #4a6b00;
+  --mp-laranja-tint: #fef0dc;
+  --mp-laranja-ink: #a35400;
+
+  /* Neutros e texto */
+  --mp-fundo: #f2f7fe;
+  --mp-superficie: #ffffff;
+  --mp-borda: rgba(11, 30, 54, .1);
+  --mp-texto: #33383d;
+  --mp-texto-sec: #5f666d;
+  --mp-texto-claro: rgba(226, 232, 240, .9);
+
+  /* ---------- 2) Tokens: tipografia ---------- */
+  --mp-fonte-titulo: 'Poppins', sans-serif;
+  --mp-fonte-texto: 'Work Sans', sans-serif;
+  --mp-display: 40px;
+  --mp-titulo-secao: 30px;
+  --mp-titulo-card: 20px;
+  --mp-corpo: 16px;
+  --mp-miolo: 14.5px;
+  --mp-pequeno: 14px;
+  --mp-legenda: 13px;
+
+  /* ---------- 3) Tokens: espaçamento, raios, sombras, movimento ---------- */
+  --mp-esp-1: 4px;
+  --mp-esp-2: 8px;
+  --mp-esp-3: 12px;
+  --mp-esp-4: 16px;
+  --mp-esp-5: 20px;
+  --mp-esp-6: 24px;
+  --mp-esp-8: 32px;
+  --mp-esp-10: 40px;
+  --mp-esp-14: 56px;
+  --mp-esp-18: 72px;
+
+  --mp-raio-sm: 8px;
+  --mp-raio-md: 12px;
+  --mp-raio-lg: 16px;
+  --mp-raio-xl: 20px;
+  --mp-raio-pill: 999px;
+
+  --mp-sombra-sm: 0 2px 10px rgba(11, 30, 54, .06);
+  --mp-sombra-md: 0 6px 24px rgba(11, 30, 54, .08);
+  --mp-sombra-lg: 0 14px 34px rgba(11, 30, 54, .14);
+
+  --mp-ease: cubic-bezier(.2, 1, .3, 1);
+  --mp-dur-1: .2s;
+  --mp-dur-2: .3s;
+}
+
+/* ---------- 4) Base ---------- */
+.mp-secao {
+  padding-top: var(--mp-esp-18);
+  padding-bottom: var(--mp-esp-18);
+}
+.mp-secao--clara { background: var(--mp-superficie); }
+.mp-secao--fundo { background: var(--mp-fundo); }
+.mp-display {
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 800;
+  font-size: var(--mp-display);
+  line-height: 1.1;
+  letter-spacing: -.5px;
+}
+.mp-largura-texto { max-width: 680px; margin-left: auto; margin-right: auto; }
+
+/* ---------- 5) Cabeçalho de seção (padrão Bradesco, sotaque Marpe) ---------- */
+.mp-secao-cabecalho { text-align: center; margin-bottom: var(--mp-esp-10); }
+.mp-eyebrow {
+  display: block;
+  margin-bottom: var(--mp-esp-3);
+  font-family: var(--mp-fonte-texto);
+  font-weight: 700;
+  font-size: var(--mp-legenda);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--mp-verde-ink);
+}
+.mp-eyebrow--clara { color: var(--mp-verde); }
+.mp-secao-titulo {
+  margin: 0 0 var(--mp-esp-2);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 800;
+  font-size: var(--mp-titulo-secao);
+  line-height: 1.2;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--mp-azul-navy);
+}
+.mp-secao-titulo::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: var(--mp-esp-3) auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--mp-azul), var(--mp-verde) 55%, var(--mp-laranja));
+}
+.mp-secao-sub {
+  margin: var(--mp-esp-3) auto 0;
+  max-width: 640px;
+  font-size: var(--mp-corpo);
+  line-height: 1.6;
+  color: var(--mp-texto-sec);
+}
+
+/* ---------- 6) Botões ---------- */
+.mp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--mp-esp-2);
+  min-height: 48px;
+  padding: 13px 28px;
+  border: 1px solid transparent;
+  border-radius: var(--mp-raio-pill);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--mp-dur-1) ease, transform var(--mp-dur-1) var(--mp-ease), box-shadow var(--mp-dur-1) ease;
+}
+.mp-btn:hover { text-decoration: none; transform: translateY(-1px); }
+.mp-btn--primary { background: var(--mp-azul); border-color: var(--mp-azul); color: #fff; box-shadow: 0 3px 10px rgba(9, 112, 205, .35); }
+.mp-btn--primary:hover { background: var(--mp-azul-escuro); border-color: var(--mp-azul-escuro); color: #fff; }
+.mp-btn--outline { background: transparent; border-color: var(--mp-azul); color: var(--mp-azul); }
+.mp-btn--outline:hover { background: var(--mp-azul); color: #fff; }
+.mp-btn--wa { background: var(--mp-whatsapp); border-color: var(--mp-whatsapp); color: #fff; box-shadow: 0 3px 10px rgba(37, 211, 102, .35); }
+.mp-btn--wa:hover { background: var(--mp-whatsapp-escuro); border-color: var(--mp-whatsapp-escuro); color: #fff; }
+.mp-btn--claro { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .65); color: #fff; }
+.mp-btn--claro:hover { background: #fff; border-color: #fff; color: var(--mp-azul-navy); }
+.mp-btn--sm { min-height: 44px; padding: 10px 22px; font-size: 14px; }
+.mp-btn--block { width: 100%; }
+
+/* ---------- 7) Chips (destaques curtos: "Sem juros", "FGTS"...) ---------- */
+.mp-chips { display: flex; flex-wrap: wrap; gap: var(--mp-esp-2); margin: 0 0 var(--mp-esp-4); padding: 0; list-style: none; }
+.mp-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: var(--mp-raio-pill);
+  font-size: var(--mp-legenda);
+  font-weight: 700;
+  letter-spacing: .2px;
+  background: var(--mp-azul-tint);
+  color: var(--mp-azul-ink);
+}
+.mp-chip--verde { background: var(--mp-verde-tint); color: var(--mp-verde-ink); }
+.mp-chip--laranja { background: var(--mp-laranja-tint); color: var(--mp-laranja-ink); }
+
+/* ---------- 8) Grade de ofertas (padrão Bradesco) ----------
+   Substitui a vitrine de artes: mesmo conteúdo das imagens,
+   agora em HTML real (título + bullets + CTA do modal). */
+.mp-ofertas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--mp-esp-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mp-oferta-card {
+  --mp-card-acento: var(--mp-azul);
+  --mp-card-tinta: var(--mp-azul-tint);
+  --mp-card-tinta-texto: var(--mp-azul-ink);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--mp-superficie);
+  border: 1px solid var(--mp-borda);
+  border-top: 4px solid var(--mp-card-acento);
+  border-radius: var(--mp-raio-lg);
+  box-shadow: var(--mp-sombra-md);
+  overflow: hidden;
+  transition: transform .25s var(--mp-ease), box-shadow .25s ease;
+}
+.mp-oferta-card:hover { transform: translateY(-4px); box-shadow: var(--mp-sombra-lg); }
+.mp-oferta-card--verde { --mp-card-acento: var(--mp-verde); --mp-card-tinta: var(--mp-verde-tint); --mp-card-tinta-texto: var(--mp-verde-ink); }
+.mp-oferta-card--laranja { --mp-card-acento: var(--mp-laranja); --mp-card-tinta: var(--mp-laranja-tint); --mp-card-tinta-texto: var(--mp-laranja-ink); }
+.mp-oferta-topo {
+  display: flex;
+  align-items: center;
+  gap: var(--mp-esp-3);
+  padding: var(--mp-esp-5) var(--mp-esp-6) 0;
+}
+.mp-oferta-icone {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--mp-raio-md);
+  background: var(--mp-card-tinta);
+  color: var(--mp-card-tinta-texto);
+}
+.mp-oferta-icone svg { width: 24px; height: 24px; }
+.mp-oferta-categoria {
+  font-size: var(--mp-legenda);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--mp-card-tinta-texto);
+}
+.mp-oferta-corpo { display: flex; flex-direction: column; flex: 1; padding: var(--mp-esp-3) var(--mp-esp-6) var(--mp-esp-6); }
+.mp-oferta-titulo {
+  margin: 0 0 var(--mp-esp-2);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: var(--mp-titulo-card);
+  line-height: 1.3;
+  color: var(--mp-azul-navy);
+}
+.mp-oferta-lista { margin: 0 0 var(--mp-esp-4); padding: 0; list-style: none; }
+.mp-oferta-lista li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: var(--mp-esp-2);
+  font-size: var(--mp-miolo);
+  line-height: 1.55;
+  color: var(--mp-texto);
+}
+/* Marcador em CSS puro (check desenhado, sem glifo) */
+.mp-oferta-lista li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 7px;
+  height: 12px;
+  border-right: 3px solid var(--mp-card-acento);
+  border-bottom: 3px solid var(--mp-card-acento);
+  border-bottom-right-radius: 2px;
+  transform: rotate(42deg);
+}
+.mp-oferta-cta {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: var(--mp-esp-2);
+  color: var(--mp-azul);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: var(--mp-legenda);
+  text-decoration: none;
+  transition: color var(--mp-dur-1) ease;
+}
+.mp-oferta-cta:hover,
+.mp-oferta-cta:focus { color: var(--mp-azul-escuro); text-decoration: underline; }
+
+/* ---------- 9) Simulador do hero (padrão Bradesco) ----------
+   Barra "escolha o produto + Simular" sobre a capa. O botão
+   abre o modal de cotação correspondente via JS. */
+.mp-simulador {
+  display: flex;
+  gap: var(--mp-esp-3);
+  max-width: 560px;
+  padding: var(--mp-esp-2);
+  background: rgba(255, 255, 255, .97);
+  border-radius: var(--mp-raio-lg);
+  box-shadow: var(--mp-sombra-lg);
+}
+.mp-simulador-rotulo {
+  display: block;
+  margin-bottom: var(--mp-esp-4);
+  font-size: var(--mp-legenda);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--mp-texto-claro);
+}
+.mp-simulador select {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 var(--mp-esp-4);
+  border: 1px solid var(--mp-borda);
+  border-radius: var(--mp-raio-md);
+  background: #fff;
+  font-family: var(--mp-fonte-texto);
+  font-size: 15px;
+  color: var(--mp-texto);
+}
+
+/* ---------- 10) Responsivo ---------- */
+@media (max-width: 991.98px) {
+  .mp-secao { padding-top: var(--mp-esp-14); padding-bottom: var(--mp-esp-14); }
+  .mp-ofertas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mp-secao-titulo { font-size: 26px; }
+}
+@media (max-width: 767.98px) {
+  .mp-simulador { flex-direction: column; }
+  .mp-simulador .mp-btn { width: 100%; }
+}
+@media (max-width: 600px) {
+  .mp-ofertas-grid { grid-template-columns: 1fr; }
+  .mp-secao-titulo { font-size: 24px; }
+  .mp-display { font-size: 32px; }
+}
+
+/* ---------- 11) Acessibilidade ---------- */
+.mp-btn:focus-visible,
+.mp-oferta-card a:focus-visible,
+.mp-simulador select:focus-visible {
+  outline: 3px solid var(--mp-azul);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mp-btn,
+  .mp-oferta-card { transition: none; }
+  .mp-btn:hover,
+  .mp-oferta-card:hover { transform: none; }
+}
+
+/* ---------- 12) Blocos da nova home (Como funciona, CTA final, assinaturas) ---------- */
+.mp-passos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--mp-esp-6);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mp-passo { text-align: center; }
+.mp-passo-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: var(--mp-esp-3);
+  border-radius: var(--mp-raio-pill);
+  background: var(--mp-azul);
+  color: #fff;
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: 18px;
+}
+.mp-passo-titulo {
+  margin: 0 0 var(--mp-esp-2);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: var(--mp-corpo);
+  color: var(--mp-azul-navy);
+}
+.mp-passo-texto {
+  margin: 0;
+  font-size: var(--mp-miolo);
+  line-height: 1.5;
+  color: var(--mp-texto-sec);
+}
+.mp-passos-cta { margin-top: var(--mp-esp-10); text-align: center; }
+
+.mp-cta-final {
+  padding: var(--mp-esp-18) 0;
+  background: var(--mp-azul-navy);
+  text-align: center;
+}
+.mp-cta-final-titulo {
+  margin: 0 0 var(--mp-esp-3);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 800;
+  font-size: var(--mp-titulo-secao);
+  color: #fff;
+}
+.mp-cta-final-sub {
+  margin: 0 0 var(--mp-esp-8);
+  font-size: var(--mp-corpo);
+  color: #cfe3f7;
+}
+.mp-cta-final-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--mp-esp-3);
+  justify-content: center;
+}
+
+.mp-btn--branco { background: #fff; border-color: #fff; color: var(--mp-azul-navy); }
+.mp-btn--branco:hover { background: #eaf3fd; border-color: #eaf3fd; color: var(--mp-azul-navy); }
+
+.mp-simulador-wrap { margin-top: var(--mp-esp-6); max-width: 560px; }
+.mp-simulador-rotulo { color: #cfe3f7; }
+
+.mp-assinatura {
+  margin: var(--mp-esp-5) 0 0;
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: var(--mp-pequeno);
+  letter-spacing: .5px;
+  color: var(--mp-azul);
+}
+.mp-assinatura--clara { color: #8ecbff; }
+
+@media (max-width: 991.98px) {
+  .mp-passos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .mp-passos { grid-template-columns: 1fr; }
+  .mp-cta-final { padding: var(--mp-esp-14) 0; }
+}

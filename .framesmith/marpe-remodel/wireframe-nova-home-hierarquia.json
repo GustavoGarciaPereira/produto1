@@ -1,0 +1,4528 @@
+{
+  "components": {},
+  "createdAt": "2026-09-14T22:48:52.330Z",
+  "fonts": [
+    {
+      "family": "Work Sans",
+      "style": "normal",
+      "url": "https://fonts.gstatic.com/s/worksans/v24/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8Jpo3ZKyHaQQ.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Poppins",
+      "style": "normal",
+      "url": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+      "weight": "400"
+    },
+    {
+      "family": "Poppins",
+      "style": "normal",
+      "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+      "weight": "500"
+    },
+    {
+      "family": "Poppins",
+      "style": "normal",
+      "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+      "weight": "600"
+    },
+    {
+      "family": "Poppins",
+      "style": "normal",
+      "url": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2",
+      "weight": "700"
+    }
+  ],
+  "id": "qsBqeB79Oy",
+  "lastModified": "2026-09-14T23:27:49.646Z",
+  "name": "Wireframe — Nova Home (hierarquia)",
+  "projectId": "repo-proj-_6TAeddo",
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "color": "#f9fafb",
+                "content": "Wireframe · Nova Home Marpe — validação de estrutura e hierarquia (sem identidade visual)",
+                "fontSize": 12.5,
+                "fontWeight": 600,
+                "id": "9DVZdXstU4",
+                "letterSpacing": 1.1,
+                "textAlign": "center",
+                "textTransform": "none",
+                "type": "text"
+              }
+            ],
+            "fill": "#0b1e36",
+            "id": "mSKPYGp9Vy",
+            "justifyContent": "center",
+            "layout": "horizontal",
+            "minHeight": 44,
+            "name": "Aviso wireframe",
+            "padding": [
+              8,
+              24
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "borderBottom": {
+              "color": "#e5e7eb",
+              "width": 1
+            },
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#ffffff",
+                    "content": "MARPE SEGUROS",
+                    "fontFamily": "Poppins",
+                    "fontSize": 12.5,
+                    "fontWeight": 700,
+                    "id": "U_jnngGXNh",
+                    "letterSpacing": 1,
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 8,
+                "fill": "#0970cd",
+                "height": 48,
+                "id": "zS65e3amJQ",
+                "justifyContent": "center",
+                "layout": "horizontal",
+                "name": "Logo",
+                "type": "frame",
+                "width": 180
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Home",
+                    "fontSize": 16,
+                    "fontWeight": 700,
+                    "id": "OVvHKOLmYn",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Seguros",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "id": "RnrXtAMq4c",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Consórcios",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "id": "sgWHF70Ysb",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Crédito",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "id": "YsnM66axKX",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Sobre Nós",
+                    "fontSize": 16,
+                    "fontWeight": 500,
+                    "id": "RB_hHkvYAV",
+                    "type": "text"
+                  }
+                ],
+                "gap": 24,
+                "id": "WQ2ELqNIYn",
+                "layout": "horizontal",
+                "name": "Navegação",
+                "type": "frame"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#ffffff",
+                    "content": "Cotar no WhatsApp",
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "id": "CTkzZSXWml",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 999,
+                "fill": "#0970cd",
+                "id": "wagKjffTsu",
+                "justifyContent": "center",
+                "layout": "horizontal",
+                "minHeight": 46,
+                "name": "CTA do header",
+                "padding": [
+                  12,
+                  24
+                ],
+                "type": "frame"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "id": "ChtpnYmUb8",
+            "justifyContent": "space-between",
+            "layout": "horizontal",
+            "minHeight": 88,
+            "name": "Header",
+            "padding": [
+              16,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "borderBottom": {
+              "color": "#0970cd",
+              "width": 3
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "color": "#81bc04",
+                    "content": "Corretora de seguros em São Sepé, RS",
+                    "fontSize": 12.5,
+                    "fontWeight": 700,
+                    "id": "DejgbVDaxu",
+                    "letterSpacing": 2,
+                    "textTransform": "uppercase",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#ffffff",
+                    "content": "Proteja seu patrimônio com quem entende de seguros.",
+                    "fontFamily": "Poppins",
+                    "fontSize": 46,
+                    "fontWeight": 800,
+                    "id": "rz3EoALhOQ",
+                    "letterSpacing": -1,
+                    "lineHeight": 1.12,
+                    "type": "text"
+                  },
+                  {
+                    "color": "#dbe7f5",
+                    "content": "Há mais de 19 anos ajudando famílias e empresas a encontrarem a proteção ideal — atendimento humano em todo o Brasil.",
+                    "fontSize": 20,
+                    "id": "qmi7DhEUFB",
+                    "lineHeight": 1.6,
+                    "type": "text"
+                  },
+                  {
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Solicitar cotação",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "o_7pPFscs2",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "fill": "#0970cd",
+                        "id": "eprXlvqPoq",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 54,
+                        "padding": [
+                          12,
+                          32
+                        ],
+                        "type": "frame"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "WhatsApp",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "6wDeintIzJ",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "id": "0bQk1ettxE",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 54,
+                        "padding": [
+                          12,
+                          32
+                        ],
+                        "stroke": "#cfe3f7",
+                        "strokeWidth": 1.5,
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "n6QAT62cUz",
+                    "layout": "horizontal",
+                    "name": "CTAs do hero",
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#cfe3f7",
+                        "content": "Simule sem compromisso:",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "vze2xNiNzO",
+                        "letterSpacing": 1,
+                        "textTransform": "none",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "id": "TsYw8QgXv-",
+                            "minHeight": 48,
+                            "type": "select",
+                            "value": "Qual seguro você procura?",
+                            "width": "100%"
+                          },
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "color": "#ffffff",
+                                "content": "Simular",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "K1tvZb2ck0",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 8,
+                            "fill": "#0970cd",
+                            "id": "GVv-K3mkDK",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "minHeight": 48,
+                            "minWidth": 130,
+                            "padding": [
+                              12,
+                              24
+                            ],
+                            "type": "frame"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#fbfcfe",
+                        "gap": 8,
+                        "id": "U-bZr3Xj_v",
+                        "layout": "horizontal",
+                        "padding": 8,
+                        "stroke": "#d1d5db",
+                        "strokeWidth": 1,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "NOdeVxtxbB",
+                    "layout": "vertical",
+                    "maxWidth": 560,
+                    "name": "Simulador",
+                    "type": "frame",
+                    "width": "100%"
+                  }
+                ],
+                "gap": 24,
+                "id": "Cr9XptMMJs",
+                "layout": "vertical",
+                "maxWidth": 640,
+                "name": "Hero conteúdo",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "icon": "image",
+                    "iconColor": "#8fb8e0",
+                    "iconSize": 44,
+                    "id": "mmLEI020Rc",
+                    "type": "icon"
+                  },
+                  {
+                    "color": "#cfe3f7",
+                    "content": "FOTO — família / cliente",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "id": "9BsW4C9uPV",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#8fb8e0",
+                    "content": "(imagem a definir com o cliente)",
+                    "fontSize": 12.5,
+                    "id": "Ju6gcItuBA",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 16,
+                "fill": "#14335a",
+                "gap": 12,
+                "id": "md_wdXsznQ",
+                "justifyContent": "center",
+                "layout": "vertical",
+                "minHeight": 460,
+                "name": "Foto do hero (a definir)",
+                "stroke": "#2a4d78",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": 520
+              }
+            ],
+            "fill": "#0b1e36",
+            "gap": 48,
+            "gradient": {
+              "angle": 135,
+              "stops": [
+                {
+                  "color": "#0b1e36",
+                  "position": 0
+                },
+                {
+                  "color": "#112d4e",
+                  "position": 1
+                }
+              ]
+            },
+            "id": "2Bk-7kCFWS",
+            "layout": "horizontal",
+            "name": "Hero",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "borderBottom": {
+              "color": "#e5e7eb",
+              "width": 1
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "award",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "6XhI3uoD7q",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "MeuRgVZtJ9",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "+19 anos",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "R6fDcmf4Vc",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "de experiência em seguros",
+                            "fontSize": 12.5,
+                            "id": "7LFlgoAGMT",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "GFRDpbcTpv",
+                        "layout": "vertical",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "-milasdK4U",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "headphones",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "D1D_0y8pbk",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "w6GTP0VVa6",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "Atendimento humano",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "fjc5jkFomb",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "personalizado pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "id": "MJ5YAvtz8a",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "IPnNPdM4bo",
+                        "layout": "vertical",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "XPF6BgrO97",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "shield-check",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "KoWux1DWdU",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "TorKG343qO",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "Grandes seguradoras",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "dUexqCiAzy",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "parceiros do mercado",
+                            "fontSize": 12.5,
+                            "id": "_dj3rzpiXP",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "1AWne-gf0s",
+                        "layout": "vertical",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "2SINLpOdPp",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "life-buoy",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "sK3NBn52Mi",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "lC-mH6Q4Cp",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "Suporte em sinistros",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "chukxCJB7U",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "acompanhamento em todo o processo",
+                            "fontSize": 12.5,
+                            "id": "AY8D-MUVOq",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "RKUBlCEbYo",
+                        "layout": "vertical",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "S37JaetCIA",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 4,
+                "id": "zf6twotIET",
+                "layout": "grid",
+                "name": "Grade de diferenciais",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "id": "9UxhlgFQR7",
+            "layout": "horizontal",
+            "name": "Diferenciais",
+            "padding": [
+              32,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Escolha o seguro ideal para você",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "MX9qt5a0Fx",
+                    "letterSpacing": -0.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Seguros, consórcios e crédito — cotação gratuita e sem compromisso.",
+                    "fontSize": 16,
+                    "id": "8I4XF5-gJI",
+                    "lineHeight": 1.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  }
+                ],
+                "gap": 12,
+                "id": "iDNdSGYRQe",
+                "layout": "vertical",
+                "name": "Cabeçalho da seção",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "4fSk5JcSiD",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/carro.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "car",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "SvY3paaqdb",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "jxAgOGAlt8",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Auto",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "uiJAW2-JoN",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Assistência 24h, carro reserva e parcelamento facilitado.",
+                            "fontSize": 14,
+                            "id": "RgxKIhhPyO",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "AxQQDTQTxw",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "S0QxvSv4uQ",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "2_1Hv-cEjR",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "jyRCN5b1IL",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/moto.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "bike",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "AD6e2hoXN3",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "-q9AW7t20s",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Moto",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "ZN0FWOwZIs",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Cobertura sob medida com preços acessíveis e assistência 24h.",
+                            "fontSize": 14,
+                            "id": "DE58G8LdtI",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "0e4g4mUWyb",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "GlDdjZozv7",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "PrE23qElir",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "SPLkoiODko",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/caminhao.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "truck",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "xdI40U8SLt",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "fYNTlfeyib",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Caminhão",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "AZCjD1FAVr",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Proteção para caminhões e frotas, incluindo a carga.",
+                            "fontSize": 14,
+                            "id": "DIyVtKWepp",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "0NneSPuRWx",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "HaJpNYbh2N",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "EmcjLq62_7",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "5w-7QGvW4t",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/agricola.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "sprout",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "TND636YXdq",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "6Jk2FPzgpN",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Agrícola",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "SJ-VQLgrWk",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Lavoura protegida contra seca, geada, granizo e chuvas excessivas.",
+                            "fontSize": 14,
+                            "id": "DHoE4Q7IOs",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "t5aw9lENMH",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "HqldrLNFnG",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "b45Rzd_2yu",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "hB3J8muKaw",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/residencial.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "home",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "wrbRMH2FJU",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "6ZQQvhOm67",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Residencial",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "arRCDZ14vU",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Casa protegida contra incêndio, roubo e danos elétricos.",
+                            "fontSize": 14,
+                            "id": "KLlWPGnYdv",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "9DpkHGHjt7",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "CYMiER9DIz",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "v-hvmLyi7C",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "Y6CuDMQo9G",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/condominio.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "building-2",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "4gTOYvbNTn",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "b1XKgGGvbI",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Condomínio",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "RfnQWk51bE",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Cobertura completa para áreas comuns e unidades.",
+                            "fontSize": 14,
+                            "id": "VsTvWkzXke",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "QW1qvbktAz",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "5g5T3lUvHs",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "1xaysQSjMO",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "8QbxT2YeSM",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/empresarial.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "briefcase",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "otV1-ZXFA7",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "CnJg4hopJ8",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Empresarial",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "Yww3bttReo",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Proteção para o negócio e responsabilidade civil.",
+                            "fontSize": 14,
+                            "id": "kzkHB27sKb",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "B3DeLME-ew",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "mJ37-tng2I",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "A_CEZqIo77",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "5BagwhQup7",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/vida.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "heart",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "3jiQ1CDR9P",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "SqbXa-TyRx",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Vida",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "8rkxxKxD9Y",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Garanta o futuro e a estabilidade da sua família.",
+                            "fontSize": 14,
+                            "id": "EgrUuXkcEz",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "xkB7LLIrLs",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "BySZsi5-sg",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "rbp-2X2Sac",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "n2Kci21lBm",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/saude.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "heart-pulse",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "bUga_H5L6v",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "o_KmtO_sWO",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Plano de Saúde",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "oEEt391znt",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Para você, sua família e sua empresa (MEI e CNPJ).",
+                            "fontSize": 14,
+                            "id": "l8Lb4LJttm",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "XhyUqWpp5o",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "cPSsbP8D9B",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "UPzE-OtF4v",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "X1T4ymP9jW",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/diversos.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "shield",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "nM-5bytnnu",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "cjwVj-uY_I",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Diversos",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "yDQNYnHbHO",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Bike, celular, viagem e muito mais, sob medida.",
+                            "fontSize": 14,
+                            "id": "6mo5dyVaVv",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Cotar pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "jmw0Iuhxmp",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "7yaXH1rBd4",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "y8TuENYxGY",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "2U6UpLTouT",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/consorcio.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "users",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "NMtcL9COSh",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "7PY8kCFBUI",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Consórcios",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "niwfT6AChO",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Sem juros — carro, imóvel, caminhão ou área rural.",
+                            "fontSize": 14,
+                            "id": "9sSRx-bbEX",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Simular pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "J8126B0RXb",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "VUfpurlQV7",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "F6p22Q5Toi",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "height": 150,
+                        "id": "nlHFVU5Gg4",
+                        "objectFit": "cover",
+                        "src": "http://127.0.0.1:5502/images/credito.webp",
+                        "type": "image",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "credit-card",
+                                "iconColor": "#0970cd",
+                                "iconSize": 22,
+                                "id": "vOXokS86FE",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 12,
+                            "fill": "#e3f0fc",
+                            "height": 44,
+                            "id": "kiHItE8jSV",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 44
+                          },
+                          {
+                            "color": "#0b1e36",
+                            "content": "Crédito",
+                            "fontFamily": "Poppins",
+                            "fontSize": 16,
+                            "fontWeight": 700,
+                            "id": "Zyq5aTIc8Y",
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Crédito pessoal e financiamentos com as melhores taxas.",
+                            "fontSize": 14,
+                            "id": "hZXwM7_Ori",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#0970cd",
+                            "content": "Simular pelo WhatsApp",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "t7jMH3lk6N",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "Ny3vA_tIaP",
+                        "layout": "vertical",
+                        "name": "Conteúdo do card",
+                        "padding": 16,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 2,
+                    "id": "GEoEg2n0kC",
+                    "layout": "vertical",
+                    "overflow": "hidden",
+                    "padding": 0,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 4,
+                "id": "8-WHZqrJXv",
+                "layout": "grid",
+                "name": "Grade de serviços",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 32,
+            "id": "WuHY0LtT_S",
+            "layout": "vertical",
+            "name": "Tipos de seguro",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Ofertas e campanhas em destaque",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "nq8Or1-4gz",
+                    "letterSpacing": -0.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Condições especiais das campanhas — fale com um especialista pelo WhatsApp.",
+                    "fontSize": 16,
+                    "id": "v-_8JlJUmM",
+                    "lineHeight": 1.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  }
+                ],
+                "gap": 12,
+                "id": "15HrlxRfEa",
+                "layout": "vertical",
+                "name": "Cabeçalho",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "car",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "xlktjy-yNg",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "BxUS5WKadO",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Seguro Auto",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "IicYClQYy4",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Assistências 24h sem custo adicional — guincho, troca de pneu, bateria, táxi e chaveiro",
+                        "fontSize": 13.5,
+                        "id": "sP2BftaxZ1",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Em caso de acidente, você só paga a franquia",
+                        "fontSize": 13.5,
+                        "id": "5_BQ950qV3",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Carro reserva de 7, 15 ou 30 dias",
+                        "fontSize": 13.5,
+                        "id": "2VFYaAK8y1",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Parcelamento em até 10x sem juros",
+                        "fontSize": 13.5,
+                        "id": "wpbcrFyTzh",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Danos corporais a terceiros incluídos",
+                        "fontSize": 13.5,
+                        "id": "2T7Do02OQJ",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "oHnDtuN7vG",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "CClGGx50O6",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "sprout",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "odpvPflU8l",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "P-FDzO8Inr",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Agrícola e Propriedade Rural",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "dV8n1tNqfw",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Proteção contra seca, geada, granizo, incêndio, chuvas excessivas, variação de temperatura, tromba d'água e ventos fortes",
+                        "fontSize": 13.5,
+                        "id": "ErNkhcPy9a",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Soluções para a propriedade rural se proteger dos imprevistos",
+                        "fontSize": 13.5,
+                        "id": "ybW_Ouy6VP",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "W5jZdeg4I9",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "asXitTkXfn",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "coins",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "_uwIl782sh",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "uKeIelVufi",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Consórcio de Automóvel",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "RkzF2eNcdZ",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Créditos a partir de R$ 25.000,00",
+                        "fontSize": 13.5,
+                        "id": "Qm41rRyeZb",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Sem entrada e sem juros — só taxa de administração",
+                        "fontSize": 13.5,
+                        "id": "D4wDQNcVKw",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Contemplação mensal por lance e sorteio",
+                        "fontSize": 13.5,
+                        "id": "Dz29CrUaF8",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Parcelas reduzidas até a contemplação",
+                        "fontSize": 13.5,
+                        "id": "ZPcFWISzbB",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Carros novos e seminovos",
+                        "fontSize": 13.5,
+                        "id": "ppX-HLCgis",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "FSGEWA00hW",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "8XtWLLvazZ",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "home",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "C4xoaryaQ6",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "3kxm4_h5Wt",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Consórcio de Imóveis",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "Us0nJ3pjDJ",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Créditos a partir de R$ 70 mil, sem juros",
+                        "fontSize": 13.5,
+                        "id": "--doQo1B7h",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Compre, construa ou reforme seu imóvel",
+                        "fontSize": 13.5,
+                        "id": "RP9PS7Ziaz",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Possibilidade de uso do FGTS",
+                        "fontSize": 13.5,
+                        "id": "ockiqpnqcp",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Contemplação mensal por lance e sorteio",
+                        "fontSize": 13.5,
+                        "id": "IhCSA4Zi9N",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Parcelas reduzidas até a contemplação",
+                        "fontSize": 13.5,
+                        "id": "yl-pkOT9Nj",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "PoUfZAFZKw",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "HEFM_0NqXc",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "trees",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "sBK64aacUk",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "OVnEfD77TB",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Consórcio de Imóveis Rurais",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "hzi9gcbTCa",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Créditos a partir de R$ 500.000,00",
+                        "fontSize": 13.5,
+                        "id": "PWqxS9QNXw",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Para chácara, sítio ou área rural",
+                        "fontSize": 13.5,
+                        "id": "J65WEArRus",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Contemplação mensal por lance e sorteio",
+                        "fontSize": 13.5,
+                        "id": "Ahn3OzbKKU",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Sem entrada e sem juros",
+                        "fontSize": 13.5,
+                        "id": "3IoQV3QBh1",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "b3dxZ1EMPc",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "57r5gxpg1Z",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "truck",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "a1tG2dwJ_M",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "tR5DBKVPVK",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Consórcio de Caminhões e Pesados",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "WiYPkXJOcH",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Créditos a partir de R$ 300.000,00",
+                        "fontSize": 13.5,
+                        "id": "PggfHqvbtE",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Contemplação mensal por lance e sorteio",
+                        "fontSize": 13.5,
+                        "id": "CVWKl8eJcq",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Prêmios em R$ para pagamentos em dia",
+                        "fontSize": 13.5,
+                        "id": "cIaiQMHrgI",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Sem entrada e sem juros",
+                        "fontSize": 13.5,
+                        "id": "cMbRJoZPv5",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "nqGRV5cBL3",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "4GAOYK4Tv1",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "heart",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "CqoCF57tJ4",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "UdOD8PapkY",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Seguro de Vida",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "cT90r6cVB-",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Mantenha o padrão de vida da família em caso de imprevistos",
+                        "fontSize": 13.5,
+                        "id": "_KAeRN1Hlp",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Tratamento médico em caso de doença grave",
+                        "fontSize": 13.5,
+                        "id": "H696ejEXzH",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Versão empresarial — proteja a saúde financeira do negócio e das famílias dos colaboradores",
+                        "fontSize": 13.5,
+                        "id": "s8Ohn2KCAx",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "8pIg7rjLD9",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "Iw5oZs5sRB",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "heart-pulse",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "9CIczR_YVh",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "Y2VKxKwevu",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Plano de Saúde MEI e CNPJ",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "lmCBuZkbq-",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Você é MEI? Contrate agora mesmo o plano de saúde da sua família",
+                        "fontSize": 13.5,
+                        "id": "hiogI1d_HY",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Hospitais de referência pertinho de você",
+                        "fontSize": 13.5,
+                        "id": "n9LbubiSL7",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Ampla cobertura para internações, exames e terapias",
+                        "fontSize": 13.5,
+                        "id": "8nm5e-eba1",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Descontos em mais de 12 mil farmácias",
+                        "fontSize": 13.5,
+                        "id": "V6VWOjmspK",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "hoovjwRDjj",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "amSZ7jyYEk",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "building-2",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "B9y-8ACNh-",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "Sb9lNVNv-r",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Financiamento Imobiliário",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "IgRy8Dd68u",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Financie até 80% do imóvel residencial ou 70% do comercial",
+                        "fontSize": 13.5,
+                        "id": "acbjJjvE8R",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Prazo de 12 até 420 meses (35 anos)",
+                        "fontSize": 13.5,
+                        "id": "jQJs6Aulg7",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Juros a partir de 11,69% a.a. + TR",
+                        "fontSize": 13.5,
+                        "id": "RNYew7Y4gN",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Tabela SAC — pessoa física",
+                        "fontSize": 13.5,
+                        "id": "nJUJqQ4Q_-",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Imóvel mínimo de R$ 98.000,00 e renda mínima de R$ 3.200,00",
+                        "fontSize": 13.5,
+                        "id": "1AeyPu8WOT",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "9vw0SRuWBi",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "gTNkDBR-5P",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "banknote",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "2aKUjzHLoI",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "ZUkscmogUn",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Financiamento de Veículos",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "mPnnCPCwl-",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Até 100% financiado",
+                        "fontSize": 13.5,
+                        "id": "Ep4vhiUBn8",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Carros e SUVs até 25 anos, motos até 10 e utilitários até 50",
+                        "fontSize": 13.5,
+                        "id": "9Y8_ndhGh7",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Prazo de 3 a 60 meses",
+                        "fontSize": 13.5,
+                        "id": "DxpQrjkm45",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Até 60 dias de carência",
+                        "fontSize": 13.5,
+                        "id": "oDt6omgpB8",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Parcelas fixas",
+                        "fontSize": 13.5,
+                        "id": "2ObCPQbJeV",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "l8cjSp6Tix",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "zwm2bxexYd",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "landmark",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "Nb3ua-nHDw",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "FEwtETKyB7",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Home Equity",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "mJi0pkRwRQ",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Imóvel residencial ou comercial como garantia",
+                        "fontSize": 13.5,
+                        "id": "VgbB8Xa9mM",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Imóveis de R$ 70 mil a R$ 20 milhões",
+                        "fontSize": 13.5,
+                        "id": "2OMFnvbAha",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Empréstimo a partir de R$ 30.000, até 60% do valor do imóvel",
+                        "fontSize": 13.5,
+                        "id": "Feq1p4Nbyp",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Prazo de 12 a 240 meses, com carência de até 12 meses",
+                        "fontSize": 13.5,
+                        "id": "mNjzXMmq-g",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Juros a partir de 1,09% a.m. + IPCA ou juros fixos",
+                        "fontSize": 13.5,
+                        "id": "X4YUHPX1IB",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "BLb06WFx2e",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "4Pifgj2duU",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "icon": "wallet",
+                            "iconColor": "#0970cd",
+                            "iconSize": 22,
+                            "id": "OQKR6UXVO0",
+                            "type": "icon"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#e3f0fc",
+                        "height": 44,
+                        "id": "FFxCSzZ75y",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Empréstimo com Garantia de Veículos",
+                        "fontFamily": "Poppins",
+                        "fontSize": 18,
+                        "fontWeight": 700,
+                        "id": "pOxg5vTama",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Taxas menores que as do empréstimo tradicional",
+                        "fontSize": 13.5,
+                        "id": "AHb5Hx4D60",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Carros, caminhonetes e SUVs até 25 anos; caminhões até 50",
+                        "fontSize": 13.5,
+                        "id": "2LM8eIriBc",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Financiamento de até 100%, prazo de 3 a 60 meses",
+                        "fontSize": 13.5,
+                        "id": "kLajvipHVZ",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "• Carência de até 60 dias e parcelas fixas",
+                        "fontSize": 13.5,
+                        "id": "ghkiSIzWyq",
+                        "lineHeight": 1.45,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#0970cd",
+                        "content": "Simular pelo WhatsApp",
+                        "fontSize": 13,
+                        "fontWeight": 700,
+                        "id": "yL1SmblVvI",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "flijnj5fyr",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 3,
+                "id": "DglrCBfRG1",
+                "layout": "grid",
+                "name": "Grade de ofertas",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 32,
+            "id": "cUuMgAmSC0",
+            "layout": "vertical",
+            "name": "Ofertas e campanhas",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Simples do início ao fim",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "88RCMSCH_V",
+                    "letterSpacing": -0.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Da cotação à assinatura, você fala com gente de verdade.",
+                    "fontSize": 16,
+                    "id": "aO5nk0T1cK",
+                    "lineHeight": 1.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  }
+                ],
+                "gap": 12,
+                "id": "McMScf663X",
+                "layout": "vertical",
+                "name": "Cabeçalho",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "1",
+                            "fontSize": 20,
+                            "fontWeight": 700,
+                            "id": "MkxGLxWo2G",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "fill": "#0970cd",
+                        "height": 44,
+                        "id": "Mn1betIO48",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Solicite uma cotação",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "8aWa-H229i",
+                        "textAlign": "center",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Escolha o serviço e preencha em poucos minutos — ou fale no WhatsApp.",
+                        "fontSize": 14,
+                        "id": "4SMLWsj_Sx",
+                        "lineHeight": 1.5,
+                        "textAlign": "center",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "MjR7ROlNvn",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "2",
+                            "fontSize": 20,
+                            "fontWeight": 700,
+                            "id": "TO_-T3Vt_6",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "fill": "#0970cd",
+                        "height": 44,
+                        "id": "_DlJbFe1gq",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Analisamos seu perfil",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "UnA86Lcz5q",
+                        "textAlign": "center",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Um corretor entende a sua necessidade e o seu orçamento.",
+                        "fontSize": 14,
+                        "id": "fXtaNhtojs",
+                        "lineHeight": 1.5,
+                        "textAlign": "center",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "QB87o-ODiZ",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "3",
+                            "fontSize": 20,
+                            "fontWeight": 700,
+                            "id": "o2HnLjFcnY",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "fill": "#0970cd",
+                        "height": 44,
+                        "id": "iWeS8f9gnn",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Comparamos as seguradoras",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "rd5l38sD9F",
+                        "textAlign": "center",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Buscamos as melhores condições entre as principais do mercado.",
+                        "fontSize": 14,
+                        "id": "8xgfKVl5Sg",
+                        "lineHeight": 1.5,
+                        "textAlign": "center",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "9vkalK0Hay",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "4",
+                            "fontSize": 20,
+                            "fontWeight": 700,
+                            "id": "uwfX7Tlkws",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 999,
+                        "fill": "#0970cd",
+                        "height": 44,
+                        "id": "3rJ7I38RGY",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 44
+                      },
+                      {
+                        "color": "#0b1e36",
+                        "content": "Você escolhe a melhor proposta",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "mVTlLfRjjc",
+                        "textAlign": "center",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Sem pressão — você decide com clareza e segurança.",
+                        "fontSize": 14,
+                        "id": "Wle_m7lDwg",
+                        "lineHeight": 1.5,
+                        "textAlign": "center",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "EaVEvkIzyn",
+                    "layout": "vertical",
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 4,
+                "id": "JR-NX6yoXR",
+                "layout": "grid",
+                "name": "Passos",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#ffffff",
+                    "content": "Começar agora",
+                    "fontSize": 16,
+                    "fontWeight": 700,
+                    "id": "Q1sp0r4geD",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 999,
+                "fill": "#0970cd",
+                "id": "SPA-pmucaR",
+                "justifyContent": "center",
+                "layout": "horizontal",
+                "minHeight": 54,
+                "padding": [
+                  12,
+                  32
+                ],
+                "type": "frame"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "gap": 32,
+            "id": "8pMMa4aop3",
+            "layout": "vertical",
+            "name": "Como funciona",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Quem confia, indica",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "L9k-IcsSL3",
+                    "letterSpacing": -0.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Histórias de quem protege o que importa com a Marpe.",
+                    "fontSize": 16,
+                    "id": "5NI9tAvQ2F",
+                    "lineHeight": 1.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  }
+                ],
+                "gap": 12,
+                "id": "kmNDK49-lu",
+                "layout": "vertical",
+                "name": "Cabeçalho",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "YJ4v38z_D6",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "BrL17nBPoG",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "Ebe9Bahxxw",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "70dC74bzSL",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "i8EGv-OrBL",
+                            "type": "icon"
+                          }
+                        ],
+                        "gap": 4,
+                        "id": "loWCPmXBQf",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Depoimento ilustrativo — texto real a coletar com o cliente.",
+                        "fontSize": 16,
+                        "id": "SFjUhxN5Dn",
+                        "lineHeight": 1.6,
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "fill": "#dbe9f8",
+                            "height": 40,
+                            "id": "9zZqjzfRgq",
+                            "type": "ellipse",
+                            "width": 40
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Nome do cliente",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "RAK0SJ5OUL",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "São Sepé — Seguro Auto",
+                                "fontSize": 12.5,
+                                "id": "_bIxNXm-XB",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "s5nG07ia7c",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "6JZUe9If7q",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 16,
+                    "id": "XlbxO3E4j4",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "cRVX2FwXsb",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "cWFqUND3s2",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "HMY9HfpQVD",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "e91303_TbC",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "wWwBvrUex-",
+                            "type": "icon"
+                          }
+                        ],
+                        "gap": 4,
+                        "id": "p2QX3rC3s3",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Depoimento ilustrativo — texto real a coletar com o cliente.",
+                        "fontSize": 16,
+                        "id": "E3NtY-RKos",
+                        "lineHeight": 1.6,
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "fill": "#dbe9f8",
+                            "height": 40,
+                            "id": "4z1TEy61SZ",
+                            "type": "ellipse",
+                            "width": 40
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Nome do cliente",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "O_kKT4MjAj",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "Região — Consórcio de Imóveis",
+                                "fontSize": 12.5,
+                                "id": "X_7NTJ7xUO",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "1JoZ2mm0xj",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "7CUczqNAIL",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 16,
+                    "id": "zUSRxZG5fu",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "g70Jua3gNK",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "PEVeGBQWij",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "3Z-tnd2_og",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "GvsKRGd_eq",
+                            "type": "icon"
+                          },
+                          {
+                            "icon": "material:star-fill",
+                            "iconColor": "$warning",
+                            "iconSize": 16,
+                            "id": "hPczq9De6j",
+                            "type": "icon"
+                          }
+                        ],
+                        "gap": 4,
+                        "id": "qwG38tHqTe",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Depoimento ilustrativo — texto real a coletar com o cliente.",
+                        "fontSize": 16,
+                        "id": "XxvIqTzCaM",
+                        "lineHeight": 1.6,
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "fill": "#dbe9f8",
+                            "height": 40,
+                            "id": "mKRUvMc9NC",
+                            "type": "ellipse",
+                            "width": 40
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Nome do cliente",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "pCiNI-0lgr",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "Brasil — Seguro de Vida",
+                                "fontSize": 12.5,
+                                "id": "PNaEZ5J2_1",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "DvPIh9Hwvb",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "uLz5wfLrwt",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 16,
+                    "id": "vW7CSwTdo3",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 3,
+                "id": "P5EJTUoJNN",
+                "layout": "grid",
+                "name": "Grade de depoimentos",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "icon": "alert-circle",
+                    "iconColor": "#0970cd",
+                    "iconSize": 16,
+                    "id": "OHXJlI0h2i",
+                    "type": "icon"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Conteúdo pendente — depoimentos reais a coletar com o cliente.",
+                    "fontSize": 12.5,
+                    "id": "acgBHjofZO",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 999,
+                "fill": "#fbfcfe",
+                "gap": 8,
+                "id": "BBVBY6j2PX",
+                "layout": "horizontal",
+                "name": "Nota de conteúdo pendente",
+                "padding": [
+                  8,
+                  16
+                ],
+                "stroke": "#d7e4f2",
+                "strokeWidth": 1,
+                "type": "frame"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 32,
+            "id": "T5nm3cH2K9",
+            "layout": "vertical",
+            "name": "Depoimentos",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "icon": "image",
+                    "iconColor": "#0970cd",
+                    "iconSize": 44,
+                    "id": "vHEDpFhU2Y",
+                    "type": "icon"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "FOTO — Marcel / equipe",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "id": "tefBkU2m9K",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "(imagem a definir com o cliente)",
+                    "fontSize": 12.5,
+                    "id": "--XDlOFpx5",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 16,
+                "fill": "#dbe9f8",
+                "gap": 12,
+                "id": "4i5nMEskP5",
+                "justifyContent": "center",
+                "layout": "vertical",
+                "minHeight": 440,
+                "name": "Foto Marcel (a definir)",
+                "type": "frame",
+                "width": 480
+              },
+              {
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Conheça quem cuida da sua proteção",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "VfSgh-qPvA",
+                    "letterSpacing": -0.5,
+                    "lineHeight": 1.2,
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "Há mais de 19 anos, a Marpe oferece todos os tipos de seguros para proteção patrimonial e proteção à vida, além de linhas de crédito e consórcios para aquisição de bens e serviços — atendendo você em todo o Brasil a partir de São Sepé, RS.",
+                    "fontSize": 16,
+                    "id": "DmB2mG4Buh",
+                    "lineHeight": 1.7,
+                    "type": "text"
+                  },
+                  {
+                    "children": [
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "eye",
+                            "iconColor": "#0970cd",
+                            "iconSize": 20,
+                            "id": "yRGRkYw3G1",
+                            "type": "icon"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Clareza",
+                                "fontSize": 16,
+                                "fontWeight": 700,
+                                "id": "Pas0A6lO9K",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "Orientação transparente em cada escolha.",
+                                "fontSize": 12.5,
+                                "id": "CfFYAXRKmw",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "YCrpDM-3tz",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "a3JaYay5dg",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "heart",
+                            "iconColor": "#0970cd",
+                            "iconSize": 20,
+                            "id": "NuVDLtM8pF",
+                            "type": "icon"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Cuidado",
+                                "fontSize": 16,
+                                "fontWeight": 700,
+                                "id": "3AIDjuQKRs",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "Atendimento humano, próximo e sem burocracia.",
+                                "fontSize": 12.5,
+                                "id": "I2RTlNy269",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "0oDjykJFcb",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "_inHNxnV5f",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "shield-check",
+                            "iconColor": "#0970cd",
+                            "iconSize": 20,
+                            "id": "kHLmNUBYck",
+                            "type": "icon"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#0b1e36",
+                                "content": "Confiança",
+                                "fontSize": 16,
+                                "fontWeight": 700,
+                                "id": "pGpRSqEvvK",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#5f666d",
+                                "content": "Parceiros das principais seguradoras desde 2007.",
+                                "fontSize": 12.5,
+                                "id": "v_gCLjT2Wx",
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "H2Q2YWJ77T",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "id": "5dzLnVzP0j",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "-_Xj66V0vi",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "Fale com a Marpe",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "bQNLWkphrt",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#0970cd",
+                    "id": "Aq1SyQoR29",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 54,
+                    "padding": [
+                      12,
+                      32
+                    ],
+                    "type": "frame"
+                  },
+                  {
+                    "color": "#0970cd",
+                    "content": "Contigo em todos os momentos",
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "id": "1lNUvaX3cR",
+                    "letterSpacing": 0.5,
+                    "type": "text"
+                  }
+                ],
+                "gap": 16,
+                "id": "XlglYLIjap",
+                "layout": "vertical",
+                "maxWidth": 600,
+                "name": "Conteúdo",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "gap": 48,
+            "id": "Zvq_mBNmjv",
+            "layout": "horizontal",
+            "name": "Sobre a Marpe",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "Trabalhamos com as principais seguradoras do mercado",
+                    "fontFamily": "Poppins",
+                    "fontSize": 32,
+                    "fontWeight": 800,
+                    "id": "iP8mkuToXI",
+                    "letterSpacing": -0.5,
+                    "textAlign": "center",
+                    "type": "text"
+                  }
+                ],
+                "gap": 12,
+                "id": "rrSglMk5_Y",
+                "layout": "vertical",
+                "name": "Cabeçalho",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "gRhXQGJB3c",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "ypRmgaMbF7",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "47JWt91TxN",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "u3Mb4dNRET",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "tdE3sxCjQa",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "QYp1Z_acUK",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "4gdrI6J3kI",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "uwEbnurM2S",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "HHkdx-vFx0",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "PJ8dRdy_js",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#5f666d",
+                        "content": "LOGO",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "3zywwa0sX_",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "OFHKcM7bdj",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 64,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 16,
+                "gridColumns": 6,
+                "id": "S_-OkeiDGA",
+                "layout": "grid",
+                "name": "Grade de logos",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "color": "#5f666d",
+                "content": "Lista de seguradoras parceiras a confirmar com o cliente.",
+                "fontSize": 12.5,
+                "id": "9I0b6z_4nM",
+                "textAlign": "center",
+                "type": "text"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 32,
+            "id": "dF8T_Qgq4_",
+            "layout": "vertical",
+            "name": "Parceiros",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "color": "#ffffff",
+                "content": "Pronto para proteger o que importa?",
+                "fontFamily": "Poppins",
+                "fontSize": 32,
+                "fontWeight": 800,
+                "id": "ibwB9O141q",
+                "letterSpacing": -0.5,
+                "textAlign": "center",
+                "type": "text"
+              },
+              {
+                "color": "#e5e7eb",
+                "content": "Cotação gratuita e sem compromisso — resposta rápida pelo WhatsApp.",
+                "fontSize": 16,
+                "id": "xz3OeB58ey",
+                "textAlign": "center",
+                "type": "text"
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#0b1e36",
+                        "content": "Cotar pelo WhatsApp",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "NTQ0_11G1p",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#fbfcfe",
+                    "id": "emHmzeL9WR",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 54,
+                    "padding": [
+                      12,
+                      32
+                    ],
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "Ver serviços",
+                        "fontSize": 16,
+                        "fontWeight": 700,
+                        "id": "ZS_oyAX_Dq",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "id": "Ry2U0fDM2W",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 54,
+                    "padding": [
+                      12,
+                      32
+                    ],
+                    "stroke": "#d1d5db",
+                    "strokeWidth": 1.5,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 12,
+                "id": "rcW-C6Rw7v",
+                "layout": "horizontal",
+                "type": "frame"
+              }
+            ],
+            "fill": "#0b1e36",
+            "gap": 24,
+            "id": "uDIb6i8FNU",
+            "layout": "vertical",
+            "name": "CTA final",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#d1d5db",
+                            "content": "LOGO",
+                            "fontSize": 12.5,
+                            "fontWeight": 700,
+                            "id": "9xiggLIqiy",
+                            "letterSpacing": 0,
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 8,
+                        "fill": "#14335a",
+                        "height": 44,
+                        "id": "7d2kDaPU-1",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": 170
+                      },
+                      {
+                        "color": "#b9cbe4",
+                        "content": "Corretora de seguros em São Sepé, RS — seguros, consórcios e crédito com atendimento humano.",
+                        "fontSize": 14,
+                        "id": "D74hb5jtEb",
+                        "lineHeight": 1.6,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#8ecbff",
+                        "content": "Contigo em todos os momentos",
+                        "fontSize": 13,
+                        "id": "TmRfIkouKs",
+                        "lineHeight": 1.5,
+                        "type": "text"
+                      },
+                      {
+                        "children": [
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "facebook",
+                                "iconColor": "#d1d5db",
+                                "iconSize": 18,
+                                "id": "sYYKlBrKwC",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 8,
+                            "fill": "#14335a",
+                            "height": 38,
+                            "id": "xHAdBdhPk_",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 38
+                          },
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "instagram",
+                                "iconColor": "#d1d5db",
+                                "iconSize": 18,
+                                "id": "li7NBrzhsd",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 8,
+                            "fill": "#14335a",
+                            "height": 38,
+                            "id": "Yjsw9lucir",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 38
+                          },
+                          {
+                            "alignItems": "center",
+                            "children": [
+                              {
+                                "icon": "message-circle",
+                                "iconColor": "#d1d5db",
+                                "iconSize": 18,
+                                "id": "JJ8_wlUloQ",
+                                "type": "icon"
+                              }
+                            ],
+                            "cornerRadius": 8,
+                            "fill": "#14335a",
+                            "height": 38,
+                            "id": "peOlfq5SdM",
+                            "justifyContent": "center",
+                            "layout": "horizontal",
+                            "type": "frame",
+                            "width": 38
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "C6SL-F0ytX",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "fQqp_PLt_A",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "Contato",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "4AmosTrNJ_",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "message-circle",
+                            "iconColor": "#b9cbe4",
+                            "iconSize": 16,
+                            "id": "3SMd-6w2dS",
+                            "type": "icon"
+                          },
+                          {
+                            "color": "#d1d5db",
+                            "content": "(55) 99150-4477",
+                            "fontSize": 14,
+                            "id": "E-RmGe7p3x",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "15Mh02gZtE",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "clock",
+                            "iconColor": "#b9cbe4",
+                            "iconSize": 16,
+                            "id": "wTZJJMhBzi",
+                            "type": "icon"
+                          },
+                          {
+                            "color": "#d1d5db",
+                            "content": "Seg a sex, 8h30 às 18h",
+                            "fontSize": 14,
+                            "id": "2fyXIYbE3Q",
+                            "tabularNums": true,
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "eJjtVS76LZ",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      },
+                      {
+                        "alignItems": "start",
+                        "children": [
+                          {
+                            "icon": "map-pin",
+                            "iconColor": "#b9cbe4",
+                            "iconSize": 16,
+                            "id": "bL5-KM9ArT",
+                            "type": "icon"
+                          },
+                          {
+                            "color": "#d1d5db",
+                            "content": "Rua Visconde do Rio Branco, 1379 — Centro, São Sepé/RS",
+                            "fontSize": 14,
+                            "id": "CGC1XeBDpt",
+                            "lineHeight": 1.5,
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 8,
+                        "id": "3quFJanj61",
+                        "layout": "horizontal",
+                        "type": "frame"
+                      }
+                    ],
+                    "gap": 12,
+                    "id": "MiBxIFGBxM",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "Institucional",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "kFZTe-n1ih",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Sobre Nós",
+                        "fontSize": 14,
+                        "id": "AZ6GFo488n",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Serviços",
+                        "fontSize": 14,
+                        "id": "xQRuK5yS6t",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Cartas Contempladas",
+                        "fontSize": 14,
+                        "id": "-Pq95YAzzm",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Política de Privacidade",
+                        "fontSize": 14,
+                        "id": "8Hfp8Q4yj1",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "63msGDmYps",
+                    "layout": "vertical",
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "Atendimento",
+                        "fontSize": 12.5,
+                        "fontWeight": 700,
+                        "id": "tLnvvTms-E",
+                        "letterSpacing": 0,
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Cotação pelo WhatsApp",
+                        "fontSize": 14,
+                        "id": "Y3xhUl-oak",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Portal do Parceiro",
+                        "fontSize": 14,
+                        "id": "05eX-DD1kG",
+                        "type": "text"
+                      },
+                      {
+                        "color": "#d1d5db",
+                        "content": "Suporte em sinistros",
+                        "fontSize": 14,
+                        "id": "9N5NIHcGGg",
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "qVGyUzhU1n",
+                    "layout": "vertical",
+                    "type": "frame"
+                  }
+                ],
+                "gap": 32,
+                "gridColumns": 4,
+                "id": "2342FV2i7p",
+                "layout": "grid",
+                "name": "Colunas",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "borderTop": {
+                  "color": "#374151",
+                  "width": 1
+                },
+                "children": [
+                  {
+                    "color": "#b9cbe4",
+                    "content": "© 2026 Marpe Corretora de Seguros — CNPJ 44.697.683/0001-53",
+                    "fontSize": 12.5,
+                    "id": "EHvTYV2FC9",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#b9cbe4",
+                    "content": "Política de Privacidade · Desenvolvido por Gustavo Garcia Pereira",
+                    "fontSize": 12.5,
+                    "id": "BjiBH3XKe2",
+                    "type": "text"
+                  }
+                ],
+                "gap": 16,
+                "id": "66MO4fNSSG",
+                "justifyContent": "space-between",
+                "layout": "horizontal",
+                "name": "Barra inferior",
+                "padding": [
+                  16,
+                  0
+                ],
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#0b1e36",
+            "gap": 32,
+            "id": "HnQZcFbwbU",
+            "layout": "vertical",
+            "name": "Rodapé",
+            "padding": [
+              64,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "borderTop": {
+              "color": "#e5e7eb",
+              "width": 1
+            },
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "icon": "alert-circle",
+                    "iconColor": "#4b5563",
+                    "iconSize": 20,
+                    "id": "_AWpeIDFbD",
+                    "type": "icon"
+                  },
+                  {
+                    "color": "#0b1e36",
+                    "content": "Pendências de conteúdo e decisões — anotação interna, não faz parte da página",
+                    "fontSize": 16,
+                    "fontWeight": 700,
+                    "id": "7JdIUApwip",
+                    "type": "text"
+                  }
+                ],
+                "gap": 8,
+                "id": "urYgIbqSHN",
+                "layout": "horizontal",
+                "type": "frame"
+              },
+              {
+                "children": [
+                  {
+                    "alignItems": "start",
+                    "children": [
+                      {
+                        "icon": "circle",
+                        "iconColor": "#0970cd",
+                        "iconSize": 10,
+                        "id": "ALuOI7QtIP",
+                        "type": "icon"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Depoimentos reais — 3, com nome, cidade e serviço (hoje são placeholders).",
+                        "fontSize": 14,
+                        "id": "DsSATKKa15",
+                        "lineHeight": 1.5,
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "jh5slHlR6N",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "start",
+                    "children": [
+                      {
+                        "icon": "circle",
+                        "iconColor": "#0970cd",
+                        "iconSize": 10,
+                        "id": "6Gpc4Ybpbl",
+                        "type": "icon"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Lista de seguradoras parceiras e autorização de uso das marcas (hoje são caixas LOGO).",
+                        "fontSize": 14,
+                        "id": "bDLgJGW8tz",
+                        "lineHeight": 1.5,
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "v_Dc96aXiZ",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "start",
+                    "children": [
+                      {
+                        "icon": "circle",
+                        "iconColor": "#0970cd",
+                        "iconSize": 10,
+                        "id": "Ua3jwIvCbG",
+                        "type": "icon"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Fotos — Marcel/equipe na seção Sobre e família/cliente no hero (hoje são placeholders).",
+                        "fontSize": 14,
+                        "id": "H1DP4d49Fl",
+                        "lineHeight": 1.5,
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "rwsi3zpCUj",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "start",
+                    "children": [
+                      {
+                        "icon": "circle",
+                        "iconColor": "#0970cd",
+                        "iconSize": 10,
+                        "id": "mKZoQ0MRh5",
+                        "type": "icon"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "As 15 ofertas das artes de campanha (Consórcio, Home Equity, Financiamentos) — decidir entre bullets nos cards de serviço ou seção própria Ofertas e campanhas.",
+                        "fontSize": 14,
+                        "id": "AYoA-KA1Av",
+                        "lineHeight": 1.5,
+                        "maxWidth": 560,
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "Q-brHatfej",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  },
+                  {
+                    "alignItems": "start",
+                    "children": [
+                      {
+                        "icon": "circle",
+                        "iconColor": "#0970cd",
+                        "iconSize": 10,
+                        "id": "2UAJwiPm-v",
+                        "type": "icon"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "Revisão dos textos propostos pelo cliente (hero, Como funciona, Sobre e CTA final).",
+                        "fontSize": 14,
+                        "id": "dgKhcR-Qgk",
+                        "lineHeight": 1.5,
+                        "type": "text"
+                      }
+                    ],
+                    "gap": 8,
+                    "id": "eL8PKWY8Ke",
+                    "layout": "horizontal",
+                    "type": "frame"
+                  }
+                ],
+                "gap": 8,
+                "id": "73SkBxR5Fa",
+                "layout": "vertical",
+                "maxWidth": 1040,
+                "type": "frame"
+              }
+            ],
+            "fill": "#e3f0fc",
+            "gap": 16,
+            "id": "C4xromok-z",
+            "layout": "vertical",
+            "name": "Pendências (anotação do wireframe)",
+            "padding": [
+              48,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          }
+        ],
+        "fill": "#fbfcfe",
+        "gap": 2,
+        "id": "VFXYmjSzrW",
+        "layout": "vertical",
+        "name": "Wireframe Home",
+        "type": "frame",
+        "width": "100%"
+      }
+    ],
+    "fill": "#FFFFFF",
+    "height": 900,
+    "id": "RlcwlM601W",
+    "name": "Document",
+    "type": "document",
+    "width": 1440
+  },
+  "variables": {
+    "typography": {
+      "body": {
+        "fontFamily": "Work Sans",
+        "fontSize": 16
+      },
+      "title": {
+        "fontFamily": "Poppins",
+        "fontSize": 32
+      }
+    }
+  }
+}
