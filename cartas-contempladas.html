@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Cartas Contempladas — Estoque disponível | Marpe Corretora de Seguros</title>
+  <meta name="description" content="Cartas contempladas de consórcio à venda — imóveis e veículos com crédito imediato, sem sorteio. Entrada, parcelas e taxa de transferência com estoque atualizado. Fale com a Marpe pelo WhatsApp.">
+  <link rel="canonical" href="https://www.marpeseguros.com.br/cartas-contempladas.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.marpeseguros.com.br/cartas-contempladas.html">
+  <meta property="og:title" content="Cartas Contempladas — Estoque disponível | Marpe">
+  <meta property="og:description" content="Cartas contempladas de consórcio à venda — imóveis e veículos com crédito imediato, sem sorteio. Estoque atualizado.">
+  <meta property="og:image" content="https://www.marpeseguros.com.br/images/bannernovo.jpeg">
+  <meta property="og:image:alt" content="Marpe — Seguros, Consórcios e Créditos">
+  <meta property="og:site_name" content="Marpe — Seguros, Consórcios e Créditos">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#0970cd">
+  <link rel="icon" href="images/logo-favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/marpe-design-system.css">
+</head>
+
+<body id="top">
+  <a class="sr-only sr-only-focusable" href="#conteudo">Pular para o conteúdo</a>
+  <div class="page">
+    <header class="pagina-interna-header">
+      <div class="container">
+        <a class="pagina-interna-brand" href="index.html">
+          <img src="images/logo.webp" alt="Marpe Seguros — Corretora de Seguros" width="240" height="80">
+        </a>
+        <a class="pagina-interna-voltar" href="index.html">Voltar ao site</a>
+        <a class="btn-wa-cta" href="https://wa.me/55991504477?text=Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20cartas%20contempladas" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- Hero -->
+      <section class="mp-cartas-hero" aria-labelledby="cartas-titulo">
+        <div class="container">
+          <p class="mp-eyebrow mp-eyebrow--clara">Consórcios sem sorteio</p>
+          <h1 class="mp-cartas-titulo" id="cartas-titulo">Cartas Contempladas</h1>
+          <p class="mp-cartas-sub">Cartas disponíveis para compra imediata — use o crédito agora, sem esperar contemplação. Estoque atualizado automaticamente.</p>
+          <div class="mp-cartas-stats">
+            <span class="mp-cartas-stat" id="stat-total">Carregando…</span>
+            <span class="mp-cartas-stat" id="stat-imovel">—</span>
+            <span class="mp-cartas-stat" id="stat-veiculo">—</span>
+            <span class="mp-cartas-stat mp-cartas-stat--suave" id="stat-atualizado"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estoque -->
+      <section class="mp-cartas-banda" aria-label="Estoque de cartas contempladas">
+        <div class="container">
+          <div class="mp-filtros">
+            <label class="sr-only" for="f-busca">Buscar por administradora</label>
+            <input type="search" id="f-busca" placeholder="Buscar por administradora" autocomplete="off">
+            <select id="f-categoria" aria-label="Categoria">
+              <option value="">Todas as categorias</option>
+              <option value="Imóvel">Imóvel</option>
+              <option value="Veículo">Veículo</option>
+            </select>
+            <label class="sr-only" for="f-valor-desejado">Valor de crédito desejado</label>
+            <input type="text" id="f-valor-desejado" inputmode="numeric" placeholder="Valor desejado (ex.: 150.000)" autocomplete="off">
+            <select id="f-valor" aria-label="Faixa de crédito">
+              <option value="">Crédito — qualquer valor</option>
+              <option value="0-50000">Até R$ 50 mil</option>
+              <option value="50000-100000">R$ 50 a 100 mil</option>
+              <option value="100000-200000">R$ 100 a 200 mil</option>
+              <option value="200000-500000">R$ 200 a 500 mil</option>
+              <option value="500000-999999999">Acima de R$ 500 mil</option>
+            </select>
+            <select id="f-ordem" aria-label="Ordenar por">
+              <option value="entrada">Menor entrada</option>
+              <option value="parcela">Menor parcela</option>
+              <option value="credito-desc">Maior crédito</option>
+              <option value="credito-asc">Menor crédito</option>
+            </select>
+            <button type="button" class="mp-filtros-limpar" id="f-limpar">Limpar filtros</button>
+          </div>
+
+          <p class="mp-resultado">
+            <span id="f-resultado" aria-live="polite">Carregando cartas disponíveis…</span>
+            <span id="f-atualizado"></span>
+          </p>
+          <p class="mp-janela" id="f-janela" hidden></p>
+
+          <ul class="mp-cartas-grid" id="cartas-grid"></ul>
+
+          <div class="mp-estado" id="estado-vazio" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <h3>Nenhuma carta encontrada</h3>
+            <p>Tente outra busca ou limpe os filtros para ver o estoque completo.</p>
+            <button type="button" class="mp-btn mp-btn--outline" id="vazio-limpar">Limpar filtros</button>
+          </div>
+
+          <div class="mp-estado" id="estado-erro" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+            <h3>Não foi possível carregar o estoque</h3>
+            <p>Verifique sua conexão e tente novamente — ou fale com a gente pelo WhatsApp.</p>
+            <button type="button" class="mp-btn mp-btn--primary" id="btn-tentar">Tentar novamente</button>
+          </div>
+
+          <div class="mp-carregar">
+            <button type="button" id="btn-mais">Carregar mais cartas</button>
+            <p class="mp-carregar-info" id="mais-info"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nota legal -->
+      <section class="mp-cartas-legal" aria-label="Informações importantes">
+        <div class="container">
+          <p>Os valores e a disponibilidade são atualizados automaticamente e podem mudar sem aviso. A transferência da carta é sujeita à aprovação e às regras da administradora do consórcio — a Marpe acompanha todo o processo com você. Em caso de dúvida, fale com um corretor pelo WhatsApp (55) 99150-4477.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pagina-interna-footer">
+      <div class="container">
+        <p>&copy; <span id="ano-atual">2026</span> Marpe Corretora de Seguros — Marcel Foletto Pereira Ltda — CNPJ 44.697.683/0001-53</p>
+        <p><a href="index.html">Home</a> · <a href="https://wa.me/55991504477" target="_blank" rel="noopener noreferrer">WhatsApp (55) 99150-4477</a> · <a href="politica-de-privacidade.html">Política de Privacidade</a></p>
+        <p class="mp-assinatura mp-assinatura--clara">Contigo em todos os momentos</p>
+      </div>
+    </footer>
+  </div>
+  <script>document.getElementById('ano-atual').textContent = new Date().getFullYear();</script>
+  <script src="js/cartas.js" defer></script>
+</body>
+
+</html>

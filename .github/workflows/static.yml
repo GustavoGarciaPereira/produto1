@@ -6,6 +6,10 @@ on:
   push:
     branches: ["main"]
 
+  # Refresh do estoque de cartas contempladas (LD Cred) — 2× por hora
+  schedule:
+    - cron: "*/30 * * * *"
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -31,6 +35,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Atualizar estoque de cartas contempladas (LD Cred)
+        env:
+          ESTOQUE_URL: ${{ secrets.LDCRED_ESTOQUE_URL }}
+        run: |
+          if [ -z "$ESTOQUE_URL" ]; then
+            echo "::warning::Secret LDCRED_ESTOQUE_URL não configurado — publicando com o data/cartas.json do repositório."
+            exit 0
+          fi
+          mkdir -p data
+          if curl -fsS --max-time 30 "$ESTOQUE_URL" -o data/cartas.json.tmp; then
+            mv data/cartas.json.tmp data/cartas.json
+            echo "Estoque atualizado ($(wc -c < data/cartas.json) bytes)."
+          else
+            rm -f data/cartas.json.tmp
+            echo "::warning::Falha ao buscar o estoque — mantendo a última versão publicada."
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

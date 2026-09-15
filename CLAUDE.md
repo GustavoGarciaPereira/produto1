@@ -17,7 +17,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 **Sem sistema de build nem gerenciador de pacotes.** Projeto HTML/CSS/JS puro.
 
 - **Dev local:** VSCode com Live Server na porta **5502** (configurado em `.vscode/settings.json`)
-- **Deploy:** qualquer push para `main` dispara o GitHub Actions (`.github/workflows/static.yml`), que publica o repositório inteiro no GitHub Pages automaticamente — sem build step
+- **Deploy:** qualquer push para `main` dispara o GitHub Actions (`.github/workflows/static.yml`), que publica o repositório inteiro no GitHub Pages automaticamente — sem build step. O workflow também roda **agendado (a cada 30 min)** para atualizar o estoque de cartas: busca a API do parceiro LD Cred usando o Secret **`LDCRED_ESTOQUE_URL`** (URL completa com token — configurado em GitHub → Settings → Secrets and variables → Actions) e escreve `data/cartas.json` antes de publicar. Sem o Secret, o deploy usa o `data/cartas.json` do repositório e emite um aviso
 - **Roteamento HTTPS:** `.htaccess` redireciona todo tráfego HTTP (porta 80) para `https://www.marpeseguros.com.br`
 
 ---
@@ -26,7 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Páginas ativas
 
-`index.html` (home) e `politica-de-privacidade.html` (LGPD, página interna enxuta — header/footer simplificados, sem JS de template). As páginas `about-us.html`, `contacts.html` e `typography.html` foram **removidas do repositório** (conteúdo morto do template, sem links; recuperáveis via git history). Todo o contato já está no footer da home.
+`index.html` (home), `cartas-contempladas.html` (estoque de cartas do parceiro **LD Cred** — página interna enxuta que lê `data/cartas.json` via `js/cartas.js`: filtros por administradora/categoria/faixa de crédito/valor desejado/ordenação, "carregar mais" de 24 em 24 e estados de carregando/vazio/erro) e `politica-de-privacidade.html` (LGPD, página interna enxuta — header/footer simplificados, sem JS de template). As páginas `about-us.html`, `contacts.html` e `typography.html` foram **removidas do repositório** (conteúdo morto do template, sem links; recuperáveis via git history). Todo o contato já está no footer da home.
 
 ### Estrutura de `index.html`
 
@@ -86,6 +86,7 @@ Os modais são gerados por um array `modals` em `js/custom.js`, dentro de `docum
 - **`js/ui-to-top.min.js`** — UItoTop.
 - **`js/script.js`** (~40KB, fonte) → **`js/script.min.js`** (21KB, minificado com terser; **é o carregado pelo site**). Lógica customizada do template: inicializa plugins via seletor jQuery, padrão `plugins = { ... }`, detecta mobile/IE/desktop via `userAgent`, `lazyInit()`. **Não editar para features novas** — use `js/custom.js`; edite o fonte e regenere o min com `npx terser js/script.js -c -m -o js/script.min.js`.
 - **`js/custom.js`** (~200 linhas, editável) — modais de cotação (array `modals` + lazy load dos iframes), fallback do preloader (2,5s), **simulador da capa** (`#simulador-btn` lê o `#simulador-servico` e abre o modal correspondente) e o código legado da vitrine (Swiper 3 — hoje **dormente**: o bloco checa a existência de `.destaques-swiper` e não faz nada; pode ser removido junto do `swiper-legacy.min.js` numa limpeza futura).
+- **`js/cartas.js`** (~250 linhas, standalone) — usado SÓ por `cartas-contempladas.html` (sem jQuery): lê o estoque de **`data/cartas.json`** (publicado pelo workflow do Pages — o token da API fica no Secret `LDCRED_ESTOQUE_URL`, nunca no código), aplica filtros (administradora, categoria, **faixa fixa**, **valor desejado com tolerância de ±R$ 10 mil** — constante `FOLGA` no topo do arquivo — e ordenação), renderiza os cards com CTA de WhatsApp pré-preenchido, controla o "carregar mais" (24/página) e os estados (skeleton, vazio, erro). **Atualização manual do JSON:** rodar `curl -fsS "$URL_DO_PARCEIRO" -o data/cartas.json`.
 
 ### CSS
 

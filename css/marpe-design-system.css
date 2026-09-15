@@ -446,3 +446,234 @@
   .mp-passos { grid-template-columns: 1fr; }
   .mp-cta-final { padding: var(--mp-esp-14) 0; }
 }
+
+/* ---------- 13) Tela "Cartas Contempladas" (estoque LD Cred) ---------- */
+.mp-cartas-hero {
+  padding: 56px 0 48px;
+  background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%);
+  border-bottom: 3px solid var(--mp-azul);
+}
+.mp-cartas-titulo {
+  margin: 12px 0 12px;
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 800;
+  font-size: clamp(30px, 5vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -.5px;
+  color: #fff;
+}
+.mp-cartas-sub {
+  margin: 0;
+  max-width: 720px;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #dbe7f5;
+}
+.mp-cartas-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+.mp-cartas-stat {
+  padding: 8px 16px;
+  border-radius: var(--mp-raio-pill);
+  background: #14335a;
+  border: 1px solid #2a4d78;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+.mp-cartas-stat--suave { color: #cfe3f7; font-weight: 400; }
+
+.mp-cartas-banda { padding: 32px 0 56px; background: var(--mp-fundo); }
+
+.mp-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 16px;
+  background: #fbfcfe;
+  border: 1px solid #d7e4f2;
+  border-radius: 16px;
+}
+.mp-filtros input,
+.mp-filtros select {
+  min-height: 46px;
+  padding: 0 16px;
+  border: 1px solid var(--mp-borda);
+  border-radius: 12px;
+  background: #fff;
+  font-family: var(--mp-fonte-texto);
+  font-size: 14px;
+  color: var(--mp-texto);
+}
+.mp-filtros input { flex: 1 1 220px; max-width: 320px; }
+.mp-filtros-limpar {
+  padding: 12px;
+  border: 0;
+  background: none;
+  color: var(--mp-azul);
+  font-family: var(--mp-fonte-texto);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+.mp-filtros-limpar:hover { text-decoration: underline; }
+
+.mp-resultado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--mp-texto-sec);
+}
+.mp-resultado strong { color: var(--mp-azul-navy); }
+
+.mp-cartas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.mp-carta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  background: #fbfcfe;
+  border: 1px solid #d7e4f2;
+  border-top: 4px solid var(--mp-azul);
+  border-radius: 16px;
+}
+.mp-carta-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.mp-carta-selo {
+  padding: 4px 12px;
+  border-radius: var(--mp-raio-pill);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+.mp-carta-selo--imovel { background: #e3f0fc; color: #075ba6; }
+.mp-carta-selo--veiculo { background: #eef6da; color: #4a6b00; }
+.mp-carta-adm { font-size: 13px; font-weight: 600; color: var(--mp-texto-sec); }
+.mp-carta-valor {
+  font-family: var(--mp-fonte-titulo);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--mp-azul-navy);
+  font-variant-numeric: tabular-nums;
+}
+.mp-carta-valor-label { font-size: 12.5px; color: var(--mp-texto-sec); }
+.mp-carta-linha { height: 1px; margin: 2px 0; border: 0; background: #d7e4f2; }
+.mp-carta-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0;
+}
+.mp-carta-info dt { margin: 0 0 2px; font-size: 12px; color: var(--mp-texto-sec); }
+.mp-carta-info dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mp-azul-navy);
+  font-variant-numeric: tabular-nums;
+}
+.mp-carta-obs { margin: 0; font-size: 12.5px; color: var(--mp-texto-sec); }
+.mp-carta-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  margin-top: auto;
+  border-radius: 12px;
+  background: var(--mp-azul);
+  color: #fff;
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background var(--mp-dur-1) ease;
+}
+.mp-carta-cta:hover { background: var(--mp-azul-escuro); color: #fff; text-decoration: none; }
+
+.mp-carregar { display: flex; flex-direction: column; align-items: center; margin-top: 32px; }
+.mp-carregar button {
+  min-height: 52px;
+  padding: 14px 32px;
+  border: 1.5px solid var(--mp-azul);
+  border-radius: var(--mp-raio-pill);
+  background: transparent;
+  color: var(--mp-azul);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background var(--mp-dur-1) ease, color var(--mp-dur-1) ease;
+}
+.mp-carregar button:hover:not([disabled]) { background: var(--mp-azul); color: #fff; }
+.mp-carregar button[disabled] { opacity: .5; cursor: default; }
+.mp-carregar-info { margin: 8px 0 0; font-size: 12.5px; color: var(--mp-texto-sec); }
+
+.mp-estado {
+  margin-top: 24px;
+  padding: 48px 24px;
+  text-align: center;
+  background: #fbfcfe;
+  border: 1px dashed #d7e4f2;
+  border-radius: 16px;
+}
+.mp-estado svg { width: 40px; height: 40px; margin-bottom: 12px; color: #6b7280; }
+.mp-estado h3 {
+  margin: 0 0 8px;
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--mp-azul-navy);
+}
+.mp-estado p { margin: 0 0 16px; font-size: 14px; color: var(--mp-texto-sec); }
+.mp-estado[hidden] { display: none; }
+
+.mp-carta--esqueleto { pointer-events: none; }
+.mp-esqueleto {
+  border-radius: 8px;
+  background: #e3f0fc;
+  animation: mp-pulso 1.6s ease-in-out infinite;
+}
+@keyframes mp-pulso { 0%, 100% { opacity: 1; } 50% { opacity: .55; } }
+
+@media (max-width: 991.98px) {
+  .mp-cartas-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+  .mp-cartas-grid { grid-template-columns: 1fr; }
+  .mp-cartas-hero { padding: 40px 0 32px; }
+  .mp-filtros { flex-direction: column; align-items: stretch; }
+  .mp-filtros input,
+  .mp-filtros select { flex: none; width: 100%; max-width: none; }
+}
+
+.mp-cartas-legal {
+  padding: 32px 0;
+  background: #fbfcfe;
+  border-top: 1px solid #d7e4f2;
+}
+.mp-cartas-legal p {
+  margin: 0;
+  max-width: 900px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--mp-texto-sec);
+}
+
+.mp-janela {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--mp-texto-sec);
+}
+.mp-janela[hidden] { display: none; }

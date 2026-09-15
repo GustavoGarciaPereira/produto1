@@ -1,0 +1,1897 @@
+{
+  "components": {},
+  "createdAt": "2026-09-15T19:15:09.749Z",
+  "id": "95APXpUQb3",
+  "lastModified": "2026-09-15T19:17:35.961Z",
+  "metadata": {
+    "provenance": {
+      "at": "2026-09-15T19:17:20.373Z",
+      "preset": "dashboard"
+    }
+  },
+  "name": "Cartas Contempladas — nova tela (estoque LD Cred)",
+  "projectId": "repo-proj-_6TAeddo",
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "alignItems": "center",
+            "borderBottom": {
+              "color": "#d7e4f2",
+              "width": 1
+            },
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "MARPE SEGUROS",
+                        "fontFamily": "Poppins",
+                        "fontSize": 13,
+                        "fontWeight": 800,
+                        "id": "Xd-P5l6b4M",
+                        "letterSpacing": 1,
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 10,
+                    "fill": "#0970cd",
+                    "height": 44,
+                    "id": "OBLQDKn37t",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "padding": [
+                      8,
+                      16
+                    ],
+                    "type": "frame"
+                  },
+                  {
+                    "color": "#0b1e36",
+                    "content": "Voltar ao site",
+                    "fontSize": 14,
+                    "fontWeight": 600,
+                    "id": "rIt_lqWEZF",
+                    "type": "text"
+                  }
+                ],
+                "gap": 16,
+                "id": "AQ42sSjPMP",
+                "layout": "horizontal",
+                "type": "frame"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#ffffff",
+                    "content": "Falar no WhatsApp",
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "id": "dQsGOSpzZL",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 999,
+                "fill": "#0970cd",
+                "id": "NrYGtuEdDb",
+                "justifyContent": "center",
+                "layout": "horizontal",
+                "minHeight": 46,
+                "padding": [
+                  12,
+                  24
+                ],
+                "type": "frame"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "id": "LKYUsd2aMc",
+            "justifyContent": "space-between",
+            "layout": "horizontal",
+            "minHeight": 88,
+            "name": "Header da página",
+            "padding": [
+              16,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "borderBottom": {
+              "color": "#0970cd",
+              "width": 3
+            },
+            "children": [
+              {
+                "color": "#81bc04",
+                "content": "CONSÓRCIOS SEM SORTEIO",
+                "fontSize": 12.5,
+                "fontWeight": 700,
+                "id": "w-rVZ_vQyN",
+                "letterSpacing": 2,
+                "type": "text"
+              },
+              {
+                "color": "#ffffff",
+                "content": "Cartas Contempladas",
+                "fontFamily": "Poppins",
+                "fontSize": 40,
+                "fontWeight": 800,
+                "id": "tuXjMKSx9x",
+                "letterSpacing": -1,
+                "type": "text"
+              },
+              {
+                "color": "#dbe7f5",
+                "content": "Cartas disponíveis para compra imediata — use o crédito agora, sem esperar contemplação. Estoque atualizado automaticamente.",
+                "fontSize": 17,
+                "id": "A7RXTXnS7n",
+                "lineHeight": 1.55,
+                "maxWidth": 760,
+                "type": "text"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "239 cartas disponíveis",
+                        "fontSize": 13.5,
+                        "fontWeight": 700,
+                        "id": "2HAl07nQAp",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#14335a",
+                    "id": "e2Z0Uk41Ys",
+                    "padding": [
+                      8,
+                      16
+                    ],
+                    "stroke": "#2a4d78",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "117 imóveis",
+                        "fontSize": 13.5,
+                        "fontWeight": 700,
+                        "id": "pgtCOMmtIy",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#14335a",
+                    "id": "dmiLnh_CEx",
+                    "padding": [
+                      8,
+                      16
+                    ],
+                    "stroke": "#2a4d78",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#ffffff",
+                        "content": "122 veículos",
+                        "fontSize": 13.5,
+                        "fontWeight": 700,
+                        "id": "bNe_6fwXj0",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#14335a",
+                    "id": "-e0v8NhkoD",
+                    "padding": [
+                      8,
+                      16
+                    ],
+                    "stroke": "#2a4d78",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "children": [
+                      {
+                        "color": "#cfe3f7",
+                        "content": "Atualizado hoje às 16h13",
+                        "fontSize": 13.5,
+                        "id": "vjhUFMv3nl",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "fill": "#14335a",
+                    "id": "DTT6aBYxkC",
+                    "padding": [
+                      8,
+                      16
+                    ],
+                    "stroke": "#2a4d78",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 12,
+                "id": "Hosz9tO6es",
+                "layout": "horizontal",
+                "type": "frame",
+                "wrap": true
+              }
+            ],
+            "fill": "#0b1e36",
+            "gap": 16,
+            "id": "Bsk6n8ZYJM",
+            "layout": "vertical",
+            "name": "Hero",
+            "padding": [
+              48,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "children": [
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#6b7280",
+                        "content": "Buscar por administradora",
+                        "fontSize": 14,
+                        "id": "r8N4x-F4so",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 12,
+                    "fill": "#fbfcfe",
+                    "id": "aZsZoGJSrv",
+                    "layout": "horizontal",
+                    "maxWidth": 320,
+                    "minHeight": 46,
+                    "padding": [
+                      12,
+                      16
+                    ],
+                    "stroke": "#d1d6dc",
+                    "strokeWidth": 1,
+                    "type": "frame",
+                    "width": "100%"
+                  },
+                  {
+                    "id": "Bx33ChoS4E",
+                    "minHeight": 46,
+                    "type": "select",
+                    "value": "Todas as categorias",
+                    "width": 200
+                  },
+                  {
+                    "id": "Kw6giY8ZJT",
+                    "minHeight": 46,
+                    "type": "select",
+                    "value": "Crédito até R$ 200 mil",
+                    "width": 210
+                  },
+                  {
+                    "id": "PaBZaaX3i3",
+                    "minHeight": 46,
+                    "type": "select",
+                    "value": "Menor entrada",
+                    "width": 180
+                  },
+                  {
+                    "color": "#0970cd",
+                    "content": "Limpar filtros",
+                    "fontSize": 13,
+                    "fontWeight": 700,
+                    "id": "g_1sB3kPi8",
+                    "type": "text"
+                  }
+                ],
+                "cornerRadius": 16,
+                "fill": "#fbfcfe",
+                "gap": 12,
+                "id": "o3DDPdK3dU",
+                "layout": "horizontal",
+                "padding": 16,
+                "stroke": "#d7e4f2",
+                "strokeWidth": 1,
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "color": "#0b1e36",
+                    "content": "239 cartas encontradas",
+                    "fontSize": 14,
+                    "fontWeight": 700,
+                    "id": "QgVp5r_TTU",
+                    "type": "text"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "atualizado às 16h13",
+                    "fontSize": 13,
+                    "id": "aZjkirJC9G",
+                    "type": "text"
+                  }
+                ],
+                "id": "isq7MiQPkA",
+                "justifyContent": "space-between",
+                "layout": "horizontal",
+                "type": "frame",
+                "width": "100%"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 16,
+            "id": "vjQxn_SN5c",
+            "layout": "vertical",
+            "name": "Filtros",
+            "padding": [
+              32,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "alignItems": "center",
+            "children": [
+              {
+                "children": [
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#075ba6",
+                                "content": "Imóvel",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "5VoAUkz0A0",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#e3f0fc",
+                            "id": "Q_6ka0wX83",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Zema",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "LcPdSMEnw_",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "PFZDoLbYLV",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 295.180",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "i2maEF6j6v",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "d2amgz3tF7",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "IqhfGlSuMS",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "Iw-WVztZGQ",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "sGES2F6gbs",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 123.975,60",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "HsMH0zb5r4",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "D-mLs-qnNK",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "oCM7sUGRbB",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 2.572",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "8p5lyNbCjj",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "Zg5LCVSk8E",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "6K2j-oY5nD",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 362.652",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "BMimlThkaf",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "DBfHQdyC8J",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "C_SSLSYVrD",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 3.000",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "XrwtpKsd6E",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "gnS2BIUUef",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "BIEq0mgFlp",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "141 parcelas restantes · vence todo dia 17 · seguro a consultar",
+                        "fontSize": 12.5,
+                        "id": "j3-nhFGF3E",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "QT3Fchm-c-",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "XsRzI9xA9G",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "0dHnL9LE3y",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#075ba6",
+                                "content": "Imóvel",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "7yBnqT7f37",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#e3f0fc",
+                            "id": "dnq5fY3nb1",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Magalu",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "sMWh1i8tpe",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "uzBrTN22p-",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 118.507",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "S0uEGTNDRC",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "BEuesfw2J_",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "NbwcJ9OFhL",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "xvg-jESr_-",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "PWAZPHyzUe",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 55.698,49",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "QZgK65eFz_",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "FiovfFJAim",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "dhcdiJBTDz",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 625",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "XG1-X3EaMC",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "z3IaM58d9u",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "Ti5PRVO98P",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 131.250",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "GxwWaAHIc5",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "pDcncWTyhc",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "kuUJeB-Xad",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 1.100",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "ri55vShKMI",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "LujvXaAtXt",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "bngIiK7So2",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "210 parcelas restantes · vence todo dia 18 · seguro a consultar",
+                        "fontSize": 12.5,
+                        "id": "cae6VqI7jW",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "wNlA7Gam80",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "l3yyN9ZQML",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "6Eyd8ivDKt",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#075ba6",
+                                "content": "Imóvel",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "bVGWl4vzCi",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#e3f0fc",
+                            "id": "xKaAjG1DdC",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Santander",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "e5TJbrTqvf",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "ReZ38devAA",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 399.087",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "OWHumfuXGb",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "XzigC4zmt6",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "sE36sUVqHg",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "ysbXwgjNYz",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "65sBhryy_P",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 189.568,09",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "8L6_tEITrc",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "PBSetpZMuw",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "14sTDml0-6",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 2.710",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "a7_As7vQV5",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "qVoOieTKZY",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "Jfi3mQnWDn",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 403.790",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "CT0KMnAb6K",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "rsn7ZoFruh",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "C8Obcr8L_N",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 3.545",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "m07V7bMnKu",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "oY8YGWEfiz",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "FlzkzA2jAT",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "149 parcelas restantes · vence todo dia 9 · seguro R$ 205,00",
+                        "fontSize": 12.5,
+                        "id": "KlzfjP4QHJ",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "LwMgqASjRE",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "Dj11ayY6Ia",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "6BG-hZq6hd",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#4a6b00",
+                                "content": "Veículo",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "CTvUJ20loZ",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#eef6da",
+                            "id": "YcLbFeNtd6",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Magalu",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "KIrJszbTxV",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "9xs2AuvO2A",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 80.120",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "8mqHkFAM0-",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "XCnr9pJuBA",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "Fk5dOEHwBp",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "0zvBUlOg2u",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "MSEv2Ql--A",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 37.656,40",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "i88w5W9J7E",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "384e8igdS6",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "JvUfPjIVC-",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 1.091",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "3lB_vdz4Cx",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "kIdIHLA4pY",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "um3vDXzNhM",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 88.371",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "0YnSCCv_NN",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "QgR-sO3_kU",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "qIElR6cqOL",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 1.052",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "e-B6cYR7M1",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "y4_VSs1FJH",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "AI2MtCknoG",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "81 parcelas restantes · vence todo dia 18 · seguro a consultar",
+                        "fontSize": 12.5,
+                        "id": "ffLygH57-E",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "Rrb5OaKxNv",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "pMHlW1hm8N",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "J1kxCkzTcZ",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#4a6b00",
+                                "content": "Veículo",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "rQ1mFzcG39",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#eef6da",
+                            "id": "dKOm2iNojR",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Itaú",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "ZaPWOMflDu",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "S_0KceoJYT",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 100.118",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "L1htvQLcf1",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "2uSABiVrJA",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "zkNwCfpqXU",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "lEByudJHaC",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "fR2ud5FeEK",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 47.056,26",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "ZJ-9CG5sqH",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "alMiaiFkyN",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "6JsoO9tZvp",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 1.239",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "h7Z-n3RZM_",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "K4Bc3iGQlH",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "zYIxkaOuis",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 118.944",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "UNEz1RIsNw",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "WQHkJntURp",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "PyEo88ZzyX",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 650",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "WfV13sOikH",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "vvNAmM78hw",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "GUu_88425n",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "96 parcelas restantes · vence todo dia 5 · seguro a consultar",
+                        "fontSize": 12.5,
+                        "id": "MfEuqWfpDh",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "8Ixn7Lx-6R",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "Kj5jlFOlda",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "cIXiPYHM86",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  },
+                  {
+                    "borderTop": {
+                      "color": "#0970cd",
+                      "width": 4
+                    },
+                    "children": [
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#4a6b00",
+                                "content": "Veículo",
+                                "fontSize": 12.5,
+                                "fontWeight": 700,
+                                "id": "NelkZx9grN",
+                                "type": "text"
+                              }
+                            ],
+                            "cornerRadius": 999,
+                            "fill": "#eef6da",
+                            "id": "xhTG5AkhQp",
+                            "padding": [
+                              4,
+                              12
+                            ],
+                            "type": "frame"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "Porto Seguro",
+                            "fontSize": 13,
+                            "fontWeight": 600,
+                            "id": "MJt88nKSvG",
+                            "type": "text"
+                          }
+                        ],
+                        "id": "73w56mnxRg",
+                        "justifyContent": "space-between",
+                        "layout": "horizontal",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "color": "#0b1e36",
+                            "content": "R$ 362.172",
+                            "fontFamily": "Poppins",
+                            "fontSize": 26,
+                            "fontWeight": 800,
+                            "id": "TqEAauuHYd",
+                            "tabularNums": true,
+                            "type": "text"
+                          },
+                          {
+                            "color": "#5f666d",
+                            "content": "valor do crédito",
+                            "fontSize": 12.5,
+                            "id": "MrDjWhvnPI",
+                            "type": "text"
+                          }
+                        ],
+                        "gap": 2,
+                        "id": "eCJjXwo81h",
+                        "layout": "vertical",
+                        "type": "frame"
+                      },
+                      {
+                        "children": [],
+                        "fill": "#d7e4f2",
+                        "height": 1,
+                        "id": "7iKXBoxc3E",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Entrada",
+                                "fontSize": 12,
+                                "id": "JcnKQbNCMa",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 173.843,04",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "8Gy4Mjk865",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "KCFvvKpL5r",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Parcela mensal",
+                                "fontSize": 12,
+                                "id": "HvfZvVsdZK",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 3.856",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "4HCEVZvs4m",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "HxbYmtZ2Uf",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Saldo devedor",
+                                "fontSize": 12,
+                                "id": "5UO9AhU6Fn",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 408.736",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "KjWqR96nCY",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "zfOji6J5Fx",
+                            "layout": "vertical",
+                            "type": "frame"
+                          },
+                          {
+                            "children": [
+                              {
+                                "color": "#5f666d",
+                                "content": "Taxa de transferência",
+                                "fontSize": 12,
+                                "id": "dcW6lRqSDz",
+                                "type": "text"
+                              },
+                              {
+                                "color": "#0b1e36",
+                                "content": "R$ 3.600",
+                                "fontSize": 14,
+                                "fontWeight": 700,
+                                "id": "R7MXm81xe2",
+                                "tabularNums": true,
+                                "type": "text"
+                              }
+                            ],
+                            "gap": 2,
+                            "id": "J0miA3txat",
+                            "layout": "vertical",
+                            "type": "frame"
+                          }
+                        ],
+                        "gap": 12,
+                        "gridColumns": 2,
+                        "id": "c8v7OQV0qM",
+                        "layout": "grid",
+                        "type": "frame",
+                        "width": "100%"
+                      },
+                      {
+                        "color": "#5f666d",
+                        "content": "106 parcelas restantes · vence todo dia 15 · seguro R$ 172,00",
+                        "fontSize": 12.5,
+                        "id": "A-fK-5dbcI",
+                        "type": "text"
+                      },
+                      {
+                        "alignItems": "center",
+                        "children": [
+                          {
+                            "color": "#ffffff",
+                            "content": "Tenho interesse",
+                            "fontSize": 14,
+                            "fontWeight": 700,
+                            "id": "uD2lq61qwA",
+                            "type": "text"
+                          }
+                        ],
+                        "cornerRadius": 12,
+                        "fill": "#0970cd",
+                        "id": "8lno8-nYPq",
+                        "justifyContent": "center",
+                        "layout": "horizontal",
+                        "minHeight": 46,
+                        "type": "frame",
+                        "width": "100%"
+                      }
+                    ],
+                    "cornerRadius": 16,
+                    "fill": "#fbfcfe",
+                    "gap": 12,
+                    "id": "uFwjJwYl_q",
+                    "layout": "vertical",
+                    "padding": 24,
+                    "stroke": "#d7e4f2",
+                    "strokeWidth": 1,
+                    "type": "frame"
+                  }
+                ],
+                "gap": 24,
+                "gridColumns": 3,
+                "id": "wY265HApfV",
+                "layout": "grid",
+                "type": "frame",
+                "width": "100%"
+              },
+              {
+                "alignItems": "center",
+                "children": [
+                  {
+                    "alignItems": "center",
+                    "children": [
+                      {
+                        "color": "#0970cd",
+                        "content": "Carregar mais cartas",
+                        "fontSize": 15,
+                        "fontWeight": 700,
+                        "id": "9zG95HkEh2",
+                        "type": "text"
+                      }
+                    ],
+                    "cornerRadius": 999,
+                    "id": "KOxBNL8Cdf",
+                    "justifyContent": "center",
+                    "layout": "horizontal",
+                    "minHeight": 52,
+                    "padding": [
+                      12,
+                      32
+                    ],
+                    "stroke": "#0970cd",
+                    "strokeWidth": 1.5,
+                    "type": "frame"
+                  },
+                  {
+                    "color": "#5f666d",
+                    "content": "mostrando 24 de 239",
+                    "fontSize": 12.5,
+                    "id": "W_RJgryUzl",
+                    "type": "text"
+                  }
+                ],
+                "gap": 8,
+                "id": "g510QftmKy",
+                "layout": "vertical",
+                "type": "frame"
+              }
+            ],
+            "fill": "#f2f7fe",
+            "gap": 24,
+            "id": "T-ajVs8DBP",
+            "layout": "vertical",
+            "name": "Grid de cartas",
+            "padding": [
+              0,
+              64,
+              48
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "borderTop": {
+              "color": "#d7e4f2",
+              "width": 1
+            },
+            "children": [
+              {
+                "color": "#5f666d",
+                "content": "Os valores e a disponibilidade são atualizados automaticamente e podem mudar sem aviso. A transferência da carta é sujeita à aprovação e às regras da administradora do consórcio — a Marpe acompanha todo o processo com você.",
+                "fontSize": 13,
+                "id": "D5c0sBx4Ai",
+                "lineHeight": 1.6,
+                "maxWidth": 900,
+                "type": "text"
+              }
+            ],
+            "fill": "#fbfcfe",
+            "gap": 8,
+            "id": "R4eia4lF_O",
+            "layout": "vertical",
+            "padding": [
+              32,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "children": [
+              {
+                "color": "#ffffff",
+                "content": "MARPE SEGUROS",
+                "fontFamily": "Poppins",
+                "fontSize": 14,
+                "fontWeight": 800,
+                "id": "_qlx9dt5wU",
+                "letterSpacing": 0.5,
+                "type": "text"
+              },
+              {
+                "color": "#b9cbe4",
+                "content": "WhatsApp (55) 99150-4477 · Seg a sex, 8h30 às 18h · Política de Privacidade",
+                "fontSize": 13,
+                "id": "E1Q5qhOeKy",
+                "type": "text"
+              },
+              {
+                "color": "#8ecbff",
+                "content": "Contigo em todos os momentos",
+                "fontSize": 13,
+                "fontWeight": 700,
+                "id": "Ie9DzgFv-g",
+                "type": "text"
+              }
+            ],
+            "fill": "#0b1e36",
+            "gap": 8,
+            "id": "xE_xkt1P8o",
+            "layout": "vertical",
+            "padding": [
+              32,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          },
+          {
+            "borderTop": {
+              "color": "#d7e4f2",
+              "width": 1
+            },
+            "children": [
+              {
+                "color": "#0b1e36",
+                "content": "Anotação interna — estados previstos para a tela (não faz parte da página)",
+                "fontSize": 13,
+                "fontWeight": 700,
+                "id": "wd9mdNlu_1",
+                "type": "text"
+              },
+              {
+                "color": "#5f666d",
+                "content": "• Carregando — cards fantasma (skeleton) enquanto a API responde",
+                "fontSize": 13,
+                "id": "Z8KItkOYTg",
+                "type": "text"
+              },
+              {
+                "color": "#5f666d",
+                "content": "• Sem resultados — mensagem com botão Limpar filtros",
+                "fontSize": 13,
+                "id": "mbr6-nMaKd",
+                "type": "text"
+              },
+              {
+                "color": "#5f666d",
+                "content": "• Erro na API — aviso amigável e botão Tentar novamente",
+                "fontSize": 13,
+                "id": "tnYSr8_QM2",
+                "type": "text"
+              },
+              {
+                "color": "#5f666d",
+                "content": "• Mobile — filtros empilhados, cards em 1 coluna, carregar mais no fim",
+                "fontSize": 13,
+                "id": "cliVV17YDr",
+                "type": "text"
+              }
+            ],
+            "fill": "#e3f0fc",
+            "gap": 8,
+            "id": "K1-v0aIweE",
+            "layout": "vertical",
+            "padding": [
+              24,
+              64
+            ],
+            "type": "frame",
+            "width": "100%"
+          }
+        ],
+        "fill": "#fbfcfe",
+        "gap": 2,
+        "id": "eFl416SLYE",
+        "layout": "vertical",
+        "name": "Página Cartas Contempladas",
+        "type": "frame",
+        "width": "100%"
+      }
+    ],
+    "fill": "#FFFFFF",
+    "height": 900,
+    "id": "zvQnLqOqX-",
+    "name": "Document",
+    "type": "document",
+    "width": 1440
+  },
+  "variables": {}
+}
