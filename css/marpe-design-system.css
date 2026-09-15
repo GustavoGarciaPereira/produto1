@@ -449,12 +449,13 @@
 
 /* ---------- 13) Tela "Cartas Contempladas" (estoque LD Cred) ---------- */
 .mp-cartas-hero {
-  padding: 56px 0 48px;
+  /* 96px no topo: compensa o menu (rd-navbar estático é absolute, ~59px) com respiro */
+  padding: 96px 0 48px;
   background: linear-gradient(135deg, #0b1e36 0%, #112d4e 100%);
   border-bottom: 3px solid var(--mp-azul);
 }
 .mp-cartas-titulo {
-  margin: 12px 0 12px;
+  margin: var(--mp-esp-6) 0 var(--mp-esp-3);
   font-family: var(--mp-fonte-titulo);
   font-weight: 800;
   font-size: clamp(30px, 5vw, 40px);
@@ -677,3 +678,38 @@
   color: var(--mp-texto-sec);
 }
 .mp-janela[hidden] { display: none; }
+
+/* Mosaico do hero de Cartas Contempladas (carro, moto, caminhão, campo, casa e R$) */
+.mp-cartas-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: 48px;
+  align-items: center;
+}
+.mp-cartas-hero-mosaico {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.mp-cartas-hero-mosaico img,
+.mp-cartas-hero-moeda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .14);
+}
+.mp-cartas-hero-moeda {
+  background: linear-gradient(135deg, var(--mp-azul) 0%, var(--mp-azul-escuro) 100%);
+  font-family: var(--mp-fonte-titulo);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -.5px;
+  color: #fff;
+}
+@media (max-width: 991.98px) {
+  .mp-cartas-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+}

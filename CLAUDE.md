@@ -26,7 +26,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Páginas ativas
 
-`index.html` (home), `cartas-contempladas.html` (estoque de cartas do parceiro **LD Cred** — página interna enxuta que lê `data/cartas.json` via `js/cartas.js`: filtros por administradora/categoria/faixa de crédito/valor desejado/ordenação, "carregar mais" de 24 em 24 e estados de carregando/vazio/erro) e `politica-de-privacidade.html` (LGPD, página interna enxuta — header/footer simplificados, sem JS de template). As páginas `about-us.html`, `contacts.html` e `typography.html` foram **removidas do repositório** (conteúdo morto do template, sem links; recuperáveis via git history). Todo o contato já está no footer da home.
+`index.html` (home), `cartas-contempladas.html` (estoque de cartas do parceiro **LD Cred** — usa o **mesmo navbar do site** (sticky + menu mobile; carrega jQuery/rd-navbar/`script.min.js` e `js/cartas.js`, que lê `data/cartas.json`): filtros por administradora/categoria/faixa de crédito/valor desejado/ordenação, "carregar mais" de 24 em 24 e estados de carregando/vazio/erro) e `politica-de-privacidade.html` (LGPD, página interna enxuta — header/footer simplificados, sem JS de template). As páginas `about-us.html`, `contacts.html` e `typography.html` foram **removidas do repositório** (conteúdo morto do template, sem links; recuperáveis via git history). Todo o contato já está no footer da home.
 
 ### Estrutura de `index.html`
 
