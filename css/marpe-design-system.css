@@ -691,8 +691,7 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
-.mp-cartas-hero-mosaico img,
-.mp-cartas-hero-moeda {
+.mp-cartas-hero-mosaico img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -701,14 +700,6 @@
   object-fit: cover;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, .14);
-}
-.mp-cartas-hero-moeda {
-  background: linear-gradient(135deg, var(--mp-azul) 0%, var(--mp-azul-escuro) 100%);
-  font-family: var(--mp-fonte-titulo);
-  font-weight: 800;
-  font-size: 28px;
-  letter-spacing: -.5px;
-  color: #fff;
 }
 @media (max-width: 991.98px) {
   .mp-cartas-hero-grid { grid-template-columns: 1fr; gap: 32px; }
