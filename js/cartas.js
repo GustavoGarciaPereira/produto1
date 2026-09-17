@@ -67,10 +67,42 @@
     return typeof v === 'number' && isFinite(v) ? v.toLocaleString('pt-BR') : '—';
   }
 
+  function valorOuConsultar(v) {
+    return typeof v === 'number' && isFinite(v) ? moeda(v) : 'A Consultar';
+  }
+
+  function tituloCarta(item) {
+    return String(item.administradora || '').toUpperCase() +
+      ' - ' + String(item.categoria || '').toUpperCase();
+  }
+
   function linkWhats(item) {
-    var msg = 'Olá! Tenho interesse na carta contemplada #' + item.id +
-      ' (' + item.categoria + ', crédito ' + moeda(item.valor_credito) + '). Pode me ajudar?';
-    return WA_BASE + encodeURIComponent(msg);
+    var titulo = tituloCarta(item);
+
+    var linhas = [
+      'Olá! Tenho interesse na carta contemplada abaixo. Pode me ajudar?',
+      '',
+      titulo,
+      '',
+      'Crédito: ' + valorOuConsultar(item.valor_credito),
+      'Entrada: ' + valorOuConsultar(item.entrada)
+    ];
+
+    if (typeof item.parcelas === 'number' && item.parcelas > 0) {
+      linhas.push('', 'Parcelamento:', '1 à ' + numero(item.parcelas) + ': ' + valorOuConsultar(item.valor_parcela));
+    }
+
+    linhas.push(
+      '',
+      'Transferência: ' + valorOuConsultar(item.taxa_transferencia),
+      'Saldo devedor: ' + valorOuConsultar(item.saldo_devedor),
+      'Seguro de vida: ' + valorOuConsultar(item.seguro),
+      'Vencimento: ' + (typeof item.vencimento_dia === 'number' ? 'dia ' + item.vencimento_dia : 'A Consultar'),
+      '',
+      'Código da carta: #' + item.id
+    );
+
+    return WA_BASE + encodeURIComponent(linhas.join('\n'));
   }
 
   function obsDe(item) {
