@@ -250,7 +250,7 @@
     var slug = LOGOS_ADM[item.administradora];
     if (slug) {
       var largura = Math.round(altura * 165 / 48);
-      return '<img class="' + classe + '" src="images/logos-adm/' + slug + '.webp" alt="' + esc(item.administradora) +
+      return '<img class="' + classe + ' mp-marca-adm" src="images/logos-adm/' + slug + '.webp" alt="' + esc(item.administradora) +
         '" width="' + largura + '" height="' + altura + '" loading="lazy" decoding="async">';
     }
     return '<span class="mp-adm"><span class="mp-adm-logo" style="--adm-cor:' + corAdm(item.administradora) +
@@ -905,6 +905,51 @@
 
   el.tbody.addEventListener('click', aoCopiar);
   el.grid.addEventListener('click', aoCopiar);
+
+  /* ---------- dica (tooltip) do logo da administradora ---------- */
+
+  var dica = document.getElementById('mp-dica');
+
+  function posicionarDica(x, y) {
+    var margem = 8;
+    dica.style.left = '0px';
+    dica.style.top = '0px';
+    var largura = dica.offsetWidth;
+    var altura = dica.offsetHeight;
+    var left = Math.min(x + 14, window.innerWidth - largura - margem);
+    var top = y + 18;
+    if (top + altura > window.innerHeight - margem) top = y - altura - 14;
+    dica.style.left = Math.max(margem, left) + 'px';
+    dica.style.top = Math.max(margem, top) + 'px';
+  }
+
+  function esconderDica() {
+    if (dica) dica.hidden = true;
+  }
+
+  function marcaSob(ev) {
+    return ev.target && ev.target.classList && ev.target.classList.contains('mp-marca-adm') ? ev.target : null;
+  }
+
+  if (dica && window.matchMedia('(hover: hover)').matches) {
+    [el.tabelaWrap, el.grid].forEach(function (cont) {
+      cont.addEventListener('mouseover', function (ev) {
+        var img = marcaSob(ev);
+        if (!img) return;
+        dica.textContent = img.alt;
+        dica.hidden = false;
+        posicionarDica(ev.clientX, ev.clientY);
+      });
+      cont.addEventListener('mousemove', function (ev) {
+        if (!marcaSob(ev)) { esconderDica(); return; }
+        if (!dica.hidden) posicionarDica(ev.clientX, ev.clientY);
+      });
+      cont.addEventListener('mouseout', function (ev) {
+        if (marcaSob(ev)) esconderDica();
+      });
+    });
+    window.addEventListener('scroll', esconderDica, true);
+  }
 
   /* ---------- ordenação por coluna ---------- */
 
