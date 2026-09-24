@@ -554,12 +554,15 @@
 }
 .mp-carta-topo { display: flex; justify-content: flex-start; align-items: center; gap: 8px; }
 .mp-selo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 3px 8px;
   border-radius: var(--mp-raio-pill);
   font-size: 12px;
   font-weight: 700;
 }
+.mp-selo svg { width: 13px; height: 13px; flex: none; }
 .mp-selo--imovel { background: var(--mp-azul-tint); color: var(--mp-azul-ink); }
 .mp-selo--veiculo { background: var(--mp-verde-tint); color: var(--mp-verde-ink); }
 .mp-carta-adm { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--mp-texto-sec); }
@@ -885,6 +888,57 @@
   letter-spacing: .3px;
 }
 .mp-adm-nome { font-weight: 700; color: var(--mp-azul-navy); }
+
+/* Aviso de regra (junção exige a mesma administradora) */
+.mp-aviso {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  background: #fff8e6;
+  border: 1px solid #f0c36d;
+  border-left: 4px solid #d99a1b;
+  border-radius: var(--mp-raio-md);
+  color: #6b4700;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.mp-aviso[hidden] { display: none; }
+.mp-aviso > svg { width: 18px; height: 18px; flex: none; margin-top: 1px; color: #b3730a; }
+.mp-aviso p { flex: 1; margin: 0; }
+.mp-aviso-fechar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex: none;
+  margin: -3px -4px 0 0;
+  border: 0;
+  border-radius: var(--mp-raio-sm);
+  background: none;
+  color: #8a5b00;
+  cursor: pointer;
+}
+.mp-aviso-fechar svg { width: 15px; height: 15px; }
+.mp-aviso-fechar:hover { background: #fdefd0; }
+
+/* Logos das administradoras */
+.mp-adm-img {
+  display: block;
+  height: 24px;
+  width: auto;
+  max-width: 96px;
+  object-fit: contain;
+}
+.mp-carta-adm-img {
+  height: 24px;
+  width: auto;
+  max-width: 96px;
+  margin-left: auto;
+  object-fit: contain;
+}
 
 .mp-status {
   display: inline-flex;

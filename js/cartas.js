@@ -29,6 +29,32 @@
 
   var CORES_ADM = ['#0970cd', '#0f766e', '#7c3aed', '#b45309', '#be123c', '#0b7a3b', '#4338ca', '#a16207', '#0369a1', '#9333ea'];
 
+  /* Logos em images/logos-adm (WebP, 165×48). Administradora sem logo cai no avatar de iniciais. */
+  var LOGOS_ADM = {
+    'BB Consórcios': 'bbconsorcios',
+    'Bradesco': 'bradesco',
+    'Caixa XS5': 'caixa-xs5',
+    'Canopus': 'canopus',
+    'CNP Consórcio': 'cnp',
+    'Embracon': 'embracon',
+    'Gazin': 'gazin',
+    'HS Consórcios': 'hsconsorcios',
+    'Itaú': 'itauconsorcio',
+    'Magalu': 'magalu',
+    'Porto Seguro': 'portoseguro',
+    'Primo Rossi': 'primorossi',
+    'Racon Consórcios': 'racon',
+    'Rodobens': 'rodobens',
+    'Santander': 'santander',
+    'Serello': 'serello',
+    'Sicoob Consórcios': 'sicoob',
+    'Sicredi': 'sicredi',
+    'União Catarinense': 'uniaocatarinense',
+    'Volkswagen': 'volkswagen',
+    'Yamaha': 'yamaha',
+    'Zema': 'zema'
+  };
+
   var el = {
     tabelaWrap: document.getElementById('tabela-wrap'),
     tbody: document.getElementById('cartas-tbody'),
@@ -65,6 +91,9 @@
     juncaoCotas: document.getElementById('juncao-cotas'),
     juncaoCopiar: document.getElementById('juncao-copiar'),
     juncaoWa: document.getElementById('juncao-wa'),
+    aviso: document.getElementById('aviso-juncao'),
+    avisoTexto: document.getElementById('aviso-juncao-texto'),
+    avisoFechar: document.getElementById('aviso-juncao-fechar'),
     toast: document.getElementById('mp-toast'),
     statTotal: document.getElementById('stat-total'),
     statImovel: document.getElementById('stat-imovel'),
@@ -183,6 +212,18 @@
     return categoria === 'Veículo' ? 'mp-selo--veiculo' : 'mp-selo--imovel';
   }
 
+  function seloIcone(categoria) {
+    if (categoria === 'Veículo') {
+      return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>';
+    }
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/></svg>';
+  }
+
+  function selo(item) {
+    return '<span class="mp-selo ' + seloClasse(item.categoria) + '">' +
+      seloIcone(item.categoria) + esc(item.categoria) + '</span>';
+  }
+
   function rotuloStatus(status) {
     var mapa = { disponivel: 'Disponível', reservado: 'Reservado', vendido: 'Vendido' };
     var chave = String(status || '').toLowerCase();
@@ -202,6 +243,26 @@
     var h = 0;
     for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
     return CORES_ADM[h % CORES_ADM.length];
+  }
+
+  /* Marca da administradora: logo quando existe; senão, avatar de iniciais + nome. */
+  function marcaAdm(item, classe, altura) {
+    var slug = LOGOS_ADM[item.administradora];
+    if (slug) {
+      var largura = Math.round(altura * 165 / 48);
+      return '<img class="' + classe + '" src="images/logos-adm/' + slug + '.webp" alt="' + esc(item.administradora) +
+        '" width="' + largura + '" height="' + altura + '" loading="lazy" decoding="async">';
+    }
+    return '<span class="mp-adm"><span class="mp-adm-logo" style="--adm-cor:' + corAdm(item.administradora) +
+      '" aria-hidden="true">' + esc(iniciais(item.administradora)) + '</span><span class="mp-adm-nome">' +
+      esc(item.administradora) + '</span></span>';
+  }
+
+  function acharItem(id) {
+    for (var i = 0; i < estado.todas.length; i++) {
+      if (String(estado.todas[i].id) === String(id)) return estado.todas[i];
+    }
+    return null;
   }
 
   function unicos(itens, campo) {
@@ -335,8 +396,8 @@
     return '' +
       '<tr data-id="' + esc(id) + '"' + (marcada ? ' class="is-selecionada"' : '') + '>' +
         '<td class="mp-td-check"><label class="mp-check-alvo"><input type="checkbox" class="mp-check-carta" data-id="' + esc(id) + '"' + (marcada ? ' checked' : '') + ' aria-label="Selecionar carta ' + esc(id) + '"></label></td>' +
-        '<td><span class="mp-adm"><span class="mp-adm-logo" style="--adm-cor:' + corAdm(item.administradora) + '" aria-hidden="true">' + esc(iniciais(item.administradora)) + '</span><span class="mp-adm-nome">' + esc(item.administradora) + '</span></span></td>' +
-        '<td><span class="mp-selo ' + seloClasse(item.categoria) + '">' + esc(item.categoria) + '</span></td>' +
+        '<td>' + marcaAdm(item, 'mp-adm-img', 24) + '</td>' +
+        '<td>' + selo(item) + '</td>' +
         '<td class="mp-td-num mp-forte">' + moeda(item.valor_credito) + '</td>' +
         '<td class="mp-td-num">' + moeda(item.entrada) + '</td>' +
         '<td class="mp-td-num">' + (typeof item.parcelas === 'number' ? numero(item.parcelas) + 'x' : '—') + '</td>' +
@@ -359,8 +420,8 @@
       '<li class="mp-carta' + (marcada ? ' is-selecionada' : '') + '" data-id="' + esc(id) + '">' +
         '<div class="mp-carta-topo">' +
           '<label class="mp-check-alvo"><input type="checkbox" class="mp-check-carta" data-id="' + esc(id) + '"' + (marcada ? ' checked' : '') + ' aria-label="Selecionar carta ' + esc(id) + '"></label>' +
-          '<span class="mp-selo ' + seloClasse(item.categoria) + '">' + esc(item.categoria) + '</span>' +
-          '<span class="mp-carta-adm">' + esc(item.administradora) + '</span>' +
+          '<span class="mp-selo ' + seloClasse(item.categoria) + '">' + seloIcone(item.categoria) + esc(item.categoria) + '</span>' +
+          marcaAdm(item, 'mp-carta-adm-img', 24) +
         '</div>' +
         '<div>' +
           '<div class="mp-carta-valor">' + moeda(item.valor_credito) + '</div>' +
@@ -565,7 +626,40 @@
     el.resultado.innerHTML = '<span>Não foi possível carregar o estoque agora.</span>';
   }
 
-  /* ---------- seleção ---------- */
+  /* ---------- avisos e seleção ---------- */
+
+  var avisoTimer;
+
+  function mostrarAviso(msg) {
+    el.avisoTexto.textContent = msg;
+    el.aviso.hidden = false;
+    clearTimeout(avisoTimer);
+    avisoTimer = setTimeout(function () { el.aviso.hidden = true; }, 9000);
+  }
+
+  function limparAviso() {
+    clearTimeout(avisoTimer);
+    el.aviso.hidden = true;
+  }
+
+  function adminsDaSelecao() {
+    var vistos = {};
+    var lista = [];
+    itensSelecionados().forEach(function (i) {
+      if (i.administradora && !vistos[i.administradora]) {
+        vistos[i.administradora] = true;
+        lista.push(i.administradora);
+      }
+    });
+    return lista;
+  }
+
+  /* Regra do parceiro: a junção só existe entre cotas da MESMA administradora. */
+  function avisoAdminsDiferentes(admins) {
+    admins.sort(function (a, b) { return a.localeCompare(b, 'pt-BR'); });
+    mostrarAviso('⚠ Não é possível juntar cartas de administradoras diferentes (' + admins.join(', ') +
+      '). Selecione cartas de uma mesma administradora.');
+  }
 
   function atualizarSelecaoUI() {
     var n = Object.keys(estado.selecionadas).length;
@@ -594,6 +688,7 @@
 
   function limparSelecao() {
     estado.selecionadas = {};
+    limparAviso();
     atualizarSelecaoUI();
   }
 
@@ -601,8 +696,21 @@
     var alvo = ev.target;
     if (!alvo || !alvo.classList || !alvo.classList.contains('mp-check-carta')) return;
     var id = alvo.getAttribute('data-id');
-    if (alvo.checked) estado.selecionadas[id] = true;
-    else delete estado.selecionadas[id];
+
+    if (alvo.checked) {
+      var item = acharItem(id);
+      var admins = adminsDaSelecao();
+      if (item && admins.length && admins.indexOf(item.administradora) === -1) {
+        alvo.checked = false;
+        avisoAdminsDiferentes(admins.concat([item.administradora]));
+        atualizarSelecaoUI();
+        return;
+      }
+      estado.selecionadas[id] = true;
+    } else {
+      delete estado.selecionadas[id];
+    }
+
     atualizarSelecaoUI();
   }
 
@@ -612,14 +720,38 @@
   el.checkPagina.addEventListener('change', function () {
     var inicio = (estado.pagina - 1) * POR_PAGINA;
     var visiveis = estado.filtradas.slice(inicio, inicio + POR_PAGINA);
+
+    if (!el.checkPagina.checked) {
+      visiveis.forEach(function (item) { delete estado.selecionadas[String(item.id)]; });
+      atualizarSelecaoUI();
+      return;
+    }
+
+    var admins = adminsDaSelecao();
+    var admRef = admins.length ? admins[0] : (visiveis[0] ? visiveis[0].administradora : null);
+    var marcadas = 0;
+    var outras = {};
+
     visiveis.forEach(function (item) {
-      if (el.checkPagina.checked) estado.selecionadas[String(item.id)] = true;
-      else delete estado.selecionadas[String(item.id)];
+      if (item.administradora === admRef) {
+        estado.selecionadas[String(item.id)] = true;
+        marcadas++;
+      } else {
+        outras[item.administradora] = true;
+      }
     });
+
+    var ignoradas = Object.keys(outras);
+    if (ignoradas.length) {
+      mostrarAviso('⚠ Esta página tem cartas de administradoras diferentes — selecionamos apenas as ' +
+        marcadas + ' cartas de ' + admRef + '.');
+    }
+
     atualizarSelecaoUI();
   });
 
   el.btnLimparSelecao.addEventListener('click', limparSelecao);
+  el.avisoFechar.addEventListener('click', limparAviso);
 
   /* ---------- visão (tabela x cartões) ---------- */
 
@@ -702,6 +834,11 @@
   function abrirJuncao() {
     var itens = itensSelecionados();
     if (!itens.length) return;
+    var admins = adminsDaSelecao();
+    if (admins.length > 1) {
+      avisoAdminsDiferentes(admins);
+      return;
+    }
     preencherJuncao(itens);
     if (typeof el.juncaoModal.showModal === 'function') {
       el.juncaoModal.showModal();
@@ -762,11 +899,7 @@
   function aoCopiar(ev) {
     var btn = ev.target && ev.target.closest ? ev.target.closest('[data-copiar]') : null;
     if (!btn) return;
-    var id = btn.getAttribute('data-copiar');
-    var item = null;
-    for (var i = 0; i < estado.todas.length; i++) {
-      if (String(estado.todas[i].id) === id) { item = estado.todas[i]; break; }
-    }
+    var item = acharItem(btn.getAttribute('data-copiar'));
     if (item) copiar(textoDetalhe(item), 'Dados da carta copiados');
   }
 
