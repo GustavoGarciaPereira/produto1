@@ -110,13 +110,19 @@
       <!-- Estoque -->
       <section class="mp-cartas-banda" aria-label="Estoque de cartas contempladas">
         <div class="container">
-          <div class="mp-filtros">
-            <label class="sr-only" for="f-busca">Buscar por administradora</label>
-            <input type="search" id="f-busca" placeholder="Buscar por administradora" autocomplete="off">
-            <select id="f-categoria" aria-label="Categoria">
-              <option value="">Todas as categorias</option>
+          <div class="mp-filtros" role="search" aria-label="Filtrar o estoque">
+            <div class="mp-campo-busca">
+              <svg class="mp-campo-busca-icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <label class="sr-only" for="f-busca">Buscar por banco ou código</label>
+              <input type="search" id="f-busca" placeholder="Buscar por banco ou código…" autocomplete="off">
+            </div>
+            <select id="f-categoria" aria-label="Segmento">
+              <option value="">Todos os segmentos</option>
               <option value="Imóvel">Imóvel</option>
               <option value="Veículo">Veículo</option>
+            </select>
+            <select id="f-administradora" aria-label="Administradora">
+              <option value="">Todas as administradoras</option>
             </select>
             <label class="sr-only" for="f-valor-desejado">Valor de crédito desejado</label>
             <input type="text" id="f-valor-desejado" inputmode="numeric" placeholder="Valor desejado (ex.: 150.000)" autocomplete="off">
@@ -128,22 +134,64 @@
               <option value="200000-500000">R$ 200 a 500 mil</option>
               <option value="500000-999999999">Acima de R$ 500 mil</option>
             </select>
-            <select id="f-ordem" aria-label="Ordenar por">
-              <option value="entrada">Menor entrada</option>
-              <option value="parcela">Menor parcela</option>
-              <option value="credito-desc">Maior crédito</option>
-              <option value="credito-asc">Menor crédito</option>
-            </select>
             <button type="button" class="mp-filtros-limpar" id="f-limpar">Limpar filtros</button>
           </div>
 
-          <p class="mp-resultado">
-            <span id="f-resultado" aria-live="polite">Carregando cartas disponíveis…</span>
-            <span id="f-atualizado"></span>
-          </p>
           <p class="mp-janela" id="f-janela" hidden></p>
 
-          <ul class="mp-cartas-grid" id="cartas-grid"></ul>
+          <div class="mp-estoque-topo">
+            <p class="mp-resultado">
+              <span id="f-resultado" aria-live="polite">Carregando cartas disponíveis…</span>
+              <span id="f-atualizado"></span>
+            </p>
+            <div class="mp-estoque-acoes">
+              <div class="mp-visao" role="group" aria-label="Modo de exibição">
+                <button type="button" class="mp-visao-btn is-ativo" id="btn-visao-tabela" aria-pressed="true" title="Ver em lista">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" x2="21" y1="6" y2="6"/><line x1="8" x2="21" y1="12" y2="12"/><line x1="8" x2="21" y1="18" y2="18"/><line x1="3" x2="3.01" y1="6" y2="6"/><line x1="3" x2="3.01" y1="12" y2="12"/><line x1="3" x2="3.01" y1="18" y2="18"/></svg>
+                  <span class="sr-only">Lista</span>
+                </button>
+                <button type="button" class="mp-visao-btn" id="btn-visao-cards" aria-pressed="false" title="Ver em cartões">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                  <span class="sr-only">Cartões</span>
+                </button>
+              </div>
+              <button type="button" class="mp-selecao-limpar" id="btn-limpar-selecao" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                Limpar seleção
+              </button>
+              <button type="button" class="mp-juncao-btn" id="btn-juncao" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+                <span class="mp-juncao-label">Calcular Junção (<span id="juncao-qtd">0</span>)</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mp-tabela-wrap" id="tabela-wrap">
+            <table class="mp-tabela">
+              <caption class="sr-only">Cartas contempladas disponíveis para compra</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="mp-td-check">
+                    <label class="mp-check-alvo"><input type="checkbox" id="check-pagina" aria-label="Selecionar todas as cartas desta página"></label>
+                  </th>
+                  <th scope="col" data-campo="administradora" aria-sort="none"><button type="button" class="mp-th">ADM. <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="categoria" aria-sort="none"><button type="button" class="mp-th">SEGMENTO <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="valor_credito" class="mp-td-num" aria-sort="none"><button type="button" class="mp-th">CRÉDITO <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="entrada" class="mp-td-num" aria-sort="none"><button type="button" class="mp-th">ENTRADA <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="parcelas" class="mp-td-num" aria-sort="none"><button type="button" class="mp-th">PRAZO <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="valor_parcela" class="mp-td-num" aria-sort="none"><button type="button" class="mp-th">PARCELA <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" data-campo="saldo_devedor" class="mp-td-num" aria-sort="none"><button type="button" class="mp-th">SALDO <svg class="mp-th-seta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg></button></th>
+                  <th scope="col" class="mp-td-num">TRANSF.</th>
+                  <th scope="col" class="mp-td-num">SEGURO</th>
+                  <th scope="col">STATUS</th>
+                  <th scope="col" class="mp-td-acoes">AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody id="cartas-tbody"></tbody>
+            </table>
+          </div>
+
+          <ul class="mp-cartas-grid" id="cartas-grid" hidden></ul>
 
           <div class="mp-estado" id="estado-vazio" hidden>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -159,10 +207,15 @@
             <button type="button" class="mp-btn mp-btn--primary" id="btn-tentar">Tentar novamente</button>
           </div>
 
-          <div class="mp-carregar">
-            <button type="button" id="btn-mais">Carregar mais cartas</button>
-            <p class="mp-carregar-info" id="mais-info"></p>
-          </div>
+          <nav class="mp-paginacao" id="paginacao" aria-label="Paginação do estoque" hidden>
+            <button type="button" class="mp-pag-btn" id="pag-anterior" aria-label="Página anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <span class="mp-pag-info" id="pag-info" aria-live="polite">1 / 1</span>
+            <button type="button" class="mp-pag-btn" id="pag-proxima" aria-label="Próxima página">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </nav>
         </div>
       </section>
 
@@ -181,7 +234,33 @@
         <p class="mp-assinatura mp-assinatura--clara">Contigo em todos os momentos</p>
       </div>
     </footer>
+
+    <!-- Resumo da junção das cartas selecionadas -->
+    <dialog class="mp-modal" id="juncao-modal" aria-labelledby="juncao-titulo">
+      <div class="mp-modal-caixa">
+        <header class="mp-modal-topo">
+          <h2 class="mp-modal-titulo" id="juncao-titulo">Resultado da Junção</h2>
+          <button type="button" class="mp-modal-fechar" id="juncao-fechar" aria-label="Fechar resultado da junção">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </header>
+        <div class="mp-modal-corpo">
+          <dl class="mp-juncao-resumo" id="juncao-resumo"></dl>
+          <p class="mp-juncao-secao">Parcelamento</p>
+          <ul class="mp-juncao-faixas" id="juncao-faixas"></ul>
+          <div class="mp-juncao-resumo mp-juncao-resumo--rodape" id="juncao-rodape"></div>
+          <p class="mp-juncao-secao">Cotas selecionadas</p>
+          <ul class="mp-juncao-cotas" id="juncao-cotas"></ul>
+          <p class="mp-juncao-nota">Somas aproximadas, sujeitas à confirmação da administradora (prazos e seguros podem variar entre as cotas). A Marpe confere as condições antes de qualquer proposta.</p>
+        </div>
+        <footer class="mp-modal-acoes">
+          <button type="button" class="mp-btn mp-btn--outline" id="juncao-copiar">Copiar texto de vendas</button>
+          <a class="mp-btn mp-btn--juncao" id="juncao-wa" href="https://wa.me/55991504477" target="_blank" rel="noopener noreferrer">Enviar pelo WhatsApp</a>
+        </footer>
+      </div>
+    </dialog>
   </div>
+  <div class="mp-toast" id="mp-toast" role="status" aria-live="polite" hidden></div>
   <script>document.getElementById('ano-atual').textContent = new Date().getFullYear();</script>
   <!-- Javascript-->
   <!-- jQuery 3 (CDN) -->
